@@ -7,7 +7,8 @@ export type CustomColor = "primary" | "error";
 export interface CustomCheckboxProps
     extends Omit<MuiCheckboxProps, "color"> {
     color?: CustomColor;             // 自訂顏色
-    label?: React.ReactNode;         // label 建議加在這裡
+    // label?: React.ReactNode;         // label 建議加在這裡
+    label: string;
 }
 
 // 樹節點數據類型定義

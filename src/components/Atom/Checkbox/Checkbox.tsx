@@ -17,7 +17,7 @@ type CustomPaletteColor = PaletteColor & {
   custMain?: string;
   tonal?: string;
   onTonal?: string;
-  default?: string;
+  myDefault?: string;
 };
 
 // 依 color 取得 palette
@@ -28,7 +28,7 @@ const getCheckboxStyles = (theme: Theme, color: CustomColor = "primary") => {
   return {
     // 初始狀態（未勾選、未 hover、未 disabled）
     "&": {
-      color: colorSet?.default ?? fallback.myDefault, // 這裡設定初始顏色
+      color: colorSet?.myDefault ?? fallback.myDefault, // 這裡設定初始顏色
     },
     // 勾選與 indeterminate 狀態
     "&.Mui-checked, &.MuiCheckbox-indeterminate": {
@@ -69,7 +69,7 @@ export const Checkbox: React.FC<CustomCheckboxProps> = ({
   );
 
   return label ? (
-    <FormControlLabel control={checkboxElement} label={label} />
+    <FormControlLabel control={checkboxElement} label={label || undefined} />
   ) : (
     checkboxElement
   );
