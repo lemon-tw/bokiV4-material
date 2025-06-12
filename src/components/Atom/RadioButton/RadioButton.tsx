@@ -10,7 +10,7 @@ import type { Theme } from '@mui/material/styles';
 // 擴充 palette 顏色型別，支援自訂顏色屬性
 type CustomPaletteColor = PaletteColor & {
     custMain?: string;
-    secondary?: string;
+    myDefault?: string;
 };
 
 // 依據 color 取得 palette 色票，並設定不同狀態的樣式
@@ -21,7 +21,7 @@ const getRadioStyles = (theme: Theme, color: CustomRadioColor = "primary") => {
     return {
         // 預設狀態
         "&": {
-            color: colorSet?.custMain ?? fallback.custMain,
+            color: colorSet?.myDefault ?? fallback.myDefault,
         },
         // 勾選狀態
         "&.Mui-checked": {

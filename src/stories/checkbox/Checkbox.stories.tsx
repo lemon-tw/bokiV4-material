@@ -28,7 +28,6 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "../../components/Atom/Checkbox/Checkbox";
 import { CustomCheckboxProps } from "../../types/checkboxExtends"
-import { fn } from "@storybook/test";
 
 const meta: Meta<typeof Checkbox> = {
   title: "Components/Checkbox/Checkbox",
@@ -48,7 +47,6 @@ const meta: Meta<typeof Checkbox> = {
   },
   args: {
     color: "primary",
-    onClick: fn(),
   },
 
 };
@@ -74,10 +72,6 @@ const InteractiveTemplate = (args: CustomCheckboxProps) => {
 };
 
 // 受控元件 Story
-// export const Primary: Story = {
-//     render: (args) => <InteractiveTemplate {...args} />,
-// };
-
 // 補上 parameters 調整storyBook呈現的程式碼範例
 export const Standard: Story = {
   render: (args) => <InteractiveTemplate {...args} />,
@@ -85,36 +79,11 @@ export const Standard: Story = {
     docs: {
       source: {
         code: `
-<Checkbox 
-  color="primary" 
-  label="" 
-/>`.trim(),
+<Checkbox />`.trim(),
       },
     },
   },
 };
-
-// export const Error: Story = {
-//     render: (args) => <InteractiveTemplate {...args} color="error" />,
-// };
-// export const Error: Story = {
-//   render: (args) => <InteractiveTemplate {...args} color="error" />,
-//   parameters: {
-//     docs: {
-//       source: {
-//         code: `
-// <Checkbox 
-//   color="error"
-//   label="" 
-// />`.trim(),
-//       },
-//     },
-//   },
-// };
-
-// export const PrimaryWithLabel: Story = {
-//     render: (args) => <InteractiveTemplate {...args} label="Standard 樣式" />,
-// };
 
 export const WithLabel: Story = {
   render: (args) => <InteractiveTemplate {...args} label="Standard 樣式" />,
@@ -122,50 +91,40 @@ export const WithLabel: Story = {
     docs: {
       source: {
         code: `
-<Checkbox 
-  color="primary" 
-  label="Standard 樣式"
-/>`.trim(),
+<Checkbox label="Standard 樣式"/>`.trim(),
       },
     },
   },
 };
 
-// export const ErrorWithLabel: Story = {
-//     render: (args) => <InteractiveTemplate {...args} color="error" label="Error 樣式" />,
-// };
-
-// export const ErrorWithLabel: Story = {
-//   render: (args) => <InteractiveTemplate {...args} color="error" label="Error 樣式" />,
-//   parameters: {
-//     docs: {
-//       source: {
-//         code: `
-// <Checkbox 
-//   color="primary" 
-//   label="Error 樣式"
-// />`.trim(),
-//       },
-//     },
-//   },
-// };
-
 // 非受控元件 Story
 export const Uncontrolled: Story = {
   render: (args) => <Checkbox {...args} defaultChecked={false} />,
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Checkbox defaultChecked={false}/>`.trim(),
+      },
+    },
+  },
 };
-
-// export const UncontrolledError: Story = {
-//   render: (args) => <Checkbox {...args} color="error" defaultChecked={false} />,
-// };
 
 export const UncontrolledWithLabel: Story = {
   render: (args) => <Checkbox {...args} defaultChecked={false} label="非受控模式 - Standard 樣式" />,
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Checkbox 
+  defaultChecked={false}
+  label="非受控模式 - Standard 樣式"
+/>
+  `.trim(),
+      },
+    },
+  },
 };
-
-// export const UncontrolledErrorWithLabel: Story = {
-//   render: (args) => <Checkbox {...args} color="error" defaultChecked={false} label="非受控模式 - Error 樣式" />,
-// };
 
 // indeterminate
 export const Indeterminate: Story = {
@@ -213,23 +172,43 @@ export const IndeterminateGroup: Story = {
     docs: {
       source: {
         code: `
-<Checkbox
-  checked={allChecked}
-  indeterminate={indeterminate}
-  onChange={e => setChecked([e.target.checked, e.target.checked])}
-  label="父層"
-/>
-<Checkbox
-  checked={checked[0]}
-  onChange={e => setChecked([e.target.checked, checked[1]])}
-  label="子項目1"
-/>
-<Checkbox
-  checked={checked[1]}
-  onChange={e => setChecked([checked[0], e.target.checked])}
-  label="子項目2"
-/>
-                `.trim(),
+<ul>
+  <li>
+    <FormControlLabel
+      label="全選"
+      control={
+        <Checkbox
+          checked={allChecked}
+          indeterminate={indeterminate}
+          onChange={handleParentChange}
+        />
+      }
+    />
+  </li>
+  <li>
+    <FormControlLabel
+      label="子項目1"
+      control={
+        <Checkbox
+          checked={checked[0]}
+          onChange={handleChildChange(0)}
+        />
+      }
+    />
+  </li>
+  <li>
+    <FormControlLabel
+      label="子項目2"
+      control={
+        <Checkbox
+          checked={checked[1]}
+          onChange={handleChildChange(1)}
+        />
+      }
+    />
+  </li>
+</ul>
+`.trim(),
       },
     },
   },
