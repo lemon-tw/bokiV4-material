@@ -27130,6 +27130,7 @@ const Wh = (o, d = "#000000") => {
       }
     },
     "& .MuiSwitch-track": {
+      boxSizing: "border-box",
       borderRadius: 100,
       backgroundColor: T.unselectbgColor,
       border: `2px solid ${T.unselectColor}`,
@@ -27202,13 +27203,14 @@ const Wh = (o, d = "#000000") => {
 }), Dp = ({
   selectedIcon: o,
   unselectedIcon: d,
-  ...f
+  size: f,
+  ...b
 }) => /* @__PURE__ */ ct(
   xp,
   {
     selectedIcon: o,
     unselectedIcon: d,
-    ...f
+    ...b
   }
 );
 export {

@@ -6,7 +6,7 @@ import Done from "@mui/icons-material/Done";
 import Close from "@mui/icons-material/Close";
 
 const meta: Meta<typeof Switch> = {
-  title: "components/Switch",
+  title: "components/Switch/Switch",
   component: Switch,
   parameters: {
     layout: "centered",
@@ -36,11 +36,27 @@ type Story = StoryObj<typeof Switch>;
 export const NormalSwitch: Story = {
   args: {
     disabled: false,
-    size: "medium",
+    size: "large",
+    color: "error",
   },
 };
 
 export const IconSwitch: Story = {
+  args: {
+    disabled: false,
+    selectedIcon: <Done />,
+    unselectedIcon: <Close />,
+    size: "small",
+  },
+};
+
+export const DoubleIconSwitch: Story = {
+  render: (args) => (
+    <div style={{ display: "flex", gap: "2rem" }}>
+      <Switch {...args} />
+      <Switch {...args} />
+    </div>
+  ),
   args: {
     disabled: false,
     selectedIcon: <Done />,

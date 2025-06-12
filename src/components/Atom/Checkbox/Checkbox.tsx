@@ -12,6 +12,7 @@ import {
   palette as defaultPalette,
 } from "../../../themes/defaultPalette";
 import { CustomCheckboxProps } from "../../../types/checkboxExtends";
+import { Opacity } from "@mui/icons-material";
 
 type CustomPaletteColor = PaletteColor & {
   custMain?: string;
@@ -36,6 +37,10 @@ const getCheckboxStyles = (theme: Theme, color: CustomColor = "primary") => {
     },
     // hover 狀態
     "&:hover": {
+      // backgroundColor: alpha(colorSet.custMain ?? fallback.custMain, 0.08),
+      backgroundColor: "#000000",
+    },
+    "&.Mui-checked:hover": {
       backgroundColor: alpha(colorSet.custMain ?? fallback.custMain, 0.08),
     },
     "&.Mui-disabled": {
@@ -43,7 +48,7 @@ const getCheckboxStyles = (theme: Theme, color: CustomColor = "primary") => {
     },
     // focus 狀態
     "&.Mui-focusVisible": {
-      outline: `2px solid ${colorSet.custMain ?? fallback.custMain, 0.08}`,
+      outline: `2px solid ${(colorSet.custMain ?? fallback.custMain, 0.08)}`,
       outlineOffset: 2,
     },
   };
@@ -61,12 +66,7 @@ export const Checkbox: React.FC<CustomCheckboxProps> = ({
   label,
   ...rest
 }) => {
-  const checkboxElement = (
-    <StyledCheckbox
-      color={color}
-      {...rest}
-    />
-  );
+  const checkboxElement = <StyledCheckbox color={color} {...rest} />;
 
   return label ? (
     <FormControlLabel control={checkboxElement} label={label || undefined} />

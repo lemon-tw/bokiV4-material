@@ -6,7 +6,6 @@ import {
 } from "../../../themes/defaultPalette";
 import { CustomSwitchProps } from "../../../types/switchExtends";
 import { renderToStaticMarkup } from "react-dom/server";
-import { Margin } from "@mui/icons-material";
 
 const jsxToBackgroundImage = (
   icon?: React.ReactElement,
@@ -60,18 +59,21 @@ const SIZE = {
   large: { w: 80, h: 50 },
 } as const;
 
-type SizeKey = keyof typeof SIZE;
-
 const StyleSwitch = styled(MuiSwitch)<{
   selectedIcon?: CustomSwitchProps["selectedIcon"];
   unselectedIcon?: CustomSwitchProps["unselectedIcon"];
-  size?: SizeKey;
-}>(({ theme, selectedIcon, unselectedIcon, size = "medium" }) => {
+  custsize?: CustomSwitchProps["size"];
+}>(({ theme, selectedIcon, unselectedIcon, custsize: size = "medium" }) => {
   const styleConfig = getSwitchStyles(theme);
 
   const selectedIconBg = jsxToBackgroundImage(
     selectedIcon,
     styleConfig.bgColor
+  );
+  const disableSelectedIconBg = jsxToBackgroundImage(
+    selectedIcon,
+    alpha(disableColor[0], 0.12)
+    // "000000"
   );
   const unselectedIconBg = jsxToBackgroundImage(
     unselectedIcon,
@@ -109,6 +111,7 @@ const StyleSwitch = styled(MuiSwitch)<{
       },
     },
     "& .MuiSwitch-track": {
+      boxSizing: "border-box",
       borderRadius: 100,
       backgroundColor: styleConfig.unselectbgColor,
       border: `2px solid ${styleConfig.unselectColor}`,
@@ -162,9 +165,15 @@ const StyleSwitch = styled(MuiSwitch)<{
           opacity: 1,
           border: 0,
         },
-        "&.Mui-disabled + .MuiSwitch-track": {
-          backgroundColor: disableColor[0],
-          opacity: 0.12,
+        "&.Mui-disabled": {
+          "+ .MuiSwitch-track": {
+            backgroundColor: disableColor[0],
+            opacity: 0.12,
+          },
+          "& .MuiSwitch-thumb:before": {
+            transitionDuration: "300ms",
+            backgroundImage: disableSelectedIconBg,
+          },
         },
         "&.Mui-focusVisible .MuiSwitch-thumb, &:hover .MuiSwitch-thumb": {
           color: styleConfig.actthumbColor,
@@ -183,12 +192,14 @@ const StyleSwitch = styled(MuiSwitch)<{
 export const Switch = ({
   selectedIcon,
   unselectedIcon,
+  size,
   ...props
 }: CustomSwitchProps) => {
   return (
     <StyleSwitch
       selectedIcon={selectedIcon}
       unselectedIcon={unselectedIcon}
+      custsize={size}
       {...props}
     />
   );
