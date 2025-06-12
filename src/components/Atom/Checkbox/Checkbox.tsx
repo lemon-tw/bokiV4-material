@@ -12,13 +12,14 @@ import {
   palette as defaultPalette,
 } from "../../../themes/defaultPalette";
 import { CustomCheckboxProps } from "../../../types/checkboxExtends";
-import { Opacity } from "@mui/icons-material";
+// import { Opacity } from "@mui/icons-material";
 
 type CustomPaletteColor = PaletteColor & {
   custMain?: string;
   tonal?: string;
   onTonal?: string;
   myDefault?: string;
+  defaultHover?: string;
 };
 
 // 依 color 取得 palette
@@ -31,20 +32,22 @@ const getCheckboxStyles = (theme: Theme, color: CustomColor = "primary") => {
     "&": {
       color: colorSet?.myDefault ?? fallback.myDefault, // 這裡設定初始顏色
     },
+    // hover 狀態
+    "&:hover": {
+      color: colorSet.defaultHover ?? fallback.custMain,
+      backgroundColor: alpha(colorSet.myDefault ?? fallback.custMain, 0.08),
+    },
     // 勾選與 indeterminate 狀態
     "&.Mui-checked, &.MuiCheckbox-indeterminate": {
       color: colorSet.custMain ?? fallback.custMain,
     },
-    // hover 狀態
-    "&:hover": {
-      // backgroundColor: alpha(colorSet.custMain ?? fallback.custMain, 0.08),
-      backgroundColor: "#000000",
-    },
+    // 勾選＋hover 狀態
     "&.Mui-checked:hover": {
+      color: colorSet.custMain ?? fallback.custMain, // 維持勾選色
       backgroundColor: alpha(colorSet.custMain ?? fallback.custMain, 0.08),
     },
     "&.Mui-disabled": {
-      color: alpha(disableColor[0], 0.38),
+      Opacity: alpha(disableColor[0], 0.38),
     },
     // focus 狀態
     "&.Mui-focusVisible": {

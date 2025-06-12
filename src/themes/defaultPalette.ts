@@ -18,7 +18,8 @@ export const palette = {
 
     fabBg: "#D1EAFE",
     fabFont: "#1994FC",
-    myDefault: "#7a7d80"
+    myDefault: "#7a7d80",
+    defaultHover: "#373737"
   },
   surface: {
     custMain: "#1994FC",
@@ -36,7 +37,8 @@ export const palette = {
 
     fabBg: "#F5F5F6",
     fabFont: "#1994FC",
-    myDefault: "1994FC"
+    myDefault: "1994FC",
+    defaultHover: "1994FC"
   },
   secondary: {
     main: "#1994FC",
@@ -55,7 +57,8 @@ export const palette = {
 
     fabBg: "#DBE9FF",
     fabFont: "#2D66BF",
-    myDefault: "#2D66BF"
+    myDefault: "#2D66BF",
+    defaultHover: "#2D66BF"
   },
   tertiary: {
     custMain: "#1994FC",
@@ -74,6 +77,7 @@ export const palette = {
     fabBg: "#BDDEDF",
     fabFont: "#0E3A3B",
     myDefault: "#0E3A3B",
+    defaultHover: "#0E3A3B",
   },
   // 
   error: {
@@ -93,7 +97,8 @@ export const palette = {
 
     fabBg: "#F5F5F6",
     fabFont: "#FF4D4F",
-    myDefault: "#FF4D4F"
+    myDefault: "#FF4D4F",
+    defaultHover: "#FF4D4F"
   }
 };
 export const dark = {
@@ -115,6 +120,7 @@ export const dark = {
     fabBg: "#D1EAFE",
     fabFont: "#1994FC",
     myDefault: "#1994FC",
+    defaultHover: "#1994FC",
   },
   surface: {
     custMain: "#1994FC",
@@ -133,6 +139,7 @@ export const dark = {
     fabBg: "#F5F5F6",
     fabFont: "#1994FC",
     myDefault: "#1994FC",
+    defaultHover: "#1994FC",
   },
   secondary: {
     main: "#1994FC",
@@ -152,6 +159,7 @@ export const dark = {
     fabBg: "#DBE9FF",
     fabFont: "#2D66BF",
     myDefault: "#2D66BF",
+    defaultHover: "#2D66BF",
   },
   tertiary: {
     custMain: "#1994FC",
@@ -170,6 +178,7 @@ export const dark = {
     fabBg: "#BDDEDF",
     fabFont: "#0E3A3B",
     myDefault: "#0E3A3B",
+    defaultHover: "#0E3A3B",
   },
 };
 //| key            | 使用情境與元件

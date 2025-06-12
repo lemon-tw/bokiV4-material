@@ -51,11 +51,27 @@ export const Standard: Story = {
         docs: {
             source: {
                 code: `
-<RadioButton 
-  color="primary" 
-  label="" 
-/>`.trim(),
+<FormControl>
+  <FormLabel id="demo-radio-buttons-group-label">性別選擇</FormLabel>
+  <RadioGroup
+    aria-labelledby="demo-radio-buttons-group-label"
+    name="radio-buttons-group"
+  >
+    <FormControlLabel value="female" control={<RadioButton />} label="男性" />
+    <FormControlLabel value="male" control={<RadioButton />} label="女性" />
+    <FormControlLabel value="other" control={<RadioButton />} label="其他" />
+  </RadioGroup>
+</FormControl>
+`.trim(),
             },
         },
     },
 };
+
+
+{/* <FormControlLabel
+    value="disabled"
+    disabled
+    control={<Radio />}
+    label="不便透露"
+/> */}
