@@ -24,7 +24,6 @@
 //   args: {},
 // };
 
-
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "../../components/Atom/Checkbox/Checkbox";
@@ -32,7 +31,7 @@ import { CustomCheckboxProps } from "../../types/checkboxExtends"
 import { fn } from "@storybook/test";
 
 const meta: Meta<typeof Checkbox> = {
-  title: "Atoms/Checkbox/Checkbox",
+  title: "Components/Checkbox/Checkbox",
   component: Checkbox,
   parameters: {
     layout: "centered",
@@ -80,7 +79,7 @@ const InteractiveTemplate = (args: CustomCheckboxProps) => {
 // };
 
 // 補上 parameters 調整storyBook呈現的程式碼範例
-export const Primary: Story = {
+export const Standard: Story = {
   render: (args) => <InteractiveTemplate {...args} />,
   parameters: {
     docs: {
@@ -98,26 +97,26 @@ export const Primary: Story = {
 // export const Error: Story = {
 //     render: (args) => <InteractiveTemplate {...args} color="error" />,
 // };
-export const Error: Story = {
-  render: (args) => <InteractiveTemplate {...args} color="error" />,
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Checkbox 
-  color="error"
-  label="" 
-/>`.trim(),
-      },
-    },
-  },
-};
+// export const Error: Story = {
+//   render: (args) => <InteractiveTemplate {...args} color="error" />,
+//   parameters: {
+//     docs: {
+//       source: {
+//         code: `
+// <Checkbox 
+//   color="error"
+//   label="" 
+// />`.trim(),
+//       },
+//     },
+//   },
+// };
 
 // export const PrimaryWithLabel: Story = {
 //     render: (args) => <InteractiveTemplate {...args} label="Standard 樣式" />,
 // };
 
-export const PrimaryWithLabel: Story = {
+export const WithLabel: Story = {
   render: (args) => <InteractiveTemplate {...args} label="Standard 樣式" />,
   parameters: {
     docs: {
@@ -136,36 +135,37 @@ export const PrimaryWithLabel: Story = {
 //     render: (args) => <InteractiveTemplate {...args} color="error" label="Error 樣式" />,
 // };
 
-export const ErrorWithLabel: Story = {
-  render: (args) => <InteractiveTemplate {...args} color="error" label="Error 樣式" />,
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Checkbox 
-  color="primary" 
-  label="Error 樣式"
-/>`.trim(),
-      },
-    },
-  },
-};
+// export const ErrorWithLabel: Story = {
+//   render: (args) => <InteractiveTemplate {...args} color="error" label="Error 樣式" />,
+//   parameters: {
+//     docs: {
+//       source: {
+//         code: `
+// <Checkbox 
+//   color="primary" 
+//   label="Error 樣式"
+// />`.trim(),
+//       },
+//     },
+//   },
+// };
 
 // 非受控元件 Story
-export const UncontrolledPrimary: Story = {
+export const Uncontrolled: Story = {
   render: (args) => <Checkbox {...args} defaultChecked={false} />,
 };
 
-export const UncontrolledError: Story = {
-  render: (args) => <Checkbox {...args} color="error" defaultChecked={false} />,
-};
-export const UncontrolledPrimaryWithLabel: Story = {
+// export const UncontrolledError: Story = {
+//   render: (args) => <Checkbox {...args} color="error" defaultChecked={false} />,
+// };
+
+export const UncontrolledWithLabel: Story = {
   render: (args) => <Checkbox {...args} defaultChecked={false} label="非受控模式 - Standard 樣式" />,
 };
 
-export const UncontrolledErrorWithLabel: Story = {
-  render: (args) => <Checkbox {...args} color="error" defaultChecked={false} label="非受控模式 - Error 樣式" />,
-};
+// export const UncontrolledErrorWithLabel: Story = {
+//   render: (args) => <Checkbox {...args} color="error" defaultChecked={false} label="非受控模式 - Error 樣式" />,
+// };
 
 // indeterminate
 export const Indeterminate: Story = {
