@@ -109,6 +109,7 @@ const StyleSwitch = styled(MuiSwitch)<{
       },
     },
     "& .MuiSwitch-track": {
+      boxSizing: "border-box",
       borderRadius: 100,
       backgroundColor: styleConfig.unselectbgColor,
       border: `2px solid ${styleConfig.unselectColor}`,
@@ -183,6 +184,7 @@ const StyleSwitch = styled(MuiSwitch)<{
 export const Switch = ({
   selectedIcon,
   unselectedIcon,
+  size,
   ...props
 }: CustomSwitchProps) => {
   return (

@@ -36,7 +36,8 @@ type Story = StoryObj<typeof Switch>;
 export const NormalSwitch: Story = {
   args: {
     disabled: false,
-    size: "medium",
+    size: "large",
+    color: "error",
   },
 };
 
