@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Fab } from '../../component/Atom/Button/FAB';
+import { Fab } from '../../components/Atom/Button/FAB';
 declare const meta: Meta<typeof Fab>;
 export default meta;
 type Story = StoryObj<typeof Fab>;
