@@ -9,4 +9,4 @@ export declare const getSwitchStyles: (theme: Theme, color?: keyof typeof defaul
     unselectColor: any;
     unselectthumbColor: any;
 };
-export declare const Switch: ({ selectedIcon, unselectedIcon, ...props }: CustomSwitchProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Switch: ({ selectedIcon, unselectedIcon, size, ...props }: CustomSwitchProps) => import("react/jsx-runtime").JSX.Element;
