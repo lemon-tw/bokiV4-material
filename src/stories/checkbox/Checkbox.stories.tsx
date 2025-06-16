@@ -72,6 +72,7 @@ const InteractiveTemplate = (args: CustomCheckboxProps) => {
 };
 
 // 受控元件 Story
+
 // 補上 parameters 調整storyBook呈現的程式碼範例
 export const Standard: Story = {
   render: (args) => <InteractiveTemplate {...args} />,
@@ -133,83 +134,83 @@ export const Indeterminate: Story = {
 
 
 // indeterminate Template
-const IndeterminateGroupTemplate = () => {
-  const [checked, setChecked] = React.useState([true, false]);
-  const allChecked = checked.every(Boolean);
-  const someChecked = checked.some(Boolean);
-  const indeterminate = someChecked && !allChecked;
+// const IndeterminateGroupTemplate = () => {
+//   const [checked, setChecked] = React.useState([true, false]);
+//   const allChecked = checked.every(Boolean);
+//   const someChecked = checked.some(Boolean);
+//   const indeterminate = someChecked && !allChecked;
 
-  return (
-    <ul>
-      <Checkbox
-        checked={allChecked}
-        indeterminate={indeterminate}
-        onChange={e => setChecked([e.target.checked, e.target.checked])}
-        label="父層"
-      />
-      <li style={{ marginLeft: "48px" }}>
-        <Checkbox
-          checked={checked[0]}
-          onChange={e => setChecked([e.target.checked, checked[1]])}
-          label="子項目1"
-        />
-      </li>
-      <li style={{ marginLeft: "48px" }}>
-        <Checkbox
-          checked={checked[1]}
-          onChange={e => setChecked([checked[0], e.target.checked])}
-          label="子項目2"
-        />
-      </li>
-    </ul>
-  );
-};
+//   return (
+//     <ul>
+//       <Checkbox
+//         checked={allChecked}
+//         indeterminate={indeterminate}
+//         onChange={e => setChecked([e.target.checked, e.target.checked])}
+//         label="父層"
+//       />
+//       <li style={{ marginLeft: "48px" }}>
+//         <Checkbox
+//           checked={checked[0]}
+//           onChange={e => setChecked([e.target.checked, checked[1]])}
+//           label="子項目1"
+//         />
+//       </li>
+//       <li style={{ marginLeft: "48px" }}>
+//         <Checkbox
+//           checked={checked[1]}
+//           onChange={e => setChecked([checked[0], e.target.checked])}
+//           label="子項目2"
+//         />
+//       </li>
+//     </ul>
+//   );
+// };
 
-// indeterminate story
-export const IndeterminateGroup: Story = {
-  render: () => <IndeterminateGroupTemplate />,
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<ul>
-  <li>
-    <FormControlLabel
-      label="全選"
-      control={
-        <Checkbox
-          checked={allChecked}
-          indeterminate={indeterminate}
-          onChange={handleParentChange}
-        />
-      }
-    />
-  </li>
-  <li>
-    <FormControlLabel
-      label="子項目1"
-      control={
-        <Checkbox
-          checked={checked[0]}
-          onChange={handleChildChange(0)}
-        />
-      }
-    />
-  </li>
-  <li>
-    <FormControlLabel
-      label="子項目2"
-      control={
-        <Checkbox
-          checked={checked[1]}
-          onChange={handleChildChange(1)}
-        />
-      }
-    />
-  </li>
-</ul>
-`.trim(),
-      },
-    },
-  },
-};
+// // indeterminate story
+// export const IndeterminateGroup: Story = {
+//   render: () => <IndeterminateGroupTemplate />,
+//   parameters: {
+//     docs: {
+//       source: {
+//         code: `
+// <ul>
+//   <li>
+//     <FormControlLabel
+//       label="全選"
+//       control={
+//         <Checkbox
+//           checked={allChecked}
+//           indeterminate={indeterminate}
+//           onChange={handleParentChange}
+//         />
+//       }
+//     />
+//   </li>
+//   <li>
+//     <FormControlLabel
+//       label="子項目1"
+//       control={
+//         <Checkbox
+//           checked={checked[0]}
+//           onChange={handleChildChange(0)}
+//         />
+//       }
+//     />
+//   </li>
+//   <li>
+//     <FormControlLabel
+//       label="子項目2"
+//       control={
+//         <Checkbox
+//           checked={checked[1]}
+//           onChange={handleChildChange(1)}
+//         />
+//       }
+//     />
+//   </li>
+// </ul>
+// `.trim(),
+//       },
+//     },
+//   },
+// };
