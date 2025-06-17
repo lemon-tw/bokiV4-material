@@ -1,4 +1,5 @@
 import MuiAvatar from "@mui/material/Avatar";
+import { useState, useEffect } from "react";
 import { CustomAvatarProps, AvatarSize } from "../../../types/avartarExtends";
 import defaults from "./default.png";
 import male from "./male.png";
@@ -22,9 +23,15 @@ export const Avatar = ({
   const fallbackSrc =
     types === "male" ? male : types === "female" ? female : defaults;
 
-  const shouldUseFallback = !src && !children; // 沒圖片也沒 children → 顯示 fallback 頭像圖
+  const [imgSrc, setImgSrc] = useState(src || null);
 
-  const finalSrc = src || (shouldUseFallback ? fallbackSrc : undefined);
+  // 🔄 同步外部傳入的 src
+  useEffect(() => {
+    setImgSrc(src || null);
+  }, [src]);
+
+  const shouldUseFallback = !imgSrc && !children;
+  const finalSrc = imgSrc || (shouldUseFallback ? fallbackSrc : undefined);
 
   return (
     <MuiAvatar
@@ -37,14 +44,14 @@ export const Avatar = ({
       }}
       slotProps={{
         img: {
-          onError: (e) => {
-            e.currentTarget.src = fallbackSrc;
+          onError: () => {
+            setImgSrc(fallbackSrc);
           },
         },
       }}
       {...rest}
     >
-      {!src && children}
+      {!imgSrc && children}
     </MuiAvatar>
   );
 };

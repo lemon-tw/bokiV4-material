@@ -69,9 +69,28 @@ export const IconAvarta: Story = {
   },
 };
 export const groupAvarta: Story = {
+  parameters: {
+    docs: {
+      source: {
+        code: `
+    import AvatarGroup from "@mui/material/AvatarGroup";
+  import Done from "@mui/icons-material/Done";
+    <AvatarGroup max={4} total={8}>
+      <Avatar>
+        <Done />
+      </Avatar>
+      <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWYnJOJepQloOKVPCIrRhgV9R7218hwCEUKg&s" />
+      <Avatar src="https://media.nownews.com/nn_media/thumbnail/2020/07/1593842222912-3d70e1f25d65456999edbdd84b0ca8c0-360x640.jpeg?unShow=false" />
+      <Avatar src="https://static.popdaily.com.tw/u/202409/fd4138c3-7bc4-483e-b54d-06d493792db6.png" />
+    </AvatarGroup>`.trim(),
+      },
+    },
+  },
   render: (args) => (
-    <AvatarGroup max={4} total={24}>
-      <Avatar src="https://static.popdaily.com.tw/u/202409/0c2abc41-3d55-47d5-9727-2916bf7b2aaa.png" />
+    <AvatarGroup max={4} total={8}>
+      <Avatar>
+        <Done />
+      </Avatar>
       <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWYnJOJepQloOKVPCIrRhgV9R7218hwCEUKg&s" />
       <Avatar src="https://media.nownews.com/nn_media/thumbnail/2020/07/1593842222912-3d70e1f25d65456999edbdd84b0ca8c0-360x640.jpeg?unShow=false" />
       <Avatar src="https://static.popdaily.com.tw/u/202409/fd4138c3-7bc4-483e-b54d-06d493792db6.png" />
