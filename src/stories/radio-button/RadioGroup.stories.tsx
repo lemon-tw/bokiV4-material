@@ -51,17 +51,19 @@ export const Standard: Story = {
         docs: {
             source: {
                 code: `
-<FormControl>
-  <FormLabel id="demo-radio-buttons-group-label">性別選擇</FormLabel>
-  <RadioGroup
-    aria-labelledby="demo-radio-buttons-group-label"
-    name="radio-buttons-group"
-  >
-    <FormControlLabel value="female" control={<RadioButton />} label="男性" />
-    <FormControlLabel value="male" control={<RadioButton />} label="女性" />
-    <FormControlLabel value="other" control={<RadioButton />} label="其他" />
-  </RadioGroup>
-</FormControl>
+const data=[
+  { label: '男性', value: 'male' },
+  { label: '女性', value: 'female' },
+  { label: '其他', value: 'other' },
+]
+
+<RadioGroup
+  label="性別選擇"
+  options={data}
+  value={value}
+  onChange={handleChange}
+/>
+
 `.trim(),
             },
         },

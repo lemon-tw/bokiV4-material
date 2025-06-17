@@ -56,8 +56,8 @@ export const palette = {
     neutral: "#34393D",
 
     fabBg: "#DBE9FF",
-    fabFont: "#2D66BF",
-    myDefault: "#2D66BF",
+    fabFont: "#373737",
+    myDefault: "#7A7D80",
     defaultHover: "#2D66BF"
   },
   tertiary: {
