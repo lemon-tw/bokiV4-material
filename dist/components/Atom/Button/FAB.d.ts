@@ -1,6 +1,6 @@
-import { CustomFabProps } from '../../../types/buttonExtends';
-import { Theme } from '@mui/material/styles';
-import { palette as defaultPalette } from '../../../themes/defaultPalette';
+import type { CustomFabProps } from "../../../types/buttonExtends";
+import type { Theme } from "@mui/material/styles";
+import { palette as defaultPalette } from "../../../themes/defaultPalette";
 export declare const getFabStyles: (theme: Theme, color?: keyof typeof defaultPalette) => {
     bgColor: any;
     fontColor: any;

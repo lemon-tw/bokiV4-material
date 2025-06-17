@@ -116,7 +116,7 @@ const StyledButton = styled(MuiButton)<{
       width: "100%",
       height: "100%",
       backgroundColor: styleConfig.overlay, // 半透明白色遮罩
-      borderRadius: 6,
+      borderRadius: 4,
       opacity: 0,
       transition: "opacity 0.3s",
       pointerEvents: "none", // 確保不影響互動

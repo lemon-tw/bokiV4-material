@@ -1,0 +1,10 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { RadioButton } from '../../components/Atom/RadioButton/RadioButton';
+declare const meta: Meta<typeof RadioButton>;
+export default meta;
+type Story = StoryObj<typeof RadioButton>;
+export declare const Standard: Story;
+export declare const WithLabel: Story;
+export declare const Uncontrolled: Story;
+export declare const UncontrolledWithLabel: Story;
+export declare const Disabled: Story;
