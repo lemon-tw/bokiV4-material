@@ -3,11 +3,9 @@ import Checkbox from "./Checkbox"; // 你的自定義 Checkbox 元件
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { CheckboxGroupProps } from "../../../types/checkboxExtends";
 
-
-
 export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
     labels,
-    parentLabel = "全選",
+    parentLabel = "全選"
 }) => {
     // 用陣列管理子項目勾選狀態
     const [checked, setChecked] = React.useState<boolean[]>(
@@ -32,34 +30,31 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
     };
 
     return (
-        <ul style={{ listStyle: "none" }}>
-            <li>
+        <>
+            <FormControlLabel
+                label={parentLabel}
+                control={
+                    <Checkbox
+                        checked={allChecked}
+                        indeterminate={indeterminate}
+                        onChange={handleParentChange}
+                    />
+                }
+            />
+            {labels.map((label, idx) => (
                 <FormControlLabel
-                    label={parentLabel}
+                    key={label}
+                    label={label}
                     control={
                         <Checkbox
-                            checked={allChecked}
-                            indeterminate={indeterminate}
-                            onChange={handleParentChange}
+                            style={{ marginLeft: "48px" }}
+                            checked={checked[idx]}
+                            onChange={handleChildChange(idx)}
                         />
                     }
                 />
-            </li>
-            {labels.map((label, idx) => (
-                <li key={label}>
-                    <FormControlLabel
-                        label={label}
-                        control={
-                            <Checkbox
-                                style={{ marginLeft: "48px" }}
-                                checked={checked[idx]}
-                                onChange={handleChildChange(idx)}
-                            />
-                        }
-                    />
-                </li>
             ))}
-        </ul>
+        </>
     );
 };
 

@@ -29,64 +29,54 @@ export const Standard: Story = {
         docs: {
             source: {
                 code: `
-const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
-    labels,
-    parentLabel = "全選",
-}) => {
-    // 用陣列管理子項目勾選狀態
-    const [checked, setChecked] = React.useState<boolean[]>(
+const CheckboxGroup = ({ labels, parentLabel = "全選" }) => {
+    const [checked, setChecked] = React.useState(
         Array(labels.length).fill(false)
     );
-
-    // 父層狀態計算
     const allChecked = checked.every(Boolean);
     const someChecked = checked.some(Boolean);
     const indeterminate = someChecked && !allChecked;
-
-    // 父層切換
-    const handleParentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleParentChange = (e) => {
         setChecked(Array(labels.length).fill(e.target.checked));
     };
-
-    // 子層切換
-    const handleChildChange = (idx: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChildChange = (idx) => (e) => {
         const newChecked = [...checked];
         newChecked[idx] = e.target.checked;
         setChecked(newChecked);
     };
 
+    const parentLabel = "父層",
+    const labels = ["子項目1", "子項目2"],
+
     return (
-        <ul style={{ listStyle: "none" }}>
-            <li>
+        <>
+            <FormControlLabel
+                label={parentLabel}
+                control={
+                    <Checkbox
+                        checked={allChecked}
+                        indeterminate={indeterminate}
+                        onChange={handleParentChange}
+                    />
+                }
+            />
+            {labels.map((label, idx) => (
                 <FormControlLabel
-                    label={parentLabel}
+                    key={label}
+                    label={label}
                     control={
                         <Checkbox
-                            checked={allChecked}
-                            indeterminate={indeterminate}
-                            onChange={handleParentChange}
+                            style={{ marginLeft: "48px" }}
+                            checked={checked[idx]}
+                            onChange={handleChildChange(idx)}
                         />
                     }
                 />
-            </li>
-            {labels.map((label, idx) => (
-                <li key={label}>
-                    <FormControlLabel
-                        label={label}
-                        control={
-                            <Checkbox
-                                style={{ marginLeft: "48px" }}
-                                checked={checked[idx]}
-                                onChange={handleChildChange(idx)}
-                            />
-                        }
-                    />
-                </li>
             ))}
-        </ul>
+        </>
     );
 };
-`.trim(),
+                `.trim(),
             },
         },
     },
