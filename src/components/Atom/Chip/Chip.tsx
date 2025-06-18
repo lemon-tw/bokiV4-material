@@ -1,16 +1,8 @@
-import { styled, Theme, alpha } from "@mui/material/styles";
+import { styled, Theme } from "@mui/material/styles";
 import MuiChip from "@mui/material/Chip";
-import {
-  palette as defaultPalette,
-  disableColor,
-} from "../../../themes/defaultPalette";
+import { palette as defaultPalette } from "../../../themes/defaultPalette";
 import { CustomChipProps } from "../../../types/chipsExtends";
 import ClearIcon from "@mui/icons-material/Clear";
-
-interface StyledProps {
-  theme: Theme;
-  ownerState: CustomChipProps; // 👈 補上這行才不會報錯
-}
 
 export const getChipStyles = (
   theme: Theme,
@@ -45,7 +37,7 @@ const StyledChip = styled(MuiChip, {
     ".MuiChip-icon": {
       color: styleConfig.iconColor,
     },
-    "&.MuiChip-clickable:hover": {
+    "&.MuiChip-clickable:hover, &.MuiChip-clickable:focus": {
       backgroundColor: selected ? styleConfig.selectedbgColor : "transparent",
     },
     "&::before": {
@@ -65,6 +57,9 @@ const StyledChip = styled(MuiChip, {
     },
     "&:hover::before": {
       opacity: 0.08,
+    },
+    "&.Mui-focusVisible::before": {
+      opacity: 0.12,
     },
     "&.MuiChip-clickable:active": {
       boxShadow: "0px 1px 3px 0px #0000004D, 0px 4px 8px 3px #00000026", // ⬅ 你可以自訂這邊的陰影效果

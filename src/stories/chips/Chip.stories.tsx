@@ -24,7 +24,7 @@ const meta: Meta<typeof Chip> = {
     },
   },
   args: {
-    onClick: fn(),
+    // onClick: fn(),
   },
 };
 
@@ -43,7 +43,7 @@ type Story = StoryObj<typeof Chip>;
 export const Label: Story = {
   args: {
     label: "Label",
-    selected: true,
+    // selected: true,
   },
 };
 export const IconAndDelete: Story = {

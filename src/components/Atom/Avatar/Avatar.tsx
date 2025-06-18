@@ -1,6 +1,6 @@
 import MuiAvatar from "@mui/material/Avatar";
 import { useState, useEffect } from "react";
-import { CustomAvatarProps, AvatarSize } from "../../../types/avartarExtends";
+import { CustomAvatarProps, AvatarSize } from "../../../types/avatarExtends";
 import defaults from "./default.png";
 import male from "./male.png";
 import female from "./female.png";

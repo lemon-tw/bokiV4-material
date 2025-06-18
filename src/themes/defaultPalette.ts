@@ -18,7 +18,9 @@ export const palette = {
 
     fabBg: "#D1EAFE",
     fabFont: "#1994FC",
-    myDefault: "#7a7d80"
+    myDefault: "#7a7d80",
+
+    menuFont: "#373737",
   },
   surface: {
     custMain: "#1994FC",
@@ -36,7 +38,9 @@ export const palette = {
 
     fabBg: "#F5F5F6",
     fabFont: "#1994FC",
-    myDefault: "1994FC"
+    myDefault: "1994FC",
+
+    menuFont: "#373737",
   },
   secondary: {
     main: "#1994FC",
@@ -55,7 +59,9 @@ export const palette = {
 
     fabBg: "#DBE9FF",
     fabFont: "#2D66BF",
-    myDefault: "#2D66BF"
+    myDefault: "#2D66BF",
+
+    menuFont: "#373737",
   },
   tertiary: {
     custMain: "#1994FC",
@@ -74,8 +80,10 @@ export const palette = {
     fabBg: "#BDDEDF",
     fabFont: "#0E3A3B",
     myDefault: "#0E3A3B",
+
+    menuFont: "#373737",
   },
-  // 
+  //
   error: {
     main: "#FF4D4F",
     custMain: "#FF4D4F",
@@ -93,8 +101,10 @@ export const palette = {
 
     fabBg: "#F5F5F6",
     fabFont: "#FF4D4F",
-    myDefault: "#FF4D4F"
-  }
+    myDefault: "#FF4D4F",
+
+    menuFont: "#373737",
+  },
 };
 export const dark = {
   primary: {
@@ -115,6 +125,8 @@ export const dark = {
     fabBg: "#D1EAFE",
     fabFont: "#1994FC",
     myDefault: "#1994FC",
+
+    menuFont: "#373737",
   },
   surface: {
     custMain: "#1994FC",
@@ -133,6 +145,8 @@ export const dark = {
     fabBg: "#F5F5F6",
     fabFont: "#1994FC",
     myDefault: "#1994FC",
+
+    menuFont: "#373737",
   },
   secondary: {
     main: "#1994FC",
@@ -152,6 +166,8 @@ export const dark = {
     fabBg: "#DBE9FF",
     fabFont: "#2D66BF",
     myDefault: "#2D66BF",
+
+    menuFont: "#373737",
   },
   tertiary: {
     custMain: "#1994FC",
@@ -170,6 +186,8 @@ export const dark = {
     fabBg: "#BDDEDF",
     fabFont: "#0E3A3B",
     myDefault: "#0E3A3B",
+
+    menuFont: "#373737",
   },
 };
 //| key            | 使用情境與元件
