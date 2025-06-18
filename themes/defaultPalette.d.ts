@@ -15,6 +15,7 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     surface: {
         custMain: string;
@@ -31,6 +32,7 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     secondary: {
         main: string;
@@ -48,6 +50,7 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     tertiary: {
         custMain: string;
@@ -64,6 +67,7 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     error: {
         main: string;
@@ -81,6 +85,7 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
 };
 export declare const dark: {
@@ -100,6 +105,7 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     surface: {
         custMain: string;
@@ -116,6 +122,7 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     secondary: {
         main: string;
@@ -133,6 +140,7 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
     tertiary: {
         custMain: string;
@@ -149,6 +157,7 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
     };
 };
 export declare const disableColor: string[];
