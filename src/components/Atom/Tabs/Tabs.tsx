@@ -22,8 +22,8 @@ const getTabStyles = (theme: Theme, color: CustomTabsColor = "primary") => {
 
     return {
         padding: 0,
+        margin: "0 8px",
         minWidth: 0, // 隨著內文等寬
-        margin: '0 16px',
         "&": {
             color: colorSet?.myDefault ?? fallback.fabFont,
         },

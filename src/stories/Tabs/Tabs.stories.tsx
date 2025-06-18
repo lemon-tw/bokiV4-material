@@ -4,6 +4,29 @@ import { CustomTabs } from '../../components/Atom/Tabs/Tabs';
 import type { CustomTabsProps } from '../../types/tabs';
 import { FcSteam, FcStart, FcCamera, FcAdvertising, FcAlphabeticalSortingAz } from "react-icons/fc";
 
+const textAndIcon = [
+    { label: '影片', value: 'video', icon: <FcStart size={32} /> },
+    { label: '相片', value: 'photos', icon: <FcCamera size={32} /> },
+    { label: '音訊', value: 'audio', icon: <FcAdvertising size={32} /> },
+    { label: '遊戲', value: 'game', icon: <FcSteam size={32} /> },
+    { label: '文字', value: 'text', icon: <FcAlphabeticalSortingAz size={32} />, disabled: true },
+]
+
+const onlyIcon = [
+    { label: '', value: 'video', icon: <FcStart size={32} /> },
+    { label: '', value: 'photos', icon: <FcCamera size={32} /> },
+    { label: '', value: 'audio', icon: <FcAdvertising size={32} /> },
+    { label: '', value: 'game', icon: <FcSteam size={32} /> },
+    { label: '', value: 'text', icon: <FcAlphabeticalSortingAz size={32} />, disabled: true },
+]
+
+const onlyText = [
+    { label: '影片', value: 'video' },
+    { label: '相片', value: 'photos' },
+    { label: '音訊', value: 'audio' },
+    { label: '遊戲', value: 'game' },
+    { label: '文字', value: 'text', disabled: true },
+]
 
 const meta: Meta<typeof CustomTabs> = {
     title: 'components/tabs/Tabs',
@@ -26,16 +49,24 @@ const meta: Meta<typeof CustomTabs> = {
             options: ['start', 'end', 'top', 'bottom'],
         },
         value: { control: 'text' },
+        options: {
+            control: { type: 'select' },
+            options: {
+                '文字+icon': textAndIcon,
+                '只有icon': onlyIcon,
+                '只有文字': onlyText,
+            },
+        }
     },
     args: {
         indicatorColor: 'primary',
         variant: 'standard',
         options: [
-            { label: '影片', value: 'video', icon: <FcStart size={32} /> },
-            { label: '相片', value: 'photos', icon: <FcCamera size={32} /> },
-            { label: '音訊', value: 'audio', icon: <FcAdvertising size={32} /> },
-            { label: '遊戲', value: 'game', icon: <FcSteam size={32} /> },
-            { label: '文字', value: 'text', icon: <FcAlphabeticalSortingAz size={32} />, disabled: true },
+            { label: '', value: 'video', icon: <FcStart size={32} /> },
+            { label: '', value: 'photos', icon: <FcCamera size={32} /> },
+            { label: '', value: 'audio', icon: <FcAdvertising size={32} /> },
+            { label: '', value: 'game', icon: <FcSteam size={32} /> },
+            { label: '', value: 'text', icon: <FcAlphabeticalSortingAz size={32} />, disabled: true },
         ],
         value: 'video',
         onChange: () => { },
@@ -90,6 +121,7 @@ const data = [
   onChange={setValue}
   indicatorColor="primary"
   variant="standard"
+  iconPosition="start"
 />
 
                 `.trim(),
