@@ -51,11 +51,29 @@ export const Standard: Story = {
         docs: {
             source: {
                 code: `
-<RadioButton 
-  color="primary" 
-  label="" 
-/>`.trim(),
+const data=[
+  { label: '男性', value: 'male' },
+  { label: '女性', value: 'female' },
+  { label: '其他', value: 'other' },
+]
+
+<RadioGroup
+  label="性別選擇"
+  options={data}
+  value={value}
+  onChange={handleChange}
+/>
+
+`.trim(),
             },
         },
     },
 };
+
+
+{/* <FormControlLabel
+    value="disabled"
+    disabled
+    control={<Radio />}
+    label="不便透露"
+/> */}

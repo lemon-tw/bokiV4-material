@@ -30,5 +30,3 @@ export const RadioGroup: React.FC<CustomRadioGroupProps> = ({
         </FormControl>
     );
 };
-
-// export default RadioGroup;
