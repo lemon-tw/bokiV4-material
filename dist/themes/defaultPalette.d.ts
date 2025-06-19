@@ -15,6 +15,15 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     surface: {
         custMain: string;
@@ -31,6 +40,15 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     secondary: {
         main: string;
@@ -48,6 +66,15 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     tertiary: {
         custMain: string;
@@ -64,6 +91,15 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     error: {
         main: string;
@@ -81,6 +117,15 @@ export declare const palette: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
 };
 export declare const dark: {
@@ -100,6 +145,15 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     surface: {
         custMain: string;
@@ -116,6 +170,15 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     secondary: {
         main: string;
@@ -133,6 +196,15 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
     tertiary: {
         custMain: string;
@@ -149,6 +221,15 @@ export declare const dark: {
         fabBg: string;
         fabFont: string;
         myDefault: string;
+        menuFont: string;
+        alertColor: {
+            error: string[];
+            success: string[];
+            info: string[];
+            warning: string[];
+            gray: string[];
+            dark: string[];
+        };
     };
 };
 export declare const disableColor: string[];

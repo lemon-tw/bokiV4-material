@@ -21,6 +21,16 @@ export const palette = {
     myDefault: "#7a7d80",
 
     menuFont: "#373737",
+
+    alertColor: {
+      //[0] bg color [1] Icon color
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   surface: {
     custMain: "#1994FC",
@@ -41,6 +51,15 @@ export const palette = {
     myDefault: "1994FC",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   secondary: {
     main: "#1994FC",
@@ -62,6 +81,15 @@ export const palette = {
     myDefault: "#2D66BF",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   tertiary: {
     custMain: "#1994FC",
@@ -82,6 +110,15 @@ export const palette = {
     myDefault: "#0E3A3B",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   //
   error: {
@@ -104,6 +141,15 @@ export const palette = {
     myDefault: "#FF4D4F",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
 };
 export const dark = {
@@ -127,6 +173,15 @@ export const dark = {
     myDefault: "#1994FC",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   surface: {
     custMain: "#1994FC",
@@ -147,6 +202,15 @@ export const dark = {
     myDefault: "#1994FC",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   secondary: {
     main: "#1994FC",
@@ -168,6 +232,15 @@ export const dark = {
     myDefault: "#2D66BF",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   tertiary: {
     custMain: "#1994FC",
@@ -188,6 +261,15 @@ export const dark = {
     myDefault: "#0E3A3B",
 
     menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
 };
 //| key            | 使用情境與元件

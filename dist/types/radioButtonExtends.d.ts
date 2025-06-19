@@ -1,5 +1,5 @@
 import { RadioProps as MuiRadioProps } from '@mui/material/Radio';
-import type { RadioGroupProps as MuiRadioGroupProps } from '@mui/material/RadioGroup';
+import { RadioGroupProps as MuiRadioGroupProps } from '@mui/material/RadioGroup';
 export type CustomRadioColor = "primary";
 export interface CustomRadioProps extends Omit<MuiRadioProps, 'color'> {
     color?: CustomRadioColor;

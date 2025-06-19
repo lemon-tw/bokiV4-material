@@ -1,6 +1,6 @@
-import type { CustomIconButtonProps } from "../../../types/buttonExtends";
-import { palette as defaultPalette } from "../../../themes/defaultPalette";
-import type { Theme } from "@mui/material/styles";
+import { CustomIconButtonProps } from '../../../types/buttonExtends';
+import { palette as defaultPalette } from '../../../themes/defaultPalette';
+import { Theme } from '@mui/material/styles';
 export declare const getIconButtonStyles: (theme: Theme, color?: keyof typeof defaultPalette) => {
     disabledcolor: string;
     filled: {

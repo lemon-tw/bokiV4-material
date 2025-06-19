@@ -17,6 +17,14 @@ declare module "@mui/material/styles" {
     fabFont?: string;
     myDefault?: string;
     menuFont?: string;
+    alertColor?: {
+      error?: string[];
+      success?: string[];
+      info?: string[];
+      warning?: string[];
+      gray?: string[];
+      dark?: string[];
+    };
   }
 
   interface Palette {
