@@ -8,4 +8,3 @@ export declare const WithLabel: Story;
 export declare const Uncontrolled: Story;
 export declare const UncontrolledWithLabel: Story;
 export declare const Indeterminate: Story;
-export declare const IndeterminateGroup: Story;

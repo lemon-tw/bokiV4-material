@@ -17,11 +17,15 @@ export declare const BasicUsage: {
     decorators?: import('@storybook/core/csf').DecoratorFunction<import('@storybook/react').ReactRenderer, {
         data: TreeNode[];
         checkedKeys?: string[] | undefined;
+        indeterminateKeys?: string[] | undefined;
         onChecked?: ((keys: string[]) => void) | undefined;
+        onIndeterminateChange?: ((keys: string[]) => void) | undefined;
     }> | import('@storybook/core/csf').DecoratorFunction<import('@storybook/react').ReactRenderer, {
         data: TreeNode[];
         checkedKeys?: string[] | undefined;
+        indeterminateKeys?: string[] | undefined;
         onChecked?: ((keys: string[]) => void) | undefined;
+        onIndeterminateChange?: ((keys: string[]) => void) | undefined;
     }>[] | undefined;
     argTypes?: Partial<import('@storybook/react').ArgTypes<import('../../types/checkboxExtends').CheckboxTreeProps>> | undefined;
     loaders?: import('@storybook/core/csf').LoaderFunction<import('@storybook/react').ReactRenderer, import('../../types/checkboxExtends').CheckboxTreeProps> | import('@storybook/core/csf').LoaderFunction<import('@storybook/react').ReactRenderer, import('../../types/checkboxExtends').CheckboxTreeProps>[] | undefined;
@@ -44,11 +48,15 @@ export declare const InitiallyChecked: {
     decorators?: import('@storybook/core/csf').DecoratorFunction<import('@storybook/react').ReactRenderer, {
         data: TreeNode[];
         checkedKeys?: string[] | undefined;
+        indeterminateKeys?: string[] | undefined;
         onChecked?: ((keys: string[]) => void) | undefined;
+        onIndeterminateChange?: ((keys: string[]) => void) | undefined;
     }> | import('@storybook/core/csf').DecoratorFunction<import('@storybook/react').ReactRenderer, {
         data: TreeNode[];
         checkedKeys?: string[] | undefined;
+        indeterminateKeys?: string[] | undefined;
         onChecked?: ((keys: string[]) => void) | undefined;
+        onIndeterminateChange?: ((keys: string[]) => void) | undefined;
     }>[] | undefined;
     parameters?: import('@storybook/react').Parameters;
     argTypes?: Partial<import('@storybook/react').ArgTypes<import('../../types/checkboxExtends').CheckboxTreeProps>> | undefined;
