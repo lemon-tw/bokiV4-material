@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Checkbox } from "../../components/Atom/Checkbox/Checkbox";
+import { Meta, StoryObj } from '@storybook/react';
+import { Checkbox } from '../../components/Atom/Checkbox/Checkbox';
 declare const meta: Meta<typeof Checkbox>;
 export default meta;
 type Story = StoryObj<typeof Checkbox>;
@@ -8,4 +8,3 @@ export declare const WithLabel: Story;
 export declare const Uncontrolled: Story;
 export declare const UncontrolledWithLabel: Story;
 export declare const Indeterminate: Story;
-export declare const IndeterminateGroup: Story;

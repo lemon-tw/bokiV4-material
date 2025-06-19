@@ -1,4 +1,4 @@
-import { alpha, styled } from "@mui/material/styles";
+import { alpha, styled, Theme } from "@mui/material/styles";
 import MuiButton from "@mui/material/Button";
 import type {
   CustomButtonProps,
@@ -8,7 +8,6 @@ import {
   disableColor,
   palette as defaultPalette,
 } from "../../../themes/defaultPalette";
-import type { Theme } from "@mui/material/styles";
 
 export const getButtonStyles = (
   theme: Theme,

@@ -1,3 +1,7 @@
+import { ChipProps } from '@mui/material/Chip';
+export interface CustomChipProps extends ChipProps {
+    selected?: boolean;
+}
 export interface DraggableChipListProps<T = any> {
     chips: T[];
     onChange: (newList: T[]) => void;

@@ -19,7 +19,18 @@ export const palette = {
     fabBg: "#D1EAFE",
     fabFont: "#1994FC",
     myDefault: "#7a7d80",
-    defaultHover: "#373737"
+
+    menuFont: "#373737",
+
+    alertColor: {
+      //[0] bg color [1] Icon color
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   surface: {
     custMain: "#1994FC",
@@ -38,7 +49,17 @@ export const palette = {
     fabBg: "#F5F5F6",
     fabFont: "#1994FC",
     myDefault: "1994FC",
-    defaultHover: "1994FC"
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   secondary: {
     main: "#1994FC",
@@ -56,9 +77,19 @@ export const palette = {
     neutral: "#34393D",
 
     fabBg: "#DBE9FF",
-    fabFont: "#373737",
-    myDefault: "#7A7D80",
-    defaultHover: "#2D66BF"
+    fabFont: "#2D66BF",
+    myDefault: "#2D66BF",
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   tertiary: {
     custMain: "#1994FC",
@@ -77,9 +108,19 @@ export const palette = {
     fabBg: "#BDDEDF",
     fabFont: "#0E3A3B",
     myDefault: "#0E3A3B",
-    defaultHover: "#0E3A3B",
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
-  // 
+  //
   error: {
     main: "#FF4D4F",
     custMain: "#FF4D4F",
@@ -98,8 +139,18 @@ export const palette = {
     fabBg: "#F5F5F6",
     fabFont: "#FF4D4F",
     myDefault: "#FF4D4F",
-    defaultHover: "#FF4D4F"
-  }
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
+  },
 };
 export const dark = {
   primary: {
@@ -120,7 +171,17 @@ export const dark = {
     fabBg: "#D1EAFE",
     fabFont: "#1994FC",
     myDefault: "#1994FC",
-    defaultHover: "#1994FC",
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   surface: {
     custMain: "#1994FC",
@@ -139,7 +200,17 @@ export const dark = {
     fabBg: "#F5F5F6",
     fabFont: "#1994FC",
     myDefault: "#1994FC",
-    defaultHover: "#1994FC",
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   secondary: {
     main: "#1994FC",
@@ -159,7 +230,17 @@ export const dark = {
     fabBg: "#DBE9FF",
     fabFont: "#2D66BF",
     myDefault: "#2D66BF",
-    defaultHover: "#2D66BF",
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
   tertiary: {
     custMain: "#1994FC",
@@ -178,7 +259,17 @@ export const dark = {
     fabBg: "#BDDEDF",
     fabFont: "#0E3A3B",
     myDefault: "#0E3A3B",
-    defaultHover: "#0E3A3B",
+
+    menuFont: "#373737",
+
+    alertColor: {
+      error: ["#FFEDED", "#A72E2F"],
+      success: ["#E9FAF5", "#20C997"],
+      info: ["#EDF4FF", "#4B91FF"],
+      warning: ["#FFF8EC", "#FFB53F"],
+      gray: ["#E9E9E9", "#373737"],
+      dark: ["#373737", "#FFFFFF"],
+    },
   },
 };
 //| key            | 使用情境與元件
