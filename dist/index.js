@@ -8095,20 +8095,23 @@ const Ec = (e, t = "primary") => {
       color: (o == null ? void 0 : o.myDefault) ?? n.myDefault
       // 這裡設定初始顏色
     },
+    // hover 狀態
+    "&:hover": {
+      color: o.defaultHover ?? n.custMain,
+      backgroundColor: U(o.myDefault ?? n.custMain, 0.08)
+    },
     // 勾選與 indeterminate 狀態
     "&.Mui-checked, &.MuiCheckbox-indeterminate": {
       color: o.custMain ?? n.custMain
     },
-    // hover 狀態
-    "&:hover": {
-      // backgroundColor: alpha(colorSet.custMain ?? fallback.custMain, 0.08),
-      backgroundColor: "#000000"
-    },
+    // 勾選＋hover 狀態
     "&.Mui-checked:hover": {
+      color: o.custMain ?? n.custMain,
+      // 維持勾選色
       backgroundColor: U(o.custMain ?? n.custMain, 0.08)
     },
     "&.Mui-disabled": {
-      color: U(Ne[0], 0.38)
+      Opacity: U(Ne[0], 0.38)
     },
     // focus 狀態
     "&.Mui-focusVisible": {
