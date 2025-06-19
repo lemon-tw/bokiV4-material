@@ -1,7 +1,7 @@
 import React from 'react';
-import Tabs from '@mui/material/Tabs';
+import MuiTabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import { CustomTabsProps } from '../../../types/tabs';
+import { CustomTabsProps } from '../../../types/tabsExtends';
 import type { PaletteColor, Theme } from "@mui/material/styles";
 import { styled, alpha } from "@mui/material/styles";
 import { disableColor, palette as defaultPalette } from '../../../themes/defaultPalette';
@@ -13,7 +13,7 @@ type CustomPaletteColor = PaletteColor & {
 };
 
 // 底線是跟著整組tabs走的, 所以要拉出來單獨設定
-const StyledTabs = styled(Tabs)(() => ({
+const StyledTabs = styled(MuiTabs)(() => ({
 }));
 
 const getTabStyles = (theme: Theme, color: CustomTabsColor = "primary") => {
@@ -46,7 +46,7 @@ const StyledTab = styled(Tab, {
     getTabStyles(theme, color)
 );
 
-export const CustomTabs: React.FC<CustomTabsProps> = ({
+export const Tabs: React.FC<CustomTabsProps> = ({
     options,
     value,
     onChange,

@@ -59,10 +59,10 @@ export const CustomStar: Story = {
         docs: {
             source: {
                 code: `
-import { Rating } from '你的專案路徑/Rating';
+import { Rating } from '@lemon/material';
 import React, { useState, useEffect } from 'react';
 
-const [value, setValue] = useState(2.7);
+const [value, setValue] = useState(2.5);
 
 useEffect(() => {
   setValue(args.value ?? 2.5);

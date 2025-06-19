@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { CustomTabs } from '../../components/Atom/Tabs/Tabs';
-import type { CustomTabsProps } from '../../types/tabs';
+import { Tabs } from '../../components/Atom/Tabs/Tabs';
+import type { CustomTabsProps } from '../../types/tabsExtends';
 import { FcSteam, FcStart, FcCamera, FcAdvertising, FcAlphabeticalSortingAz } from "react-icons/fc";
 
 const textAndIcon = [
@@ -28,9 +28,15 @@ const onlyText = [
     { label: '文字', value: 'text', disabled: true },
 ]
 
-const meta: Meta<typeof CustomTabs> = {
+const optionsMap = {
+    '文字+icon': textAndIcon,
+    '只有icon': onlyIcon,
+    '只有文字': onlyText,
+};
+
+const meta: Meta<typeof Tabs> = {
     title: 'components/tabs/Tabs',
-    component: CustomTabs,
+    component: Tabs,
     parameters: {
         layout: 'fullscreen',
     },
@@ -51,10 +57,12 @@ const meta: Meta<typeof CustomTabs> = {
         value: { control: 'text' },
         options: {
             control: { type: 'select' },
-            options: {
-                '文字+icon': textAndIcon,
-                '只有icon': onlyIcon,
-                '只有文字': onlyText,
+            options: Object.keys(optionsMap), // ['文字+icon', '只有icon', '只有文字']
+            mapping: optionsMap,              // 這裡對應到實際資料
+            labels: {
+                '文字+icon': '文字+icon',
+                '只有icon': '只有icon',
+                '只有文字': '只有文字',
             },
         }
     },
@@ -75,7 +83,7 @@ const meta: Meta<typeof CustomTabs> = {
 
 export default meta;
 
-type Story = StoryObj<typeof CustomTabs>;
+type Story = StoryObj<typeof Tabs>;
 
 const InteractiveTemplate = (args: CustomTabsProps) => {
     const [value, setValue] = React.useState(args.value);
@@ -87,7 +95,7 @@ const InteractiveTemplate = (args: CustomTabsProps) => {
 
     return (
         <div style={{ width: '100%' }}>
-            <CustomTabs {...args} value={value} onChange={handleChange} />
+            <Tabs {...args} value={value} onChange={handleChange} />
         </div>
     );
 };
@@ -98,6 +106,7 @@ export const Standard: Story = {
         docs: {
             source: {
                 code: `
+import { Tabs } from '@lemon/material';
 // icon 可任意替換
 import { 
   FcSteam, 
@@ -115,7 +124,7 @@ const data = [
   { label: '文字', value: 'text', icon: <FcAlphabeticalSortingAz size={32} />, disabled: true },
 ]
 
-<CustomTabs
+<Tabs
   options={data}
   value={value}
   onChange={setValue}
