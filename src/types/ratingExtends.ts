@@ -26,11 +26,3 @@ export interface RatingProps extends Omit<MuiRatingProps, 'icon' | 'emptyIcon' |
     /** 空星顏色（可選，覆蓋預設空星顏色） */
     // emptyColor?: string;
 }
-
-export interface FractionalStarProps {
-    fillPercent: number; // 0~100
-    size?: number;
-    color?: string;
-    emptyColor?: string;
-    id: string;
-}
