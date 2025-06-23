@@ -3,8 +3,8 @@ import MuiRadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import RadioButton from './RadioButton'; // 你先前自訂的 RadioButton 元件
-import type { CustomRadioGroupProps } from '../../../types/radioButtonExtends';
+import Radio from './Radio'; // 你先前自訂的 Radio 元件
+import type { CustomRadioGroupProps } from '../../../types/radioExtends';
 
 export const RadioGroup: React.FC<CustomRadioGroupProps> = ({
     options,
@@ -22,7 +22,7 @@ export const RadioGroup: React.FC<CustomRadioGroupProps> = ({
                     <FormControlLabel
                         key={option.value}
                         value={option.value}
-                        control={<RadioButton color={color} />}
+                        control={<Radio color={color} />}
                         label={option.label}
                     />
                 ))}
