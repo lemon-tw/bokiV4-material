@@ -44,6 +44,10 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: (a, b) =>
+        a.title.localeCompare(b.title, undefined, { numeric: true }),
+    },
   },
 };
 
