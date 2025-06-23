@@ -5,4 +5,4 @@ export default meta;
 type Story = StoryObj<typeof Switch>;
 export declare const NormalSwitch: Story;
 export declare const IconSwitch: Story;
-export declare const DoubleIconSwitch: Story;
+export declare const ControlledSwitch: Story;
