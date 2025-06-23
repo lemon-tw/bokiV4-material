@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Alert } from "../../components/Atom/Alert/Alert";
 import { Button } from "../../components/Atom/Button/Button";
@@ -73,5 +74,57 @@ export const AlertSticky: Story = {
   },
   args: {
     severity: "info",
+  },
+};
+
+export const CloseableAlert: Story = {
+  render: (args) => {
+    const [open, setOpen] = React.useState(true);
+    return (
+      <div>
+        {open && (
+          <Alert
+            icon={<BsBox />}
+            action={
+              <div>
+                <Button
+                  variant="text"
+                  sx={{ height: "35px" }}
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  Close
+                </Button>
+                <IconButton
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              </div>
+            }
+            {...args}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </Alert>
+        )}
+        {!open && (
+          <Button
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            re-open
+          </Button>
+        )}
+      </div>
+    );
+  },
+  args: {
+    severity: "error",
   },
 };

@@ -1,5 +1,7 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import { useArgs } from "@storybook/preview-api";
 
 import { Switch } from "../../components/Atom/Switch/Switch";
 import Done from "@mui/icons-material/Done";
@@ -50,17 +52,24 @@ export const IconSwitch: Story = {
   },
 };
 
-export const DoubleIconSwitch: Story = {
-  render: (args) => (
-    <div style={{ display: "flex", gap: "2rem" }}>
-      <Switch {...args} />
-      <Switch {...args} />
-    </div>
-  ),
+export const ControlledSwitch: Story = {
+  render: (args) => {
+    const [{ checked }, updateArgs] = useArgs();
+    return (
+      <Switch
+        {...args}
+        checked={checked}
+        onChange={(e) => updateArgs({ checked: e.target.checked })}
+      />
+    );
+  },
   args: {
     disabled: false,
-    selectedIcon: <Done />,
-    unselectedIcon: <Close />,
-    size: "small",
+  },
+  argTypes: {
+    checked: {
+      control: "boolean",
+      description: "開關狀態",
+    },
   },
 };

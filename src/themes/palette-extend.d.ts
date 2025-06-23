@@ -9,6 +9,7 @@ declare module "@mui/material/styles" {
     elevated?: string;
     tonal?: string;
     onTonal?: string;
+    toggleButtonBg?: string;
     iconFont?: string;
     iconOverlay?: string;
     surface?: string;

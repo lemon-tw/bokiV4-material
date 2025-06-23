@@ -10,6 +10,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -40,6 +41,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -70,6 +72,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -99,6 +102,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -130,6 +134,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -162,6 +167,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -191,6 +197,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -221,6 +228,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -250,6 +258,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",

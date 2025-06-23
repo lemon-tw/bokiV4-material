@@ -1,4 +1,4 @@
-import { alpha, styled, Theme } from "@mui/material/styles";
+import { styled, Theme } from "@mui/material/styles";
 import MuiAlert from "@mui/material/Alert";
 import { AlertTitle } from "@mui/material";
 import { CustomAlertProps, custSeverity } from "../../../types/alertExtends";

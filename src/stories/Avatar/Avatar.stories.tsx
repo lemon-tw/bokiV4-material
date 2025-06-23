@@ -18,6 +18,7 @@ const meta: Meta<typeof Avatar> = {
     },
     children: {
       control: "text",
+      description: "頭像內部的顯示內容，可以是string、icon",
     },
     types: {
       control: "select",
@@ -44,7 +45,7 @@ export const defaultAvarta: Story = {
   args: {},
 };
 
-export const InitialAvarta: Story = {
+export const InitialAvata: Story = {
   args: {
     alt: "A",
     children: "A",
@@ -53,13 +54,13 @@ export const InitialAvarta: Story = {
     },
   },
 };
-export const ImageAvarta: Story = {
+export const ImageAvata: Story = {
   args: {
     alt: "image",
     src: "https://static.popdaily.com.tw/u/202409/0c2abc41-3d55-47d5-9727-2916bf7b2aaa.png",
   },
 };
-export const IconAvarta: Story = {
+export const IconAvata: Story = {
   args: {
     alt: "icon",
     children: <Done />,
@@ -68,7 +69,7 @@ export const IconAvarta: Story = {
     },
   },
 };
-export const groupAvarta: Story = {
+export const groupAvata: Story = {
   parameters: {
     docs: {
       source: {
@@ -87,7 +88,7 @@ import Done from "@mui/icons-material/Done";
     },
   },
   render: (args) => (
-    <AvatarGroup max={4} total={8}>
+    <AvatarGroup {...args}>
       <Avatar>
         <Done />
       </Avatar>
@@ -96,5 +97,35 @@ import Done from "@mui/icons-material/Done";
       <Avatar src="https://static.popdaily.com.tw/u/202409/fd4138c3-7bc4-483e-b54d-06d493792db6.png" />
     </AvatarGroup>
   ),
-  args: {},
+  args: {
+    max: 4,
+    total: 8,
+  },
+  argTypes: {
+    src: {
+      table: {
+        disable: true,
+      },
+    },
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+    types: {
+      table: {
+        disable: true,
+      },
+    },
+    size: {
+      table: {
+        disable: true,
+      },
+    },
+    sx: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };

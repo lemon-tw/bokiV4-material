@@ -31,3 +31,9 @@ export interface CustomIconButtonProps
   toggleIcon?: React.ReactElement;
   color?: CustomColor;
 }
+
+import { ToggleButtonProps as MuiToggleButtonProps } from "@mui/material/ToggleButton";
+export interface CustomToggleButtonProps
+  extends Omit<MuiToggleButtonProps, "color"> {
+  color?: CustomColor;
+}

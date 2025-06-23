@@ -22,6 +22,9 @@ const meta: Meta<typeof Chip> = {
     icon: {
       table: { disable: true },
     },
+    sx: {
+      control: "object",
+    },
   },
   args: {
     // onClick: fn(),
