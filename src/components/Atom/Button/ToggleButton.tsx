@@ -60,6 +60,10 @@ const StyledToggleButton = styled(MuiToggleButton)<{
     "&.Mui-selected:hover": {
       backgroundColor: toggleButtonStyles.bgColor,
     },
+    "&.Mui-disabled": {
+      color: toggleButtonStyles.fontColor,
+      backgroundColor: alpha(toggleButtonStyles.bgColor, 0.38),
+    },
   };
 });
 

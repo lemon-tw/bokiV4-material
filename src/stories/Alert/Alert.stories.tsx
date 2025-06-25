@@ -33,9 +33,7 @@ export const AlertFloating: Story = {
   render: (args) => {
     return (
       <Alert onClose={() => {}} {...args} sx={{ mb: 2 }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam.
+        {args.children}
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Button variant="text">Close</Button>
           <Button variant="text">Retry</Button>
@@ -46,6 +44,8 @@ export const AlertFloating: Story = {
   args: {
     severity: "success",
     alertTitle: "Alert title here",
+    children:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   },
 };
 
@@ -68,12 +68,13 @@ export const AlertSticky: Story = {
         }
         {...args}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        {args.children}
       </Alert>
     );
   },
   args: {
     severity: "info",
+    children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
 };
 
@@ -109,7 +110,7 @@ export const CloseableAlert: Story = {
             }
             {...args}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            {args.children}
           </Alert>
         )}
         {!open && (
@@ -126,5 +127,6 @@ export const CloseableAlert: Story = {
   },
   args: {
     severity: "error",
+    children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
 };

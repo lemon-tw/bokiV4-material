@@ -23,6 +23,8 @@ export const palette = {
 
     menuFont: "#373737",
 
+    tooltipBg: "#34393D",
+
     alertColor: {
       //[0] bg color [1] Icon color
       error: ["#FFEDED", "#A72E2F"],
@@ -53,6 +55,8 @@ export const palette = {
     myDefault: "1994FC",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -85,6 +89,8 @@ export const palette = {
 
     menuFont: "#373737",
 
+    tooltipBg: "#34393D",
+
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
       success: ["#E9FAF5", "#20C997"],
@@ -114,6 +120,8 @@ export const palette = {
     myDefault: "#0E3A3B",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -146,6 +154,8 @@ export const palette = {
     myDefault: "#FF4D4F",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -180,6 +190,8 @@ export const dark = {
 
     menuFont: "#373737",
 
+    tooltipBg: "#34393D",
+
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
       success: ["#E9FAF5", "#20C997"],
@@ -209,6 +221,8 @@ export const dark = {
     myDefault: "#1994FC",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -241,6 +255,8 @@ export const dark = {
 
     menuFont: "#373737",
 
+    tooltipBg: "#34393D",
+
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
       success: ["#E9FAF5", "#20C997"],
@@ -270,6 +286,8 @@ export const dark = {
     myDefault: "#0E3A3B",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],

@@ -18,6 +18,7 @@ declare module "@mui/material/styles" {
     fabFont?: string;
     myDefault?: string;
     menuFont?: string;
+    tooltipBg?: string;
     alertColor?: {
       error?: string[];
       success?: string[];

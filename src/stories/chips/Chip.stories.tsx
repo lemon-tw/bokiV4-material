@@ -24,6 +24,8 @@ const meta: Meta<typeof Chip> = {
     },
     sx: {
       control: "object",
+      description: "點擊 RAW 編輯自定義樣式, 例如: { backgroundColor: 'red' }",
+      raw: true,
     },
   },
   args: {

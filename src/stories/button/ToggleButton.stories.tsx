@@ -83,8 +83,7 @@ export const ToggleButtonsGroup: Story = {
           <GoZoomOut />
         </ToggleButton>
         <ToggleButton {...args} value="right">
-          {" "}
-          <TbZoomReset />{" "}
+          <TbZoomReset />
         </ToggleButton>
       </ToggleButtonGroup>
     );
