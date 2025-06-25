@@ -19,7 +19,7 @@ const meta: Meta<typeof RichTooltip> = {
   },
   tags: ["autodocs"],
   argTypes: {
-    description: {
+    content: {
       control: "text",
     },
     actions: {
@@ -83,7 +83,7 @@ export const Controlled: Story = {
   },
   args: {
     title: "Title",
-    description: "Supporting line text lorem ipsum dolor sit amet, consectetur",
+    content: "Supporting line text lorem ipsum dolor sit amet, consectetur",
     arrow: true,
   },
 };
@@ -113,7 +113,7 @@ export const Uncontrolled: Story = {
   },
   args: {
     title: "Title",
-    description: "Supporting line text lorem ipsum dolor sit amet, consectetur",
+    content: "Supporting line text lorem ipsum dolor sit amet, consectetur",
     arrow: true,
     disableInteractive: false,
   },

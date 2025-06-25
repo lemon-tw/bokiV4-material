@@ -48,7 +48,7 @@ const StyleRichTooltip = styled(
 
 export const RichTooltip = ({
   title,
-  description,
+  content,
   actions,
   ...props
 }: CustomRichTooltipProps) => {
@@ -62,9 +62,9 @@ export const RichTooltip = ({
               {title}
             </Typography>
           )}
-          {description && (
+          {content && (
             <Typography fontSize={14} fontFamily={"Noto Sans"}>
-              {description}
+              {content}
             </Typography>
           )}
           {actions && (
