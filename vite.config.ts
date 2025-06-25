@@ -23,6 +23,7 @@ export default defineConfig({
         "@mui/icons-material",
         "@emotion/react",
         "@emotion/styled",
+        "**/*.stories.tsx",
       ], // 不要打包這些
       output: {
         globals: {

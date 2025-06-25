@@ -15,5 +15,6 @@
       "@components/*": ["src/components/*"]
     }
   },
+  "exclude": ["**/*.stories.tsx", "**/*.stories.mdx"],
   "include": ["src"]
 }

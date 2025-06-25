@@ -8,6 +8,7 @@ export declare const palette: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -16,6 +17,7 @@ export declare const palette: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -33,6 +35,7 @@ export declare const palette: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -41,6 +44,7 @@ export declare const palette: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -59,6 +63,7 @@ export declare const palette: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -67,6 +72,7 @@ export declare const palette: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -84,6 +90,7 @@ export declare const palette: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -92,6 +99,7 @@ export declare const palette: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -110,6 +118,7 @@ export declare const palette: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -118,6 +127,7 @@ export declare const palette: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -138,6 +148,7 @@ export declare const dark: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -146,6 +157,7 @@ export declare const dark: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -163,6 +175,7 @@ export declare const dark: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -171,6 +184,7 @@ export declare const dark: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -189,6 +203,7 @@ export declare const dark: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -197,6 +212,7 @@ export declare const dark: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
@@ -214,6 +230,7 @@ export declare const dark: {
         elevated: string;
         tonal: string;
         onTonal: string;
+        toggleButtonBg: string;
         iconFont: string;
         iconOverlay: string;
         surface: string;
@@ -222,6 +239,7 @@ export declare const dark: {
         fabFont: string;
         myDefault: string;
         menuFont: string;
+        tooltipBg: string;
         alertColor: {
             error: string[];
             success: string[];
