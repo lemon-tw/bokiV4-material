@@ -1,11 +1,11 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { RadioGroup } from '../../components/Atom/RadioButton/RadioGroup';
-import type { CustomRadioGroupProps } from '../../types/radioButtonExtends';
+import { RadioGroup } from '../../components/Atom/Radio/RadioGroup';
+import type { CustomRadioGroupProps } from '../../types/radioExtends';
 import { fn } from "@storybook/test";
 
 const meta: Meta<typeof RadioGroup> = {
-    title: 'Components/RadioButton/RadioGroup',
+    title: 'Components/Radio/RadioGroup',
     component: RadioGroup,
     parameters: {
         layout: 'centered',

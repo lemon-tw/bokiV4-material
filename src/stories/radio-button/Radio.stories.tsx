@@ -1,7 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { RadioButton } from "../../components/Atom/RadioButton/RadioButton";
-import { CustomRadioProps } from "../../types/radioButtonExtends";
+import { Radio } from "../../components/Atom/Radio/Radio";
+import { CustomRadioProps } from "../../types/radioExtends";
 
 // 文件部分暫存
 //   錯誤提示 ：可結合表單驗證顯示錯誤狀態。
@@ -13,11 +13,11 @@ import { CustomRadioProps } from "../../types/radioButtonExtends";
 
 
 //   Storybook 設定
-//   - 展示 RadioButton 的多種狀態與互動
+//   - 展示 Radio 的多種狀態與互動
 //   - 支援受控與非受控模式
-const meta: Meta<typeof RadioButton> = {
-    title: "Components/RadioButton/RadioButton",
-    component: RadioButton,
+const meta: Meta<typeof Radio> = {
+    title: "Components/Radio/Radio",
+    component: Radio,
     parameters: {
         layout: "centered",
     },
@@ -36,7 +36,7 @@ const meta: Meta<typeof RadioButton> = {
 
 export default meta;
 
-type Story = StoryObj<typeof RadioButton>;
+type Story = StoryObj<typeof Radio>;
 
 //   互動版 Template
 //   - 受控元件，內部維護 checked 狀態
@@ -48,7 +48,7 @@ const InteractiveTemplate = (args: CustomRadioProps) => {
     };
 
     return (
-        <RadioButton
+        <Radio
             {...args}
             checked={checked}
             onChange={handleChange}
@@ -63,7 +63,7 @@ export const Standard: Story = {
         docs: {
             source: {
                 code: `
-<RadioButton />`.trim(),
+<Radio />`.trim(),
             },
         },
     },
@@ -76,7 +76,7 @@ export const WithLabel: Story = {
         docs: {
             source: {
                 code: `
-<RadioButton label="Standard 樣式"/>`.trim(),
+<Radio label="Standard 樣式"/>`.trim(),
             },
         },
     },
@@ -85,17 +85,17 @@ export const WithLabel: Story = {
 // 非受控元件範例
 // - 直接使用 defaultChecked
 export const Uncontrolled: Story = {
-    render: (args) => <RadioButton {...args} defaultChecked={false} />,
+    render: (args) => <Radio {...args} defaultChecked={false} />,
 };
 
 // 非受控 + 標籤範例
 export const UncontrolledWithLabel: Story = {
-    render: (args) => <RadioButton {...args} defaultChecked={false} label="非受控模式 - Standard 樣式" />,
+    render: (args) => <Radio {...args} defaultChecked={false} label="非受控模式 - Standard 樣式" />,
     parameters: {
         docs: {
             source: {
                 code: `
-<RadioButton 
+<Radio 
   defaultChecked={false}
   label="非受控模式 - Standard 樣式"
 />`.trim(),
@@ -106,12 +106,12 @@ export const UncontrolledWithLabel: Story = {
 
 // 禁用狀態
 export const Disabled: Story = {
-    render: (args) => <RadioButton {...args} disabled={true} label="Disabled 樣式" />,
+    render: (args) => <Radio {...args} disabled={true} label="Disabled 樣式" />,
     parameters: {
         docs: {
             source: {
                 code: `
-<RadioButton 
+<Radio 
   disabled={true}
   label="Disabled 樣式"
 />`.trim(),

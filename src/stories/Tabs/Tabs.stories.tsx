@@ -35,7 +35,7 @@ const optionsMap = {
 };
 
 const meta: Meta<typeof Tabs> = {
-    title: 'components/tabs/Tabs',
+    title: 'components/Tabs/Tabs',
     component: Tabs,
     parameters: {
         layout: 'fullscreen',

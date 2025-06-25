@@ -1,7 +1,7 @@
 import React from 'react';
-import Radio from '@mui/material/Radio';
+import MuiRadio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import type { CustomRadioProps, CustomRadioColor } from '../../../types/radioButtonExtends';
+import type { CustomRadioProps, CustomRadioColor } from '../../../types/radioExtends';
 import type { PaletteColor } from "@mui/material/styles";
 import { styled, alpha } from "@mui/material/styles";
 import { disableColor, palette as defaultPalette } from '../../../themes/defaultPalette';
@@ -44,14 +44,14 @@ const getRadioStyles = (theme: Theme, color: CustomRadioColor = "primary") => {
 };
 
 // 依據 color 取得 palette 色票，並設定不同狀態的樣式
-const StyledRadio = styled(Radio, {
+const StyledRadio = styled(MuiRadio, {
     shouldForwardProp: (prop) => prop !== "color",
 })<{ color?: CustomRadioColor }>(({ theme, color = "primary" }) =>
     getRadioStyles(theme, color)
 );
 
-// RadioButton 元件，支援 label 與自訂顏色
-export const RadioButton: React.FC<CustomRadioProps> = ({
+// Radio 元件，支援 label 與自訂顏色
+export const Radio: React.FC<CustomRadioProps> = ({
     color = 'primary',
     label,
     ...rest
@@ -70,4 +70,4 @@ export const RadioButton: React.FC<CustomRadioProps> = ({
     );
 };
 
-export default RadioButton;
+export default Radio;
