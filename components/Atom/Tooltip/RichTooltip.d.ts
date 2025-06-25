@@ -5,4 +5,4 @@ export declare const getRichTooltipStyles: (theme: Theme, color?: keyof typeof d
     bgColor: any;
     fontColor: any;
 };
-export declare const RichTooltip: ({ title, description, actions, ...props }: CustomRichTooltipProps) => import("react/jsx-runtime").JSX.Element;
+export declare const RichTooltip: ({ title, content, actions, ...props }: CustomRichTooltipProps) => import("react/jsx-runtime").JSX.Element;
