@@ -75,6 +75,7 @@ export const Controlled: Story = {
         {...args}
         open={open}
         onOpen={handleOpen}
+        // onClose={() => setOpen(false)}
         actions={localActions}
       >
         <Button>Hover to open</Button>

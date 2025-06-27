@@ -9,7 +9,7 @@ export default defineConfig({
       entry: "src/index.ts",
       name: "@lemon/material",
       fileName: "index",
-      formats: ["es"], // 支援 ESM 和 CommonJS
+      formats: ["es"], // 支援 ESM 格式
     },
     rollupOptions: {
       external: [
