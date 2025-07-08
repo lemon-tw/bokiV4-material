@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Rating } from "../../components/Atom/Rating/Rating"; // 路徑請依實際專案調整
 import type { RatingProps } from "../../types/ratingExtends";
+import { Heart } from "phosphor-react";
+
 
 const meta: Meta<RatingProps> = {
   title: "components/Atoms/Rating/Rating",
@@ -16,6 +18,8 @@ const meta: Meta<RatingProps> = {
     size: { control: { type: "radio" }, options: ["small", "medium", "large"] },
     precision: { control: { type: "number", min: 0.1, max: 1, step: 0.1 } },
     showValueLabel: { control: "boolean" },
+    iconColor: { control: "color" },
+    iconFilledColor: { control: "color" },
   },
   args: {
     value: 2.5,
@@ -24,7 +28,7 @@ const meta: Meta<RatingProps> = {
     disabled: false,
     precision: 0.1,
     showValueLabel: true,
-    onChange: () => {},
+    onChange: () => { },
   },
 };
 
@@ -48,7 +52,11 @@ const InteractiveTemplate = (args: RatingProps) => {
 };
 
 export const CustomStar: Story = {
-  render: (args) => <InteractiveTemplate {...args} />,
+  render: (args) => <InteractiveTemplate
+    {...args}
+    iconColor={args.iconColor}
+    iconFilledColor={args.iconFilledColor} />,
+  name: "預設 Icon",
   parameters: {
     docs: {
       source: {
@@ -68,8 +76,47 @@ useEffect(() => {
   precision={0.1}
   size="medium"
   showValueLabel
+  iconColor = "#9d9d9d",          // 預設未填滿顏色
+  iconFilledColor = "#fad703"     // 預設填滿顏色
 />
                 `.trim(),
+      },
+    },
+  },
+};
+
+
+export const CustomHeart: Story = {
+  render: (args) => <InteractiveTemplate {...args}
+    icon={Heart}
+    iconColor={args.iconColor}
+    iconFilledColor={args.iconFilledColor} />,
+  name: "Customization Icon",
+  parameters: {
+    docs: {
+      source: {
+        code: `
+import { Rating } from '@lemon/material';
+import { Heart } from 'phosphor-react'; // 自定義的ICON
+import React, { useState, useEffect } from 'react';
+
+const [value, setValue] = useState(2.5);
+
+useEffect(() => {
+  setValue(args.value ?? 2.5);
+}, [args.value]);
+
+<Rating
+  value={value}
+  onChange={setValue}
+  precision={0.1}
+  size="medium"
+  showValueLabel
+  icon={Heart}
+  iconColor = "#9d9d9d",          // 預設未填滿顏色
+  iconFilledColor = "#fad703"     // 預設填滿顏色
+/>
+        `.trim(),
       },
     },
   },

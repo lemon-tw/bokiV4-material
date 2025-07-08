@@ -1,4 +1,5 @@
 import type { RatingProps as MuiRatingProps } from '@mui/material/Rating';
+import { ElementType } from "react";
 
 export interface RatingProps extends Omit<MuiRatingProps, 'icon' | 'emptyIcon' | 'onChange' | 'value'> {
     /** 目前評分值（支援小數） */
@@ -19,10 +20,7 @@ export interface RatingProps extends Omit<MuiRatingProps, 'icon' | 'emptyIcon' |
     showValueLabel?: boolean;
     /** aria-label（可選，無障礙） */
     ariaLabel?: string;
-
-    // 先固定顏色
-    /** 顏色（可選，覆蓋預設星星顏色） */
-    // color?: string;
-    /** 空星顏色（可選，覆蓋預設空星顏色） */
-    // emptyColor?: string;
+    icon?: ElementType; // 自訂傳入ICON圖標
+    iconColor?: string;
+    iconFilledColor?: string;
 }

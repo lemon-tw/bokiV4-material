@@ -1,13 +1,10 @@
 import React, { useState, useMemo } from "react";
-// 目前先固定星星樣式
-// import { FaStar } from "react-icons/fa";
-// import { CiStar } from "react-icons/ci";
 import type { RatingProps } from "../../../types/ratingExtends";
 import { Star } from "phosphor-react";
 
 const sizeMap = { small: 20, medium: 32, large: 40 };
 
-export const Rating: React.FC<RatingProps> = ({
+export const Rating: React.FC<RatingProps & { icon?: React.ElementType }> = ({
   value,
   max = 5,
   precision = 0.1,
@@ -16,6 +13,9 @@ export const Rating: React.FC<RatingProps> = ({
   disabled = false,
   showValueLabel = true,
   onChange,
+  icon: Icon = Star, // 預設為 Star
+  iconColor = "#9d9d9d",          // 預設未填滿顏色
+  iconFilledColor = "#fad703", // 預設填滿顏色
 }) => {
   const [hoverValue, setHoverValue] = useState<number | null>(null);
   const iconSize = sizeMap[size] || 32;
@@ -76,10 +76,12 @@ export const Rating: React.FC<RatingProps> = ({
             onMouseMove={(e) => handleMouseMove(i, e)}
             onClick={(e) => handleClick(i, e)}
           >
-            <Star
+            {/* 使用傳入的 Icon 元件，未填滿部分 */}
+            <Icon
               size={iconSize}
-              style={{ position: "absolute", left: 0, top: 0, color: "#bbb" }}
+              style={{ position: "absolute", left: 0, top: 0, color: iconColor }}
             />
+            {/* 填滿部分 */}
             <span
               style={{
                 width: `${fill * 100}%`,
@@ -92,10 +94,10 @@ export const Rating: React.FC<RatingProps> = ({
                 display: "inline-block",
               }}
             >
-              <Star
+              <Icon
                 weight="fill"
                 size={iconSize}
-                style={{ color: "#FFD700" }}
+                style={{ color: iconFilledColor }}
               />
             </span>
           </span>
