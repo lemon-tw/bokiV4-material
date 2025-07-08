@@ -3,12 +3,12 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { DraggableChips } from "../../components/Atom/Chip/DraggableChips";
 import { Avatar } from "../../components/Atom/Avatar/Avatar";
 import { Chip } from "../../components/Atom/Chip/Chip";
-import FaceIcon from "@mui/icons-material/Face";
+import { SmileySticker } from "phosphor-react";
 
 type ChipItem = { id: string; name: string };
 
 const meta: Meta<typeof DraggableChips> = {
-  title: "components/Chip/DraggableChips",
+  title: "components/Atoms/Chip/DraggableChips",
   component: DraggableChips,
   parameters: {
     layout: "centered",
@@ -92,7 +92,7 @@ export const Draggablechips: Story = {
           <Chip
             selected
             label={item.name}
-            icon={<FaceIcon />}
+            icon={<SmileySticker />}
             onDelete={() => handleDelete()}
           />
         )}

@@ -12,7 +12,6 @@ import {
   palette as defaultPalette,
 } from "../../../themes/defaultPalette";
 import { CustomCheckboxProps } from "../../../types/checkboxExtends";
-// import { Opacity } from "@mui/icons-material";
 
 type CustomPaletteColor = PaletteColor & {
   custMain?: string;

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
-import { BottomModal } from "../../components/Atom/Modal/BottomModal";
+import { BottomModal } from "../../components/Modules/Modal/BottomModal";
 import { Button } from "../../components/Atom/Button/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -16,11 +16,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { Tray, Envelope } from "phosphor-react";
 
 const meta: Meta<typeof BottomModal> = {
-  title: "components/Modal/BottomModal",
+  title: "components/Modules/Modal/BottomModal",
   component: BottomModal,
   parameters: {
     layout: "centered",
@@ -87,8 +86,8 @@ export const Navigation: Story = {
           {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <ListItemIcon sx={{ fontSize: 24 }}>
+                  {index % 2 === 0 ? <Tray /> : <Envelope />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -100,8 +99,8 @@ export const Navigation: Story = {
           {["All mail", "Trash", "Spam"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <ListItemIcon sx={{ fontSize: 24 }}>
+                  {index % 2 === 0 ? <Tray /> : <Envelope />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -113,8 +112,8 @@ export const Navigation: Story = {
           {["All mail", "Trash", "Spam"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <ListItemIcon sx={{ fontSize: 24 }}>
+                  {index % 2 === 0 ? <Tray /> : <Envelope />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>

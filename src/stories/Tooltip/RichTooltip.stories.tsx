@@ -6,7 +6,7 @@ import { RichTooltip } from "../../components/Atom/Tooltip/RichTooltip";
 import { Button } from "../../components/Atom/Button/Button";
 
 const meta: Meta<typeof RichTooltip> = {
-  title: "components/Tooltip/RichTooltip",
+  title: "components/Atoms/Tooltip/RichTooltip",
   component: RichTooltip,
   parameters: {
     docs: {

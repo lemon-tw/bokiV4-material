@@ -4,12 +4,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { ToggleButton } from "../../components/Atom/Button/ToggleButton";
 import { ToggleButtonGroup } from "@mui/material";
-import { GoZoomIn, GoZoomOut } from "react-icons/go";
-import { TbZoomReset } from "react-icons/tb";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import {
+  MagnifyingGlassPlus,
+  MagnifyingGlassMinus,
+  CaretLeft,
+  CaretRight,
+  ArrowCounterClockwise,
+} from "phosphor-react";
 
 const meta: Meta<typeof ToggleButton> = {
-  title: "components/Button/ToggleButton",
+  title: "components/Atoms/Button/ToggleButton",
   component: ToggleButton,
   parameters: {
     layout: "centered",
@@ -42,10 +46,10 @@ export const Surface: Story = {
     return (
       <div style={{ display: "flex", gap: "20px" }}>
         <ToggleButton {...args} value="left">
-          <IoIosArrowBack />
+          <CaretLeft />
         </ToggleButton>
         <ToggleButton {...args} value="right">
-          <IoIosArrowForward />
+          <CaretRight />
         </ToggleButton>
       </div>
     );
@@ -77,13 +81,13 @@ export const ToggleButtonsGroup: Story = {
         }}
       >
         <ToggleButton {...args} value="left">
-          <GoZoomIn />
+          <MagnifyingGlassPlus />
         </ToggleButton>
         <ToggleButton {...args} value="center">
-          <GoZoomOut />
+          <MagnifyingGlassMinus />
         </ToggleButton>
         <ToggleButton {...args} value="right">
-          <TbZoomReset />
+          <ArrowCounterClockwise />
         </ToggleButton>
       </ToggleButtonGroup>
     );

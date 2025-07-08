@@ -1,17 +1,15 @@
 import { styled, Theme, useTheme } from "@mui/material/styles";
-import MuiSwipeableDrawer, {
-  SwipeableDrawerProps,
-} from "@mui/material/SwipeableDrawer";
+import MuiDrawer, { DrawerProps } from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import DialogTitle from "@mui/material/DialogTitle";
 import { palette as defaultPalette } from "../../../themes/defaultPalette";
-import { CustomBottomModalProps } from "../../../types/modalExtends";
+import { CustomSideModalProps } from "../../../types/modalExtends";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import { CaretLeft, CaretRight, X } from "phosphor-react";
 
-type BottomModalProps = SwipeableDrawerProps & CustomBottomModalProps;
+type SideModalProps = DrawerProps & CustomSideModalProps;
 
-export const getBottomModalStyles = (
+export const getSideModalStyles = (
   theme: Theme,
   color: keyof typeof defaultPalette = "primary"
 ) => {
@@ -25,45 +23,45 @@ export const getBottomModalStyles = (
   };
 };
 
-const StyleBottomModal = styled(
-  ({ title, content, align, ...muiDrawerProps }: BottomModalProps) => (
-    <MuiSwipeableDrawer {...muiDrawerProps} />
+const StyleSideModal = styled(
+  ({ title, content, align, ...muiDrawerProps }: SideModalProps) => (
+    <MuiDrawer {...muiDrawerProps} />
   ),
   {
     shouldForwardProp: (prop) =>
       prop !== "title" && prop !== "content" && prop !== "align",
   }
-)<{ anchor?: CustomBottomModalProps["anchor"] }>(({ anchor, theme }) => {
-  const styleConfig = getBottomModalStyles(theme);
+)<{ anchor?: CustomSideModalProps["anchor"] }>(({ anchor, theme }) => {
+  const styleConfig = getSideModalStyles(theme);
   return {
     "& .MuiDrawer-paper": {
       backgroundColor: styleConfig.bgColor,
       borderRadius:
-        anchor === "top"
-          ? "0 0 16px 16px"
-          : anchor === "bottom"
-            ? "16px 16px 0 0"
+        anchor === "left"
+          ? "0 20px 20px 0"
+          : anchor === "right"
+            ? "20px 0 0 20px"
             : "0",
     },
   };
 });
 
-export const BottomModal = ({
+export const SideModal = ({
   title,
   align,
   content,
   actions,
-  anchor = "bottom",
+  anchor = "right", // 預設為右側
   ...props
-}: CustomBottomModalProps) => {
+}: CustomSideModalProps) => {
   const theme = useTheme(); // 取得 MUI 主題
-  const styleConfig = getBottomModalStyles(theme); // 👈 在這裡計算
+  const styleConfig = getSideModalStyles(theme); // 👈 在這裡計算
   return (
-    <StyleBottomModal anchor={anchor} {...props}>
+    <StyleSideModal anchor={anchor} {...props}>
       {/* 關閉按鈕 */}
       <IconButton
         aria-label="close"
-        onClick={(e) => props.onClose?.(e)}
+        onClick={(e) => props.onClose?.(e, "escapeKeyDown")}
         sx={{
           fontSize: "30px",
           position: "absolute",
@@ -71,7 +69,7 @@ export const BottomModal = ({
           top: 16,
         }}
       >
-        <CloseIcon />
+        <X />
       </IconButton>
 
       {/* 全部內容區：滾動用 */}
@@ -79,6 +77,18 @@ export const BottomModal = ({
       {/* 標題區 */}
       {title && (
         <Box sx={{ display: "flex", justifyContent: align }}>
+          {anchor === "right" && align === "start" && (
+            <Box
+              sx={{
+                alignContent: "center",
+                ml: "24px",
+                mt: "8px",
+                fontSize: "18px",
+              }}
+            >
+              <CaretLeft />
+            </Box>
+          )}
           <DialogTitle
             sx={{
               p: 0,
@@ -92,6 +102,18 @@ export const BottomModal = ({
           >
             {title}
           </DialogTitle>
+          {anchor === "left" && align === "start" && (
+            <Box
+              sx={{
+                alignContent: "center",
+                mr: "24px",
+                mt: "8px",
+                fontSize: "18px",
+              }}
+            >
+              <CaretRight />
+            </Box>
+          )}
         </Box>
       )}
       <Box
@@ -127,6 +149,6 @@ export const BottomModal = ({
           {actions}
         </Box>
       )}
-    </StyleBottomModal>
+    </StyleSideModal>
   );
 };

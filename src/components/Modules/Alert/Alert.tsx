@@ -3,11 +3,14 @@ import MuiAlert from "@mui/material/Alert";
 import { AlertTitle } from "@mui/material";
 import { CustomAlertProps, custSeverity } from "../../../types/alertExtends";
 import { palette as defaultPalette } from "../../../themes/defaultPalette";
-import { GoCheckCircle } from "react-icons/go";
-import { FiAlertTriangle } from "react-icons/fi";
-import { PiInfo } from "react-icons/pi";
-import { MdErrorOutline } from "react-icons/md";
-import { BiErrorAlt } from "react-icons/bi";
+
+import {
+  CheckCircle,
+  Warning,
+  WarningCircle,
+  WarningOctagon,
+  Info,
+} from "phosphor-react";
 
 export const getAlertStyles = (
   theme: Theme,
@@ -22,12 +25,12 @@ export const getAlertStyles = (
 };
 
 const iconMap: Record<custSeverity, React.ReactNode> = {
-  success: <GoCheckCircle />,
-  info: <PiInfo />,
-  warning: <FiAlertTriangle />,
-  error: <MdErrorOutline />,
-  gray: <BiErrorAlt />,
-  dark: <BiErrorAlt />,
+  success: <CheckCircle />,
+  info: <Info />,
+  warning: <Warning />,
+  error: <WarningCircle />,
+  gray: <WarningOctagon />,
+  dark: <WarningOctagon />,
 };
 
 const StyledAlert = styled(MuiAlert)<{

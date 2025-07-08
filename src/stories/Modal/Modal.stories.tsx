@@ -2,13 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { fn } from "@storybook/test";
 
-import { Modal } from "../../components/Atom/Modal/Modal";
+import { Modal } from "../../components/Modules/Modal/Modal";
 import { Button } from "../../components/Atom/Button/Button";
-import { GoAlert } from "react-icons/go";
 import Box from "@mui/material/Box";
+import { Warning } from "phosphor-react";
 
 const meta: Meta<typeof Modal> = {
-  title: "components/Modal/Modal",
+  title: "components/Modules/Modal/Modal",
   component: Modal,
   parameters: {
     layout: "centered",
@@ -69,7 +69,7 @@ export const WithIcon: Story = {
     );
   },
   args: {
-    icon: <GoAlert />,
+    icon: <Warning />,
     size: "large",
     title: "This is a modal title",
     content: (

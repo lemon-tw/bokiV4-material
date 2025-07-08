@@ -2,7 +2,7 @@ import { styled, Theme } from "@mui/material/styles";
 import MuiChip from "@mui/material/Chip";
 import { palette as defaultPalette } from "../../../themes/defaultPalette";
 import { CustomChipProps } from "../../../types/chipsExtends";
-import ClearIcon from "@mui/icons-material/Clear";
+import { X } from "phosphor-react";
 
 export const getChipStyles = (
   theme: Theme,
@@ -73,7 +73,7 @@ const StyledChip = styled(MuiChip, {
 export const Chip = ({
   selected = false,
   avatar,
-  deleteIcon = <ClearIcon />,
+  deleteIcon = <X />,
   ...rest
 }: CustomChipProps) => (
   <StyledChip

@@ -3,10 +3,10 @@ import { fn } from "@storybook/test";
 
 import { Avatar } from "../../components/Atom/Avatar/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
-import Done from "@mui/icons-material/Done";
+import { Check } from "phosphor-react";
 
 const meta: Meta<typeof Avatar> = {
-  title: "components/Avatar/Avatar",
+  title: "components/Atoms/Avatar/Avatar",
   component: Avatar,
   parameters: {
     layout: "centered",
@@ -63,7 +63,7 @@ export const ImageAvata: Story = {
 export const IconAvata: Story = {
   args: {
     alt: "icon",
-    children: <Done />,
+    children: <Check />,
     sx: {
       bgcolor: "primary.main",
     },
@@ -75,10 +75,10 @@ export const groupAvata: Story = {
       source: {
         code: `
 import AvatarGroup from "@mui/material/AvatarGroup";
-import Done from "@mui/icons-material/Done";
+import {Check} from "phosphor-react";
   <AvatarGroup max={4} total={8}>
     <Avatar>
-      <Done />
+      <Check />
     </Avatar>
     <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWYnJOJepQloOKVPCIrRhgV9R7218hwCEUKg&s" />
     <Avatar src="https://media.nownews.com/nn_media/thumbnail/2020/07/1593842222912-3d70e1f25d65456999edbdd84b0ca8c0-360x640.jpeg?unShow=false" />
@@ -90,7 +90,7 @@ import Done from "@mui/icons-material/Done";
   render: (args) => (
     <AvatarGroup {...args}>
       <Avatar>
-        <Done />
+        <Check />
       </Avatar>
       <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWYnJOJepQloOKVPCIrRhgV9R7218hwCEUKg&s" />
       <Avatar src="https://media.nownews.com/nn_media/thumbnail/2020/07/1593842222912-3d70e1f25d65456999edbdd84b0ca8c0-360x640.jpeg?unShow=false" />

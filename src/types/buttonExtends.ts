@@ -1,11 +1,11 @@
 import type { ButtonProps as MuiButtonProps } from "@mui/material/Button";
+import { CustomColor } from "./colorExtends";
 export type CustomButtonVariant =
   | "filled"
   | "outlined"
   | "text"
   | "elevated"
   | "tonal";
-export type CustomColor = "surface" | "primary" | "secondary" | "tertiary";
 export type CustomIconButtonVariant =
   | "filled"
   | "standard"

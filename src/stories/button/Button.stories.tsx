@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import { Button } from "../../components/Atom/Button/Button";
-import SendIcon from "@mui/icons-material/Send";
+import { PaperPlaneRight } from "phosphor-react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
-  title: "components/Button/Button",
+  title: "components/Atoms/Button/Button",
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -52,7 +52,7 @@ export const Outline: Story = {
   args: {
     children: "Outline Button",
     variant: "outlined",
-    endIcon: <SendIcon />,
+    endIcon: <PaperPlaneRight />,
   },
 };
 

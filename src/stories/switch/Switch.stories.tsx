@@ -4,11 +4,10 @@ import { fn } from "@storybook/test";
 import { useArgs } from "@storybook/preview-api";
 
 import { Switch } from "../../components/Atom/Switch/Switch";
-import Done from "@mui/icons-material/Done";
-import Close from "@mui/icons-material/Close";
+import { X, Check } from "phosphor-react";
 
 const meta: Meta<typeof Switch> = {
-  title: "components/Switch/Switch",
+  title: "components/Atoms/Switch/Switch",
   component: Switch,
   parameters: {
     layout: "centered",
@@ -46,8 +45,8 @@ export const NormalSwitch: Story = {
 export const IconSwitch: Story = {
   args: {
     disabled: false,
-    selectedIcon: <Done />,
-    unselectedIcon: <Close />,
+    selectedIcon: <Check />,
+    unselectedIcon: <X />,
     size: "small",
   },
 };

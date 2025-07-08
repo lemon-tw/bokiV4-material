@@ -1,13 +1,12 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Alert } from "../../components/Atom/Alert/Alert";
+import { Alert } from "../../components/Modules/Alert/Alert";
 import { Button } from "../../components/Atom/Button/Button";
-import { BsBox } from "react-icons/bs";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import { X, Cube } from "phosphor-react";
 
 const meta: Meta<typeof Alert> = {
-  title: "components/Alert/Alert",
+  title: "components/Modules/Alert/Alert",
   component: Alert,
   parameters: {
     layout: "centered",
@@ -53,7 +52,7 @@ export const AlertSticky: Story = {
   render: (args) => {
     return (
       <Alert
-        icon={<BsBox />}
+        icon={<Cube />}
         onClose={() => {}}
         action={
           <div>
@@ -62,7 +61,7 @@ export const AlertSticky: Story = {
             </Button>
             <Button sx={{ height: "35px" }}>Retry</Button>
             <IconButton color="inherit" size="small">
-              <CloseIcon fontSize="inherit" />
+              <X fontSize="inherit" />
             </IconButton>
           </div>
         }
@@ -85,7 +84,7 @@ export const CloseableAlert: Story = {
       <div>
         {open && (
           <Alert
-            icon={<BsBox />}
+            icon={<Cube />}
             action={
               <div>
                 <Button
@@ -104,7 +103,7 @@ export const CloseableAlert: Story = {
                     setOpen(false);
                   }}
                 >
-                  <CloseIcon fontSize="inherit" />
+                  <X fontSize="inherit" />
                 </IconButton>
               </div>
             }

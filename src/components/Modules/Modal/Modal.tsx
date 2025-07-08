@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import { palette as defaultPalette } from "../../../themes/defaultPalette";
 import { CustomModalProps } from "../../../types/modalExtends";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import { X } from "phosphor-react";
 
 export const getModalStyles = (
   theme: Theme,
@@ -76,7 +76,7 @@ export const Modal = ({
           top: 16,
         }}
       >
-        <CloseIcon />
+        <X />
       </IconButton>
       {icon && (
         <DialogTitle

@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from "@storybook/test";
 
 import { Fab } from "../../components/Atom/Button/FAB";
-import EditIcon from "@mui/icons-material/Edit";
+import { PencilLine } from "phosphor-react";
 
 const meta: Meta<typeof Fab> = {
-  title: "components/Button/Fab",
+  title: "components/Atoms/Button/Fab",
   component: Fab,
   parameters: {
     layout: "centered",
@@ -40,27 +40,27 @@ type Story = StoryObj<typeof Fab>;
 export const Surface: Story = {
   args: {
     size: "large",
-    children: <EditIcon />,
+    children: <PencilLine />,
   },
 };
 
 export const Primary: Story = {
   args: {
     color: "primary",
-    children: <EditIcon />,
+    children: <PencilLine />,
   },
 };
 export const Secondary: Story = {
   args: {
     color: "secondary",
-    children: <EditIcon />,
+    children: <PencilLine />,
   },
 };
 
 export const Tertiary: Story = {
   args: {
     color: "tertiary",
-    children: <EditIcon />,
+    children: <PencilLine />,
   },
 };
 
@@ -68,6 +68,6 @@ export const Extended: Story = {
   args: {
     variant: "extended",
     color: "tertiary",
-    children: [<EditIcon sx={{ mr: 1 }} />, "Extendeda"],
+    children: [<PencilLine style={{ margin: 1 }} />, "Extended"],
   },
 };

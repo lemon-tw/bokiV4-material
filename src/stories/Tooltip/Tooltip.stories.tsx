@@ -3,10 +3,10 @@ import { fn } from "@storybook/test";
 
 import { Tooltip } from "../../components/Atom/Tooltip/Tooltip";
 import { IconButton } from "../../components/Atom/Button/IconButton";
-import LocalTaxiOutlinedIcon from "@mui/icons-material/LocalTaxiOutlined";
+import { Taxi } from "phosphor-react";
 
 const meta: Meta<typeof Tooltip> = {
-  title: "components/Tooltip/Tooltip",
+  title: "components/Atoms/Tooltip/Tooltip",
   component: Tooltip,
   parameters: {
     layout: "centered",
@@ -53,7 +53,7 @@ export const Label: Story = {
   render: (args) => (
     <Tooltip {...args}>
       <IconButton>
-        <LocalTaxiOutlinedIcon />
+        <Taxi />
       </IconButton>
     </Tooltip>
   ),
