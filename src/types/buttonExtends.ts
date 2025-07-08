@@ -1,11 +1,11 @@
 import type { ButtonProps as MuiButtonProps } from "@mui/material/Button";
+import { CustomColor } from "./colorExtends";
 export type CustomButtonVariant =
   | "filled"
   | "outlined"
   | "text"
   | "elevated"
   | "tonal";
-export type CustomColor = "surface" | "primary" | "secondary" | "tertiary";
 export type CustomIconButtonVariant =
   | "filled"
   | "standard"
@@ -29,5 +29,11 @@ export interface CustomIconButtonProps
   variant?: CustomIconButtonVariant;
   selected?: boolean;
   toggleIcon?: React.ReactElement;
+  color?: CustomColor;
+}
+
+import { ToggleButtonProps as MuiToggleButtonProps } from "@mui/material/ToggleButton";
+export interface CustomToggleButtonProps
+  extends Omit<MuiToggleButtonProps, "color"> {
   color?: CustomColor;
 }

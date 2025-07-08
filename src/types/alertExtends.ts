@@ -1,4 +1,5 @@
 import { AlertProps } from "@mui/material/Alert";
+import { CustomColor } from "./colorExtends";
 export type custSeverity =
   | "error"
   | "success"
@@ -6,7 +7,6 @@ export type custSeverity =
   | "warning"
   | "gray"
   | "dark";
-export type CustomColor = "surface" | "primary" | "secondary" | "tertiary";
 export interface CustomAlertProps
   extends Omit<AlertProps, "severity" | "color"> {
   severity?: custSeverity;

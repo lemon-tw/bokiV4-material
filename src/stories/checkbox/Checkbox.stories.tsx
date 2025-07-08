@@ -27,10 +27,10 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "../../components/Atom/Checkbox/Checkbox";
-import { CustomCheckboxProps } from "../../types/checkboxExtends"
+import { CustomCheckboxProps } from "../../types/checkboxExtends";
 
 const meta: Meta<typeof Checkbox> = {
-  title: "Components/Checkbox/Checkbox",
+  title: "Components/Atoms/Checkbox/Checkbox",
   component: Checkbox,
   parameters: {
     layout: "centered",
@@ -48,7 +48,6 @@ const meta: Meta<typeof Checkbox> = {
   args: {
     color: "primary",
   },
-
 };
 
 export default meta;
@@ -62,13 +61,7 @@ const InteractiveTemplate = (args: CustomCheckboxProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
   };
-  return (
-    <Checkbox
-      {...args}
-      checked={checked}
-      onChange={handleChange}
-    />
-  );
+  return <Checkbox {...args} checked={checked} onChange={handleChange} />;
 };
 
 // 受控元件 Story
@@ -112,7 +105,13 @@ export const Uncontrolled: Story = {
 };
 
 export const UncontrolledWithLabel: Story = {
-  render: (args) => <Checkbox {...args} defaultChecked={false} label="非受控模式 - Standard 樣式" />,
+  render: (args) => (
+    <Checkbox
+      {...args}
+      defaultChecked={false}
+      label="非受控模式 - Standard 樣式"
+    />
+  ),
   parameters: {
     docs: {
       source: {
@@ -129,9 +128,10 @@ export const UncontrolledWithLabel: Story = {
 
 // indeterminate
 export const Indeterminate: Story = {
-  render: (args) => <Checkbox {...args} indeterminate={true} label="indeterminate" />,
+  render: (args) => (
+    <Checkbox {...args} indeterminate={true} label="indeterminate" />
+  ),
 };
-
 
 // indeterminate Template
 // const IndeterminateGroupTemplate = () => {

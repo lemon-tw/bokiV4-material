@@ -6,3 +6,6 @@ export type { CustomFabProps } from "../../../types/buttonExtends";
 
 export { IconButton } from "./IconButton";
 export type { CustomIconButtonProps } from "../../../types/buttonExtends";
+
+export { ToggleButton } from "./ToggleButton";
+export type { CustomToggleButtonProps } from "../../../types/buttonExtends";

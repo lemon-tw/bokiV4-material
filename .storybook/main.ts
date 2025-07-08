@@ -7,6 +7,9 @@ const config: StorybookConfig = {
   },
   stories: ["../src/**/*.stories.@(ts|tsx|mdx)"],
   addons: ["@storybook/addon-essentials", "@storybook/blocks"],
+  // typescript: {
+  //   reactDocgen: "react-docgen-typescript",
+  // },
 };
 
 export default config;

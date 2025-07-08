@@ -1,12 +1,13 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import { useArgs } from "@storybook/preview-api";
 
 import { Switch } from "../../components/Atom/Switch/Switch";
-import Done from "@mui/icons-material/Done";
-import Close from "@mui/icons-material/Close";
+import { X, Check } from "phosphor-react";
 
 const meta: Meta<typeof Switch> = {
-  title: "components/Switch/Switch",
+  title: "components/Atoms/Switch/Switch",
   component: Switch,
   parameters: {
     layout: "centered",
@@ -44,23 +45,30 @@ export const NormalSwitch: Story = {
 export const IconSwitch: Story = {
   args: {
     disabled: false,
-    selectedIcon: <Done />,
-    unselectedIcon: <Close />,
+    selectedIcon: <Check />,
+    unselectedIcon: <X />,
     size: "small",
   },
 };
 
-export const DoubleIconSwitch: Story = {
-  render: (args) => (
-    <div style={{ display: "flex", gap: "2rem" }}>
-      <Switch {...args} />
-      <Switch {...args} />
-    </div>
-  ),
+export const ControlledSwitch: Story = {
+  render: (args) => {
+    const [{ checked }, updateArgs] = useArgs();
+    return (
+      <Switch
+        {...args}
+        checked={checked}
+        onChange={(e) => updateArgs({ checked: e.target.checked })}
+      />
+    );
+  },
   args: {
     disabled: false,
-    selectedIcon: <Done />,
-    unselectedIcon: <Close />,
-    size: "small",
+  },
+  argTypes: {
+    checked: {
+      control: "boolean",
+      description: "開關狀態",
+    },
   },
 };

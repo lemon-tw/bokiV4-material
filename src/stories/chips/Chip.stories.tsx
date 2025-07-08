@@ -3,10 +3,10 @@ import { fn } from "@storybook/test";
 
 import { Chip } from "../../components/Atom/Chip/Chip";
 import { Avatar } from "../../components/Atom/Avatar/Avatar";
-import LocalTaxiOutlinedIcon from "@mui/icons-material/LocalTaxiOutlined";
+import { Taxi } from "phosphor-react";
 
 const meta: Meta<typeof Chip> = {
-  title: "components/Chip/Chip",
+  title: "components/Atoms/Chip/Chip",
   component: Chip,
   parameters: {
     layout: "centered",
@@ -21,6 +21,11 @@ const meta: Meta<typeof Chip> = {
     },
     icon: {
       table: { disable: true },
+    },
+    sx: {
+      control: "object",
+      description: "點擊 RAW 編輯自定義樣式, 例如: { backgroundColor: 'red' }",
+      raw: true,
     },
   },
   args: {
@@ -49,7 +54,7 @@ export const Label: Story = {
 export const IconAndDelete: Story = {
   args: {
     label: "Label",
-    icon: <LocalTaxiOutlinedIcon />,
+    icon: <Taxi />,
     onDelete: handleDelete,
   },
 };

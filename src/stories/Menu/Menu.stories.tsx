@@ -2,17 +2,17 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import { Menu } from "../../components/Atom/Menu/Menu";
-import { MenuItem } from "../../components/Atom/Menu/MenuItem";
+import { Menu } from "../../components/Modules/Menu/Menu";
+import { MenuItem } from "../../components/Modules/Menu/MenuItem";
 import { Button } from "../../components/Atom/Button/Button";
 import Divider from "@mui/material/Divider";
-import { Cloud } from "@mui/icons-material";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Typography from "@mui/material/Typography";
 import ListItemText from "@mui/material/ListItemText";
+import { Cloud } from "phosphor-react";
 
 const meta: Meta<typeof Menu> = {
-  title: "components/Menu/Menu",
+  title: "components/Modules/Menu/Menu",
   component: Menu,
   parameters: {
     layout: "centered",
@@ -33,7 +33,7 @@ export const Label: Story = {
     docs: {
       source: {
         code: `
-import { Cloud } from "@mui/icons-material";
+import { Cloud } from "phosphor-react";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Typography from "@mui/material/Typography";
 import ListItemText from "@mui/material/ListItemText";
@@ -135,7 +135,7 @@ import ListItemText from "@mui/material/ListItemText";
           <MenuItem onClick={handleClose} selected sx={{ p: 2 }}>
             Selected
           </MenuItem>
-          {/* <Divider /> */}
+          <Divider />
           <MenuItem onClick={handleClose} sx={{ p: 2 }}>
             <ListItemIcon>
               <Cloud fontSize="small" />

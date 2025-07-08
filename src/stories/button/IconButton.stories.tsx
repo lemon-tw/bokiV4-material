@@ -3,11 +3,10 @@ import { Meta, StoryObj } from "@storybook/react";
 
 import { IconButton } from "../../components/Atom/Button/IconButton";
 // import { ToggleIconButton } from "../../component/Atom/Button/IconButton";
-import SettingsIcon from "@mui/icons-material/Settings";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import { Gear } from "phosphor-react";
 
 const meta: Meta<typeof IconButton> = {
-  title: "components/Button/IconButton",
+  title: "components/Atoms/Button/IconButton",
   component: IconButton,
   parameters: {
     layout: "centered",
@@ -47,32 +46,32 @@ type Story = StoryObj<typeof IconButton>;
 export const Filled: Story = {
   args: {
     variant: "filled",
-    children: <SettingsOutlinedIcon />,
+    children: <Gear />,
   },
 };
 export const standard: Story = {
   args: {
     variant: "standard",
-    children: <SettingsOutlinedIcon />,
+    children: <Gear />,
   },
 };
 export const Tonal: Story = {
   args: {
     variant: "tonal",
-    children: <SettingsOutlinedIcon />,
+    children: <Gear />,
   },
 };
 export const Outlined: Story = {
   args: {
     variant: "outlined",
-    children: <SettingsOutlinedIcon />,
+    children: <Gear />,
   },
 };
 
 export const ToggleButton: Story = {
   args: {
     variant: "filled",
-    toggleIcon: <SettingsOutlinedIcon />,
-    children: <SettingsIcon />,
+    toggleIcon: <Gear />,
+    children: <Gear weight="fill" />,
   },
 };

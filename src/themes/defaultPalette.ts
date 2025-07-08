@@ -10,6 +10,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -21,6 +22,8 @@ export const palette = {
     myDefault: "#7a7d80",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       //[0] bg color [1] Icon color
@@ -40,6 +43,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -51,6 +55,8 @@ export const palette = {
     myDefault: "1994FC",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -70,6 +76,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -81,6 +88,8 @@ export const palette = {
     myDefault: "#2D66BF",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -99,6 +108,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -110,6 +120,8 @@ export const palette = {
     myDefault: "#0E3A3B",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -130,6 +142,7 @@ export const palette = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -141,6 +154,8 @@ export const palette = {
     myDefault: "#FF4D4F",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -162,6 +177,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -173,6 +189,8 @@ export const dark = {
     myDefault: "#1994FC",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -191,6 +209,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -202,6 +221,8 @@ export const dark = {
     myDefault: "#1994FC",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -221,6 +242,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -232,6 +254,8 @@ export const dark = {
     myDefault: "#2D66BF",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],
@@ -250,6 +274,7 @@ export const dark = {
     elevated: "#FAFAFA",
     tonal: "#DBE9FF",
     onTonal: "#2D66BF",
+    toggleButtonBg: "#1E1E1E",
 
     iconFont: "#7A7D80",
     iconOverlay: "#505050",
@@ -261,6 +286,8 @@ export const dark = {
     myDefault: "#0E3A3B",
 
     menuFont: "#373737",
+
+    tooltipBg: "#34393D",
 
     alertColor: {
       error: ["#FFEDED", "#A72E2F"],

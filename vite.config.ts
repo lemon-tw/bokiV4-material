@@ -9,7 +9,7 @@ export default defineConfig({
       entry: "src/index.ts",
       name: "@lemon/material",
       fileName: "index",
-      formats: ["es"], // 支援 ESM 和 CommonJS
+      formats: ["es"], // 支援 ESM 格式
     },
     rollupOptions: {
       external: [
@@ -23,6 +23,7 @@ export default defineConfig({
         "@mui/icons-material",
         "@emotion/react",
         "@emotion/styled",
+        "**/*.stories.tsx",
       ], // 不要打包這些
       output: {
         globals: {

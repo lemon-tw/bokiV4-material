@@ -4,31 +4,31 @@ import CheckboxGroup from "../../components/Atom/Checkbox/CheckboxGroup";
 
 // Storybook 設定
 const meta: Meta<typeof CheckboxGroup> = {
-    title: "Components/Checkbox/CheckboxGroup",
-    component: CheckboxGroup,
-    tags: ["autodocs"],
-    parameters: {
-        layout: "centered",
-    },
-    argTypes: {
-        parentLabel: { control: "text" },
-        labels: { control: "object" },
-    },
-    args: {
-        parentLabel: "父層",
-        labels: ["子項目1", "子項目2"],
-    },
+  title: "Components/Atoms/Checkbox/CheckboxGroup",
+  component: CheckboxGroup,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
+  argTypes: {
+    parentLabel: { control: "text" },
+    labels: { control: "object" },
+  },
+  args: {
+    parentLabel: "父層",
+    labels: ["子項目1", "子項目2"],
+  },
 };
 export default meta;
 
 type Story = StoryObj<typeof CheckboxGroup>;
 
 export const Standard: Story = {
-    render: (args) => <CheckboxGroup {...args} />,
-    parameters: {
-        docs: {
-            source: {
-                code: `
+  render: (args) => <CheckboxGroup {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        code: `
 const CheckboxGroup = ({ labels, parentLabel = "全選" }) => {
     const [checked, setChecked] = React.useState(
         Array(labels.length).fill(false)
@@ -77,7 +77,7 @@ const CheckboxGroup = ({ labels, parentLabel = "全選" }) => {
     );
 };
                 `.trim(),
-            },
-        },
+      },
     },
+  },
 };
