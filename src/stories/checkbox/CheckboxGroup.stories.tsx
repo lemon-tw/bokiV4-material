@@ -15,8 +15,8 @@ const meta: Meta<typeof CheckboxGroup> = {
     labels: { control: "object" },
   },
   args: {
-    parentLabel: "父層",
-    labels: ["子項目1", "子項目2"],
+    parentLabel: "水果全選",
+    labels: ["Apple", "Banana", "Orange"],
   },
 };
 export default meta;
@@ -29,54 +29,18 @@ export const Standard: Story = {
     docs: {
       source: {
         code: `
-const CheckboxGroup = ({ labels, parentLabel = "全選" }) => {
-    const [checked, setChecked] = React.useState(
-        Array(labels.length).fill(false)
-    );
-    const allChecked = checked.every(Boolean);
-    const someChecked = checked.some(Boolean);
-    const indeterminate = someChecked && !allChecked;
-    const handleParentChange = (e) => {
-        setChecked(Array(labels.length).fill(e.target.checked));
-    };
-    const handleChildChange = (idx) => (e) => {
-        const newChecked = [...checked];
-        newChecked[idx] = e.target.checked;
-        setChecked(newChecked);
-    };
+import React from "react";
+import CheckboxGroup from "@/components/Atom/Checkbox/CheckboxGroup";
 
-    const parentLabel = "父層",
-    const labels = ["子項目1", "子項目2"],
-
-    return (
-        <>
-            <FormControlLabel
-                label={parentLabel}
-                control={
-                    <Checkbox
-                        checked={allChecked}
-                        indeterminate={indeterminate}
-                        onChange={handleParentChange}
-                    />
-                }
-            />
-            {labels.map((label, idx) => (
-                <FormControlLabel
-                    key={label}
-                    label={label}
-                    control={
-                        <Checkbox
-                            style={{ marginLeft: "48px" }}
-                            checked={checked[idx]}
-                            onChange={handleChildChange(idx)}
-                        />
-                    }
-                />
-            ))}
-        </>
-    );
-};
-                `.trim(),
+export default function Example() {
+  return (
+    <CheckboxGroup
+      labels={["Apple", "Banana", "Orange"]}
+      parentLabel="水果全選"
+    />
+  );
+}
+        `.trim(),
       },
     },
   },
