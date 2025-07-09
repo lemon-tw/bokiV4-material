@@ -1,6 +1,5 @@
 import { CheckboxProps as MuiCheckboxProps } from '@mui/material/Checkbox';
-/** 自訂 Checkbox 支援的顏色型別 */
-export type CustomColor = "primary" | "error";
+import { CustomColor } from './colorExtends';
 /** 自訂 Checkbox 元件 Props */
 export interface CustomCheckboxProps extends Omit<MuiCheckboxProps, "color"> {
     /** 顏色（primary 或 error） */
