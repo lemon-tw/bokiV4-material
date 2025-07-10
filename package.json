@@ -23,6 +23,7 @@
     "@fontsource/noto-sans": "^5.2.7",
     "@fontsource/noto-sans-tc": "^5.2.5",
     "@hello-pangea/dnd": "^18.0.1",
+    "@phosphor-icons/react": "^2.1.10",
     "phosphor-react": "^1.4.1"
   },
   "peerDependencies": {
