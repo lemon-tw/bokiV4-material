@@ -1,7 +1,6 @@
 import React from "react";
 
 import type { Theme } from "@mui/material/styles";
-import type { CustomColor } from "../../../types/checkboxExtends";
 import type { PaletteColor } from "@mui/material/styles";
 
 import MuiCheckbox from "@mui/material/Checkbox";
@@ -22,7 +21,10 @@ type CustomPaletteColor = PaletteColor & {
 };
 
 // 依 color 取得 palette
-const getCheckboxStyles = (theme: Theme, color: CustomColor = "primary") => {
+const getCheckboxStyles = (
+  theme: Theme,
+  color: CustomCheckboxProps["color"] = "primary"
+) => {
   const fallback = defaultPalette[color];
   const colorSet = (theme?.palette?.[color] as CustomPaletteColor) ?? fallback;
 
@@ -58,8 +60,8 @@ const getCheckboxStyles = (theme: Theme, color: CustomColor = "primary") => {
 
 // 用 styled API 包裝 MuiCheckbox
 const StyledCheckbox = styled(MuiCheckbox, {
-  shouldForwardProp: (prop) => prop !== "color",
-})<{ color?: CustomColor }>(({ theme, color = "primary" }) =>
+  shouldForwardProp: (prop) => prop !== "color" && prop !== "data-color",
+})<{ color?: CustomCheckboxProps["color"] }>(({ theme, color = "primary" }) =>
   getCheckboxStyles(theme, color)
 );
 
@@ -68,7 +70,7 @@ export const Checkbox: React.FC<CustomCheckboxProps> = ({
   label,
   ...rest
 }) => {
-  const checkboxElement = <StyledCheckbox color={color} {...rest} />;
+  const checkboxElement = <StyledCheckbox data-color={color} {...rest} />;
 
   return label ? (
     <FormControlLabel control={checkboxElement} label={label || undefined} />
