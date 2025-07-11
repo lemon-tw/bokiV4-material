@@ -1,0 +1,12 @@
+import{j as r}from"./jsx-runtime-BO8uF4Og.js";import{p as c}from"./defaultPalette-fWaDn0-C.js";import{s as d}from"./memoTheme-C83d1A0S.js";import{T as g,t as n}from"./Tooltip-BPgs10mR.js";import{I as f}from"./IconButton-B6tYplb6.js";import{T as u}from"./Taxi.esm-B-xgICOU.js";import"./index-D4H_InIO.js";import"./DefaultPropsProvider-D4sChuSN.js";import"./index-Bm8UbI65.js";import"./useTheme-CfJJ7vPb.js";import"./useTheme-Bh-_xkMb.js";import"./useSlot-BWf5NxIe.js";import"./TransitionGroupContext-DUOgHM_c.js";import"./useEnhancedEffect-BUbyLjya.js";import"./useControlled-DIa7s2dv.js";import"./useId-CN9_kA9R.js";import"./Portal-LBlGjCQn.js";import"./index-BkuToD7M.js";import"./index-vYCkCKEW.js";import"./Grow-zgzfA1CP.js";import"./utils-bnsn1T2-.js";import"./Popper-Cf3gwBMq.js";import"./ownerDocument-DW-IO8s5.js";import"./useSlotProps-qwZrg_4U.js";import"./ButtonBase-CP1Oo1Bo.js";import"./IconButton-BTG6ddxK.js";import"./createSimplePaletteValueFilter-bm0fmN_7.js";import"./CircularProgress-Cn6m69C4.js";import"./IconBase.esm-BbKRF193.js";const b=(o,t="primary")=>{var i;const p=c[t];return{bgColor:(((i=o==null?void 0:o.palette)==null?void 0:i[t])??p).tooltipBg??p.tooltipBg}},T=d(({className:o,...t})=>r.jsx(g,{...t,classes:{popper:o}}))(({theme:o})=>{const t=b(o);return{[`& .${n.tooltip}`]:{backgroundColor:t.bgColor,fontSize:13,fontFamily:"Noto Sans, Noto Sans TC, sans-serif",fontWeight:400},[`& .${n.arrow}`]:{color:t.bgColor}}}),s=({...o})=>r.jsx(T,{...o});s.__docgenInfo={description:"",methods:[],displayName:"Tooltip"};const Q={title:"components/Atoms/Tooltip/Tooltip",component:s,parameters:{layout:"centered",docs:{description:{component:"因為storybook會阻擋首次Hover行為，點擊或focus後才能正常使用"}}},tags:["autodocs"],argTypes:{placement:{control:"select",options:["top","top-start","top-end","right","right-start","right-end","bottom","bottom-start","bottom-end","left","left-start","left-end"]},arrow:{control:"boolean"}},args:{}},e={render:o=>r.jsx(s,{...o,children:r.jsx(f,{children:r.jsx(u,{})})}),args:{arrow:!0,title:"Label",placement:"bottom"}};var a,m,l;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: args => <Tooltip {...args}>
+      <IconButton>
+        <Taxi />
+      </IconButton>
+    </Tooltip>,
+  args: {
+    arrow: true,
+    title: "Label",
+    placement: "bottom"
+  }
+}`,...(l=(m=e.parameters)==null?void 0:m.docs)==null?void 0:l.source}}};const U=["Label"];export{e as Label,U as __namedExportsOrder,Q as default};
