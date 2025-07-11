@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Tag from "../../components/Atom/Tag/Tag"; // 路徑請依專案實際調整
+import { Tag } from "../../components/Atom/Tag/Tag"; // 路徑請依專案實際調整
 import type { TagProps } from "../../types/tagExtends";
 import { Bed, UsersThree, CornersOut, Prohibit, CheckCircle } from "phosphor-react";
 import { BowlFoodIcon } from "@phosphor-icons/react";
@@ -18,7 +18,17 @@ const ICONS = {
 const meta: Meta<TagProps> = {
     title: "components/Atoms/Tag/Tag",
     component: Tag,
-    parameters: { layout: "centered" },
+    parameters: {
+        layout: "centered",
+        docs: {
+            description: {
+                component: `
+使用時傳入的 label 可以直接傳入 ReactNode
+如果需要部分文字不同顏色或是其他效果可以直接在標籤修改style 或是 className
+        `,
+            },
+        },
+    },
     tags: ["autodocs"],
     argTypes: {
         label: { control: "text" },
@@ -178,6 +188,9 @@ export const MixColor: Story = {
     },
     parameters: {
         docs: {
+            description: {
+                story: '使用時傳入的 label 可以直接傳入 ReactNode 如果需要部分文字不同顏色或是其他效果可以直接在標籤修改style 或是 className',
+            },
             source: {
                 code: `
 import Tag from '@lemon/material/Tag';

@@ -2,7 +2,7 @@ import "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface PaletteColor {
-    costMain?: string;
+    custMain?: string;
     onMain?: string;
     shadow?: string;
     outline?: string;
