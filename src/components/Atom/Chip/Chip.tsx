@@ -36,6 +36,7 @@ const StyledChip = styled(MuiChip, {
     border: selected ? "0px" : "",
     ".MuiChip-icon": {
       color: styleConfig.iconColor,
+      fontSize: "1rem",
     },
     "&.MuiChip-clickable:hover, &.MuiChip-clickable:focus": {
       backgroundColor: selected ? styleConfig.selectedbgColor : "transparent",
@@ -73,7 +74,7 @@ const StyledChip = styled(MuiChip, {
 export const Chip = ({
   selected = false,
   avatar,
-  deleteIcon = <X />,
+  deleteIcon = <X size={"1rem"} />,
   ...rest
 }: CustomChipProps) => (
   <StyledChip
