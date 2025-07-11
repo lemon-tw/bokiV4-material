@@ -190,8 +190,7 @@ function MixColorText() {
     免費取消{" "}
     {/* 需要自定義不同顏色的直接寫 style 或是 className */}
     <span style={{ color: "#818181" }}>{date} 前</span>
-  </span>
-  );
+  </span>);
 }
 
 <Tag

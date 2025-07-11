@@ -189,5 +189,3 @@ export const Table: React.FC<TableProps> = ({
         </>
     );
 };
-
-export default Table;

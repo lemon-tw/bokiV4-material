@@ -6,7 +6,7 @@ import { TAG_SIZE_STYLE, TagSize } from "./tagSizeStyle";
 import { COLOR_MAP, VARIANT_MAP, TagColor, TagVariant } from "./colorMap";
 import type { TagProps } from "../../../types/tagExtends";
 
-const Tag: React.FC<TagProps> = ({
+export const Tag: React.FC<TagProps> = ({
     color = "primary",
     variant = "solid",
     onlyText = false,
@@ -110,5 +110,3 @@ const Tag: React.FC<TagProps> = ({
         />
     );
 };
-
-export default Tag;
