@@ -1,8 +1,8 @@
 import { ImageListProps } from '@mui/material/ImageList';
-export interface ExtendedImageListProps extends Omit<ImageListProps, "variant"> {
+export interface CustomImageListProps extends Omit<ImageListProps, "variant"> {
     showImg?: 1 | 4 | 5 | 7;
     height?: number;
-    onclick?: () => void;
+    totalButtonClick?: () => void;
     itemData: Array<{
         img: string;
         title?: string;
