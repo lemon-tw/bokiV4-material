@@ -1,0 +1,1 @@
+import{j as x}from"./jsx-runtime-BO8uF4Og.js";import{s as r}from"./memoTheme-DQLz_w2O.js";import{M as t}from"./Menu-DPgr-jSq.js";const s=r(t)(()=>({"& .MuiPaper-root":{boxShadow:"0px 2px 6px 2px #00000026, 0px 1px 2px 0px #0000004D"}})),a=({open:o,...p})=>x.jsx(s,{open:o,...p});export{a as M};
