@@ -1,0 +1,2 @@
+import { GuestRoomConfigProps } from 'src/types/guestRoomConfigExtends';
+export declare const GuestRoomConfig: ({ showMultiRoomPackage, isMultiRoomPackage, setIsMultiRoomPackage, numRooms, setNumRooms, showSeniors, seniors, setSeniors, seniorsAge, seniorsArray, setSeniorsArray, showChildrens, childrens, setChildrens, childrensAge, childrensHeight, childrensSelectorType, childrensArray, setChildrensArray, adults, setAdults, showAge, withPet, setWithPet, AccessibleRoom, setAccessibleRoom, ...rest }: GuestRoomConfigProps) => import("react/jsx-runtime").JSX.Element;

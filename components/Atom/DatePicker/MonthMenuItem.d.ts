@@ -1,5 +1,4 @@
-import { default as React } from '../../../../node_modules/react';
-import { MenuItemProps } from '@mui/material/MenuItem';
+import { MenuItemProps } from '@mui/material';
 export interface MonthMenuItemProps extends MenuItemProps {
     selected?: boolean;
     autoFocus?: boolean;
@@ -7,4 +6,4 @@ export interface MonthMenuItemProps extends MenuItemProps {
     hasFocus?: unknown;
     timeViewsCount?: unknown;
 }
-export declare const MonthMenuItem: React.ForwardRefExoticComponent<Omit<MonthMenuItemProps, "ref"> & React.RefAttributes<HTMLLIElement>>;
+export declare const MonthMenuItem: import('../../../../node_modules/react').ForwardRefExoticComponent<Omit<MonthMenuItemProps, "ref"> & import('../../../../node_modules/react').RefAttributes<HTMLLIElement>>;

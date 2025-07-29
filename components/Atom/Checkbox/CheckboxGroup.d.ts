@@ -1,6 +1,6 @@
 import { default as React } from '../../../../node_modules/react';
 import { CheckboxGroupProps } from '../../../types/checkboxExtends';
-interface CheckboxGroupRenderProps extends Omit<CheckboxGroupProps, 'parentLabel'> {
+interface CheckboxGroupRenderProps extends Omit<CheckboxGroupProps, "parentLabel"> {
     renderParent?: (props: {
         label: string;
         checked: boolean;

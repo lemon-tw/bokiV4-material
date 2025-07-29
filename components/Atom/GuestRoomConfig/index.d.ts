@@ -1,0 +1,1 @@
+export { GuestRoomConfig } from './GuestRoomConfig';

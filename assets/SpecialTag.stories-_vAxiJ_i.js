@@ -1,0 +1,3 @@
+import"./lemonTheme-DGlRE1oP.js";import"./Typography-2_fYrsYp.js";import{g as a}from"./RichTooltip-Cx3E0wiy.js";import"./DefaultPropsProvider-w6ViFw_n.js";import"./index-D4H_InIO.js";import"./jsx-runtime-BO8uF4Og.js";import"./index-BkuToD7M.js";import"./index-vYCkCKEW.js";import"./tiny-invariant-CopsF_GD.js";const u={title:"components/Atoms/Tag/MembersOnlyTag",component:a,tags:["autodocs"],parameters:{layout:"centered"},argTypes:{label:{control:"text"}},args:{}},r={args:{}};var e,t,o;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  args: {}
+}`,...(o=(t=r.parameters)==null?void 0:t.docs)==null?void 0:o.source}}};const y=["MemberOnly"];export{r as MemberOnly,y as __namedExportsOrder,u as default};
