@@ -6,6 +6,7 @@ export * from './components/Atom/Checkbox';
 export * from './components/Atom/Chip';
 export * from './components/Atom/CodeInput';
 export * from './components/Atom/DatePicker';
+export * from './components/Atom/DisplaySortBar';
 export * from './components/Atom/GuestRoomConfig';
 export * from './components/Modules/MemberMenu';
 export * from './components/Modules/Menu';

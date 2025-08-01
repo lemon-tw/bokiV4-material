@@ -32,6 +32,6 @@ export interface GuestRoomConfigProps extends PopoverProps {
     showAge?: boolean;
     withPet: boolean;
     setWithPet: React.Dispatch<React.SetStateAction<boolean>>;
-    AccessibleRoom: boolean;
+    accessibleRoom: boolean;
     setAccessibleRoom: React.Dispatch<React.SetStateAction<boolean>>;
 }
