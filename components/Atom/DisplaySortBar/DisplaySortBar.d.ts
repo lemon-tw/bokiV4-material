@@ -1,2 +1,2 @@
 import { DisplaySortBarProps } from 'src/types/displaySortBarExtends';
-export declare const DisplaySortBar: ({ displayType, setDisplayType, sortType, setSortType, filterSection, filterItem, setFilterItem, ...rest }: DisplaySortBarProps) => import("react/jsx-runtime").JSX.Element;
+export declare const DisplaySortBar: ({ defaultDisplayType, defaultSortType, defaultFilterItems, onFilterResult, filterSection, baseItems, ...rest }: DisplaySortBarProps) => import("react/jsx-runtime").JSX.Element;

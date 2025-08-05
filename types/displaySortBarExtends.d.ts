@@ -1,14 +1,48 @@
 import { BoxProps } from '@mui/material';
+export interface FilterOption {
+    groupId: string;
+    value: string;
+    label: string;
+}
+export type Item = {
+    id: string;
+    category?: string[];
+    [key: string]: string[] | string | undefined;
+};
 export interface DisplaySortBarProps extends BoxProps {
-    displayType?: "room" | "project";
-    setDisplayType?: React.Dispatch<React.SetStateAction<"room" | "project">>;
-    sortType?: "lowToHigh" | "highToLow" | "recommend";
-    setSortType?: React.Dispatch<React.SetStateAction<"lowToHigh" | "highToLow" | "recommend">>;
+    defaultDisplayType?: "room" | "project";
+    defaultSortType?: "lowToHigh" | "highToLow" | "recommend";
+    defaultFilterItems?: FilterOption[];
+    onFilterResult?: (result: {
+        displayType: "room" | "project";
+        sortType: "lowToHigh" | "highToLow" | "recommend";
+        filterItems: FilterOption[];
+    }) => void;
     filterSection?: {
         id: string;
         label: string;
-        options: string[];
+        options: {
+            groupId: string;
+            label: string;
+            value: string;
+        }[];
     }[];
-    filterItem?: string[];
-    setFilterItem?: React.Dispatch<React.SetStateAction<string[]>>;
+    baseItems: Item[];
+}
+export interface FilterModalProps {
+    filterOpen: boolean;
+    filterhandleClose: () => void;
+    filterSection?: {
+        id: string;
+        label: string;
+        options: {
+            groupId: string;
+            label: string;
+            value: string;
+        }[];
+    }[];
+    setFilterItems?: React.Dispatch<React.SetStateAction<FilterOption[]>>;
+    pendingFilters: FilterOption[];
+    setPendingFilters: React.Dispatch<React.SetStateAction<FilterOption[]>>;
+    baseItems: Item[];
 }
