@@ -34,4 +34,4 @@ import { DisplaySortBar } from '@lemon/material/DisplaySortBar';
     defaultSortType: "recommend",
     defaultFilterItems: []
   }
-}`,...(l=(o=e.parameters)==null?void 0:o.docs)==null?void 0:l.source}}};const v=["ShowLessProps"];export{e as ShowLessProps,v as __namedExportsOrder,h as default};
+}`,...(l=(o=e.parameters)==null?void 0:o.docs)==null?void 0:l.source}}};const v=["Basic"];export{e as Basic,v as __namedExportsOrder,h as default};
