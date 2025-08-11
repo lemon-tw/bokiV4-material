@@ -22,3 +22,4 @@ export * from './components/Atom/Tag';
 export * from './components/Atom/TextField';
 export * from './components/Atom/Tooltip';
 export * from './components/Atom/Typography';
+export * from './components/Modules/Header';
