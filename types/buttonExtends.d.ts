@@ -17,7 +17,6 @@ export interface CustomIconButtonProps extends Omit<MuiIconButtonProps, "variant
     selected?: boolean;
     toggleIcon?: React.ReactElement;
     color?: CustomColor;
-    href?: string;
 }
 export interface CustomToggleButtonProps extends Omit<MuiToggleButtonProps, "color"> {
     color?: CustomColor;

@@ -30,8 +30,19 @@ export interface GuestRoomConfigProps extends PopoverProps {
     setAdults: React.Dispatch<React.SetStateAction<number>>;
     /** 是否顯示各選項年齡層   */
     showAge?: boolean;
-    withPet: boolean;
-    setWithPet: React.Dispatch<React.SetStateAction<boolean>>;
+    /** 是否顯示寵物選項   */
+    showPets?: boolean;
+    /** 是否顯示服務性動物相關說明   */
+    showPetsModal?: boolean;
+    pets?: number;
+    setPets?: React.Dispatch<React.SetStateAction<number>>;
+    /** 寵物評斷標準   */
+    petsSelectorType?: "age" | "weight";
+    /** 寵物體重標準   */
+    petsWeight?: number;
+    petsArray?: (number | boolean)[];
+    setPetsArray?: React.Dispatch<React.SetStateAction<(number | boolean)[]>>;
+    /** 是否攜帶寵物   */
     accessibleRoom: boolean;
     setAccessibleRoom: React.Dispatch<React.SetStateAction<boolean>>;
 }

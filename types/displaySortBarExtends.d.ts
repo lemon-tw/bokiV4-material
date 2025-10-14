@@ -6,7 +6,7 @@ export interface FilterOption {
 }
 export type Item = {
     id: string;
-    category?: string[];
+    category: string[];
     [key: string]: string[] | string | undefined;
 };
 export interface DisplaySortBarProps extends BoxProps {
