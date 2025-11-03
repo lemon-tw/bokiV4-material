@@ -1,5 +1,6 @@
 import { ReactNode } from '../../node_modules/react';
 import { AppBarProps } from '@mui/material/AppBar';
+import { LoginStatus } from './auth';
 /**
  * Announcement 物件介面
  */
@@ -70,24 +71,31 @@ export interface UserMenuItem {
     icon?: ReactNode;
     onClick: () => void;
     divider?: boolean;
+    sx?: React.CSSProperties;
 }
 export interface UserProps {
-    isAuthenticated: boolean;
+    /** 登入狀態 - 使用 enum 替代原本的布林值 */
+    loginStatus: LoginStatus;
+    /** 社群登入來源（僅社群登入有效） */
+    socialProvider?: 'google' | 'facebook' | 'apple' | 'line';
     name?: string;
     avatar?: string;
     onLogin?: () => void;
     onLogout?: () => void;
     onProfile?: () => void;
-    menuItems?: UserMenuItem[];
+    menuItems?: Record<string, UserMenuItem[]>;
 }
 /**
  * HeaderComponent 共用屬性（不含 selector）
  */
-export interface HeaderSharedProps<T extends string = string> {
+export interface HeaderSharedProps {
     logo?: string;
     brandName?: string;
     hotelName?: string;
     onBrandClick?: () => void;
+    onLoginMember?: () => void;
+    onSocialLogin?: () => void;
+    onLogout?: () => void;
     announcement?: Announcement[];
     announcementControls?: {
         currentIndex: number;
@@ -126,11 +134,11 @@ export type HeaderProps<T extends string = string> = ({
     isGroup?: true;
     hotelHostSelector: HotelHostSelectorProps<T>;
     onBackToGroup?: () => void;
-} & HeaderSharedProps<T>) | ({
+} & HeaderSharedProps) | ({
     /** 單館模式 */
     currentHotelHost: Exclude<T, 'group'>;
     isGroup?: false;
     hotelHostSelector?: never;
     /** 新增 - 允許提供一個切回 group 的 callback */
     onBackToGroup?: () => void;
-} & HeaderSharedProps<T>);
+} & HeaderSharedProps);

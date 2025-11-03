@@ -1,0 +1,1 @@
+export { RoomsProjectsCard } from './RoomsProjectsCard';
