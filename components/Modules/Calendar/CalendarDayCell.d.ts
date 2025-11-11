@@ -6,5 +6,7 @@ export interface CalendarDayCellProps {
     onSelect: (date: Dayjs) => void;
     renderPrice?: (day: CalendarDayComputed) => React.ReactNode;
     renderExtra?: (day: CalendarDayComputed) => React.ReactNode;
+    onHover?: (date: Dayjs | null) => void;
+    previewNights?: number;
 }
 export declare const CalendarDayCell: React.FC<CalendarDayCellProps>;

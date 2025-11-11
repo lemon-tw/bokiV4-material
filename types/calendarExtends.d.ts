@@ -49,12 +49,19 @@ export interface CalendarDayComputed {
     isInRange: boolean;
     isDisabled: boolean;
     data?: CalendarDay;
+    isPreview?: boolean;
+    isPreviewStart?: boolean;
+    isPreviewEnd?: boolean;
 }
 export interface CalendarProps {
     tabs?: CalendarTabOption[];
     tabValue?: string;
     onTabChange?: (value: string) => void;
     infoText?: ReactNode;
+    /**
+     * 是否顯示雙月份；預設為雙月份
+     */
+    showDoubleMonth?: boolean;
     /**
      * 以 ISO 字串為 key 的日期資料
      */

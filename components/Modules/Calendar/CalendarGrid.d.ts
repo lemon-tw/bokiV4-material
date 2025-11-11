@@ -17,5 +17,12 @@ export interface CalendarGridProps {
     todayLabel?: React.ReactNode;
     monthOptions?: Dayjs[];
     onMonthSelect?: (month: Dayjs) => void;
+    previewRange?: {
+        start: Dayjs;
+        end: Dayjs;
+    } | null;
+    previewNights?: number | null;
+    onHoverDay?: (date: Dayjs | null) => void;
+    showDoubleMonth?: boolean;
 }
 export declare const CalendarGrid: React.FC<CalendarGridProps>;

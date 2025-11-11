@@ -1,4 +1,5 @@
 import { BoxProps } from '@mui/material';
+import { JSX } from '../../node_modules/react';
 export interface RoomInfo {
     id: string;
     name: string;
@@ -8,19 +9,24 @@ export interface RoomInfo {
     size?: string;
     description?: string;
     amenities?: string[];
-    view?: string;
+    view?: string[];
     remainingRooms?: number;
 }
 export interface ProjectInfo {
     id: string;
     name: string;
     memberOnly: boolean;
+    memberDiscount?: number | string;
+    earnedPoints?: number | string;
     images: string[];
-    tag?: string | string[];
+    tag?: string[];
     freeCancelUntil?: string;
     includeBreakfast?: boolean;
     description?: string;
-    includes?: string[];
+    includes?: {
+        name: string;
+        qty?: string;
+    }[];
     addons?: string[];
 }
 export interface PriceInfo {
@@ -38,8 +44,16 @@ export interface RoomsProjectsCardInfo {
     projects: ProjectInfo[];
     links: RoomProjectLink[];
 }
+export type DetailTarget = {
+    type: "room";
+    id: string;
+} | {
+    type: "project";
+    id: string;
+} | null;
 export interface mainCardProps extends BoxProps {
-    displayType?: "room" | "project";
+    id: string;
+    displayType: "room" | "project";
     photo?: string;
     isFavorite?: boolean;
     onToggleFavorite?: () => void;
@@ -47,18 +61,30 @@ export interface mainCardProps extends BoxProps {
     projectFeature?: {
         projectTag?: string[];
         withBreakfast?: boolean;
-        cancelDeadline?: React.ReactNode;
+        cancelDeadline?: string | null;
         paidService?: boolean;
     };
     remainingRooms?: number;
     bedType?: string;
     maxGuests?: number;
     roomSize?: string;
-    view?: string;
+    view?: string[];
     roomTagLabels?: string[];
     cancelText?: React.ReactNode;
     priceTagLabel?: string;
     fullImg?: boolean;
+    handleDetailCardOpen: (target: DetailTarget) => void;
+    taglabel: (label: React.ReactNode | undefined, icon: React.ReactElement, disabled?: boolean) => JSX.Element;
+}
+export interface DetailCardProps {
+    open: boolean;
+    handleDetailCardClose: () => void;
+    room: RoomInfo | null;
+    project: ProjectInfo | null;
+    buildCancelText: (cancelDeadline?: string | null) => JSX.Element;
+    taglabel: (label: React.ReactNode | undefined, icon: React.ReactElement, disabled?: boolean) => JSX.Element;
+    isLogin: boolean;
+    loginLink: string;
 }
 export interface roomsProjectsCardProps extends BoxProps {
     info: RoomsProjectsCardInfo;
