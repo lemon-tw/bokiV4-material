@@ -5,6 +5,15 @@ export interface CalendarDayStatus {
     hot?: boolean;
     unavailable?: boolean;
 }
+export interface CalendarDayBadge {
+    key: string;
+    label?: string;
+    icon: ReactNode;
+}
+export interface CalendarDayMeta {
+    badges?: CalendarDayBadge[];
+    [key: string]: unknown;
+}
 export interface CalendarDay {
     /**
      * ISO 字串，例如 2024-03-19
@@ -21,7 +30,7 @@ export interface CalendarDay {
     /**
      * 可自行附帶額外資訊，會在 onDayRender 時傳回
      */
-    meta?: Record<string, unknown>;
+    meta?: CalendarDayMeta;
 }
 export interface CalendarLegendItem {
     key: string;
@@ -73,6 +82,7 @@ export interface CalendarProps {
     value?: CalendarRangeValue;
     defaultValue?: CalendarRangeValue;
     onChange?: (value: CalendarRangeValue) => void;
+    filterItems?: ReactNode[];
     legendItems?: CalendarLegendItem[];
     todayLabel?: ReactNode;
     clearLabel?: ReactNode;

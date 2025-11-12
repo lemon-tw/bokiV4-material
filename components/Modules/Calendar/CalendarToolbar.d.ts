@@ -9,5 +9,6 @@ export interface CalendarToolbarProps {
     legendItems?: CalendarLegendProps["items"];
     onTodayClick?: () => void;
     todayLabel?: React.ReactNode;
+    filterItems?: React.ReactNode[];
 }
 export declare const CalendarToolbar: React.FC<CalendarToolbarProps>;
