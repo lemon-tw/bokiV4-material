@@ -1,6 +1,6 @@
 import { default as React } from '../../../../node_modules/react';
 import { Dayjs } from 'dayjs';
-import { CalendarDay, CalendarDayComputed, CalendarRangeValue } from '../../../types/calendarExtends';
+import { CalendarDay, CalendarDayComputed, CalendarRangeValue, RoomCode, UsedDiscountType } from '../../../types/calendarExtends';
 export interface CalendarGridProps {
     month: Dayjs;
     range: CalendarRangeValue;
@@ -24,5 +24,8 @@ export interface CalendarGridProps {
     previewNights?: number | null;
     onHoverDay?: (date: Dayjs | null) => void;
     showDoubleMonth?: boolean;
+    showPrice?: boolean;
+    selectedCodes?: UsedDiscountType | null;
+    roomCodeValues?: RoomCode[];
 }
 export declare const CalendarGrid: React.FC<CalendarGridProps>;

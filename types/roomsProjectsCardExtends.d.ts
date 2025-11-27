@@ -1,5 +1,6 @@
 import { BoxProps } from '@mui/material';
 import { JSX } from '../../node_modules/react';
+import { Dayjs } from 'dayjs';
 export interface RoomInfo {
     id: string;
     name: string;
@@ -29,6 +30,12 @@ export interface ProjectInfo {
     }[];
     addons?: string[];
 }
+export interface PriceDetail {
+    original?: number;
+    sale: number;
+    status?: "available" | "closed";
+}
+export type PriceMap = Record<string, PriceDetail>;
 export interface PriceInfo {
     amount: number;
     currency: string;
@@ -96,4 +103,12 @@ export interface roomsProjectsCardProps extends BoxProps {
     isLogin: boolean;
     loginLink: string;
     fullImg: boolean;
+    checkIn: Dayjs | null;
+    setCheckIn: (date: Dayjs | null) => void;
+    checkOut: Dayjs | null;
+    setCheckOut: (date: Dayjs | null) => void;
+}
+export interface DateRange {
+    checkIn: Dayjs;
+    checkOut: Dayjs;
 }

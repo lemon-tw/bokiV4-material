@@ -1,4 +1,4 @@
-import { ReactNode } from '../../node_modules/react';
+import { ComponentType, ReactNode } from '../../node_modules/react';
 import { Dayjs } from 'dayjs';
 import { SxProps, Theme } from '@mui/material/styles';
 export interface CalendarDayStatus {
@@ -9,6 +9,10 @@ export interface CalendarDayBadge {
     key: string;
     label?: string;
     icon: ReactNode;
+    /**
+     * 當日期區塊進入選取或特殊狀態時可以改用的圖示
+     */
+    activeIcon?: ReactNode;
 }
 export interface CalendarDayMeta {
     badges?: CalendarDayBadge[];
@@ -62,6 +66,22 @@ export interface CalendarDayComputed {
     isPreviewStart?: boolean;
     isPreviewEnd?: boolean;
 }
+export type IconRenderer = ComponentType<{
+    size?: number;
+    color?: string;
+}>;
+export interface RoomCode {
+    code: string;
+    description: string;
+    discountAmount: string;
+    icon?: IconRenderer;
+}
+export type DiscountType = "rate" | "promo" | "voucher";
+export interface UsedDiscountType {
+    discountType: DiscountType;
+    discountCode: string;
+    Icon: IconRenderer;
+}
 export interface CalendarProps {
     tabs?: CalendarTabOption[];
     tabValue?: string;
@@ -93,5 +113,6 @@ export interface CalendarProps {
     renderPrice?: (day: CalendarDayComputed) => ReactNode;
     renderExtra?: (day: CalendarDayComputed) => ReactNode;
     className?: string;
+    roomCodes?: RoomCode[];
     sx?: SxProps<Theme>;
 }
