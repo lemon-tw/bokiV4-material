@@ -1,3 +1,0 @@
-import"./DefaultPropsProvider-B0z8ytDR.js";import{X as a}from"./Calendar-L8PC6DfT.js";import"./index-D4H_InIO.js";import"./jsx-runtime-BO8uF4Og.js";import"./index-BkuToD7M.js";import"./index-vYCkCKEW.js";import"./tiny-invariant-CopsF_GD.js";const g={title:"components/Atoms/Tag/MembersOnlyTag",component:a,tags:["autodocs"],parameters:{layout:"centered"},argTypes:{label:{control:"text"}},args:{}},r={args:{}};var e,t,o;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
-  args: {}
-}`,...(o=(t=r.parameters)==null?void 0:t.docs)==null?void 0:o.source}}};const d=["MemberOnly"];export{r as MemberOnly,d as __namedExportsOrder,g as default};
