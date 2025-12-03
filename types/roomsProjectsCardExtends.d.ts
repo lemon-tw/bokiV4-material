@@ -31,15 +31,39 @@ export interface ProjectInfo {
     addons?: string[];
 }
 export interface PriceDetail {
+    amount: number;
+    /**
+     * Original price before discounts (for display).
+     */
     original?: number;
-    sale: number;
     status?: "available" | "closed";
 }
 export type PriceMap = Record<string, PriceDetail>;
+export type PromoApplyTo = "firstNight" | "eachNight" | "lastNight";
+export interface PromoCode {
+    code: string;
+    /**
+     * > 0 = fixed amount off, < 0 = multiplier (e.g. -0.9 = 10% off)
+     */
+    discount: number;
+    applyTo: PromoApplyTo;
+}
 export interface PriceInfo {
     amount: number;
     currency: string;
     per: string;
+    /**
+     * Optional per-day pricing for the calendar.
+     */
+    calendarPrices?: PriceMap;
+    /**
+     * Promo code discount configuration.
+     */
+    promoCode?: PromoCode;
+    /**
+     * Member discount rate (e.g. 0.9 = 10% off).
+     */
+    memberRate?: number;
 }
 export interface RoomProjectLink {
     roomId: string;
@@ -97,6 +121,7 @@ export interface roomsProjectsCardProps extends BoxProps {
     info: RoomsProjectsCardInfo;
     favorites?: string[];
     onToggleFavorite?: (id: string) => void;
+    onRemovePromoCode?: (id: string) => void;
     displayMode?: "room" | "project";
     defaultExpanded?: boolean;
     searchRoomNumber?: number;

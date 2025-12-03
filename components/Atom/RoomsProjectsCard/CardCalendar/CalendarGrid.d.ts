@@ -5,6 +5,8 @@ export interface CalendarGridProps {
     prices: PriceMap;
     checkIn: Dayjs | null;
     checkOut: Dayjs | null;
+    hasPromoCode: boolean;
+    memberOnly?: boolean;
     onSelect: (date: Dayjs) => void;
 }
-export declare function CalendarGrid({ month, prices, checkIn, checkOut, onSelect, }: CalendarGridProps): import("react/jsx-runtime").JSX.Element;
+export declare function CalendarGrid({ month, prices, checkIn, checkOut, hasPromoCode, memberOnly, onSelect, }: CalendarGridProps): import("react/jsx-runtime").JSX.Element;
