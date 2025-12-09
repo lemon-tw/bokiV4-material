@@ -1,8 +1,9 @@
 import { default as React } from '../../../../node_modules/react';
 type FooterLink = {
     label: string;
-    href: string;
+    href?: string;
     icon?: React.ReactNode;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
 };
 type FooterContact = {
     label: string;

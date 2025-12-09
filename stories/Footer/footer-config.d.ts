@@ -23,3 +23,16 @@ export declare const footerDefaultData: {
     legalText: string;
     isGroup: boolean;
 };
+type PolicyItem = string | {
+    text: string;
+    subItems?: string[];
+};
+type CancellationPlan = {
+    key: string;
+    color: string;
+    Icon: React.ElementType;
+    depositPolicies: PolicyItem[];
+    cancelPolicies: PolicyItem[];
+};
+export declare const cancellationPlans: CancellationPlan[];
+export {};
