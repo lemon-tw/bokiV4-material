@@ -21,6 +21,7 @@ export interface FooterProps {
     license?: string;
     socials?: SocialLink[];
     legalText?: string;
+    isGroup?: boolean;
 }
 /**
  * 酒店頁尾元件，依示意支援桌機/平板/手機的 RWD 排版。

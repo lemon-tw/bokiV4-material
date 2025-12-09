@@ -21,4 +21,5 @@ export declare const footerDefaultData: {
         icon: import("react/jsx-runtime").JSX.Element;
     }[];
     legalText: string;
+    isGroup: boolean;
 };
