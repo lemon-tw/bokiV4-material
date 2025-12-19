@@ -122,16 +122,23 @@ export interface roomsProjectsCardProps extends BoxProps {
     favorites?: string[];
     onToggleFavorite?: (id: string) => void;
     onRemovePromoCode?: (id: string) => void;
+    /** 房型 or 專案 顯示 */
     displayMode?: "room" | "project";
+    /** 預設是否展開 */
     defaultExpanded?: boolean;
+    /** 搜尋間數select 最大數量 */
     searchRoomNumber?: number;
+    /** 登入狀態 */
     isLogin: boolean;
     loginLink: string;
+    /** 大圖顯示 */
     fullImg: boolean;
     checkIn: Dayjs | null;
     setCheckIn: (date: Dayjs | null) => void;
     checkOut: Dayjs | null;
     setCheckOut: (date: Dayjs | null) => void;
+    /** 是否含稅及服務費 */
+    taxesCharges: "null" | "charges" | "both";
 }
 export interface DateRange {
     checkIn: Dayjs;

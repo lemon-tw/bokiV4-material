@@ -1,1 +1,0 @@
-import{c as a,d as r,p as e}from"./DefaultPropsProvider-CjMFwZtl.js";const s=a({palette:{primary:e.primary,secondary:e.secondary,tertiary:e.tertiary,surface:e.surface}}),c=a({palette:{primary:r.primary,secondary:r.secondary,tertiary:r.tertiary,surface:r.surface}});export{c as d,s as l};
