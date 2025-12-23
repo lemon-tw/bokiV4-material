@@ -13,6 +13,24 @@ export type CartItemConfig = {
     discountLabel?: string;
     discountAmount?: number;
 };
+export type FrequentCompany = {
+    id: string;
+    title: string;
+    taxId: string;
+};
+export type FrequentGuest = {
+    id: string;
+    lastName: string;
+    firstName: string;
+    salute: string;
+    dialCode: string;
+    phone: string;
+    email: string;
+    country: string;
+    city: string;
+    idType: string;
+    idNumber: string;
+};
 declare const profileConfig: {
     arrivalTimeOptions: {
         value: string;
@@ -39,6 +57,9 @@ declare const profileConfig: {
         value: string;
     }[];
     cartItems: CartItemConfig[];
+    defaultUser: FrequentGuest;
+    frequentGuests: FrequentGuest[];
+    frequentCompanies: FrequentCompany[];
     promoDiscount: number;
     memberDiscount: number;
 };

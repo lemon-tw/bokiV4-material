@@ -20,7 +20,6 @@ export interface ProfileProps extends Omit<StepperProps, "children"> {
     memberBenefitBanner?: memberBenefitBanner;
     arrivalTimeOptions?: typeof profileConfig.arrivalTimeOptions;
     specialRequirementOptions?: typeof profileConfig.specialRequirementOptions;
-    specialRequirementPanels?: typeof profileConfig.specialRequirementPanels;
     invoiceIssueMethodOptions?: typeof profileConfig.invoiceIssueMethodOptions;
     importantInfoPanels?: typeof profileConfig.importantInfoPanels;
     importantInfoContent?: ImportantInfoContent;
@@ -28,6 +27,8 @@ export interface ProfileProps extends Omit<StepperProps, "children"> {
     initialCartItems?: CartItem[];
     promoDiscount?: number;
     memberDiscount?: number;
+    frequentGuests?: typeof profileConfig.frequentGuests;
+    frequentCompanies?: typeof profileConfig.frequentCompanies;
 }
 export type CartItem = CartItemConfig;
 export declare const Profile: React.FC<ProfileProps>;
