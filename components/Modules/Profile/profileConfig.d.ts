@@ -1,3 +1,4 @@
+export type MemberRole = 'guest' | 'socialGuest' | 'member';
 export type ImportantInfoContent = Record<string, {
     text: string;
     agreeLabel?: string;
@@ -12,6 +13,20 @@ export type CartItemConfig = {
     plan: string;
     discountLabel?: string;
     discountAmount?: number;
+};
+export type memberCoupon = {
+    code: string;
+    title: string;
+    discount: string;
+    validRange: string;
+    minSpend: string;
+};
+export declare const memberExclusiveCoupon: {
+    code: string;
+    title: string;
+    discount: string;
+    validRange: string;
+    minSpend: string;
 };
 export type FrequentCompany = {
     id: string;

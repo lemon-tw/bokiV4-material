@@ -1,10 +1,9 @@
 import { default as React } from '../../../../node_modules/react';
 import { StepperProps } from '@mui/material';
-import { default as profileConfig, CartItemConfig, ImportantInfoContent } from './profileConfig';
+import { default as profileConfig, CartItemConfig, ImportantInfoContent, MemberRole } from './profileConfig';
 export type ProfileStep = {
     label: string;
 };
-type MemberRole = 'guest' | 'socialGuest' | 'member';
 export type memberBenefitBanner = {
     title: string;
     subTitle: string;
@@ -32,4 +31,3 @@ export interface ProfileProps extends Omit<StepperProps, "children"> {
 }
 export type CartItem = CartItemConfig;
 export declare const Profile: React.FC<ProfileProps>;
-export {};

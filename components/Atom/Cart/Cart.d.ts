@@ -1,4 +1,5 @@
 import { default as React } from '../../../../node_modules/react';
+import { MemberRole } from '../../Modules/Profile/profileConfig';
 export type CartItem = {
     id: string;
     title: string;
@@ -40,5 +41,6 @@ export type CartProps = {
     payOnArrivalValue: string;
     rewardText?: string;
     rewardValue?: string;
+    memberRole?: MemberRole;
 };
 export declare const Cart: React.FC<CartProps>;
