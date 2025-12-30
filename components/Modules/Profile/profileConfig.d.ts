@@ -27,7 +27,7 @@ export declare const memberExclusiveCoupon: {
     discount: string;
     validRange: string;
     minSpend: string;
-};
+}[];
 export type FrequentCompany = {
     id: string;
     title: string;
