@@ -44,3 +44,9 @@ export declare const cancelPolicySafe: {
     lines: string[];
     footer: string;
 };
+export declare const userAccount: {
+    code: string;
+    account: string;
+    remittanceAmount: string;
+    timeLimit: string;
+};
