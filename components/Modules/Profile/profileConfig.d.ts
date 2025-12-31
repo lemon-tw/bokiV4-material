@@ -24,9 +24,9 @@ export type memberCoupon = {
 export declare const memberExclusiveCoupon: {
     code: string;
     title: string;
-    discount: string;
+    discount: number;
     validRange: string;
-    minSpend: string;
+    minSpend: number;
 }[];
 export type FrequentCompany = {
     id: string;

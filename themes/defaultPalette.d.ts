@@ -18,6 +18,7 @@ export declare const palette: {
         myDefault: string;
         menuFont: string;
         tooltipBg: string;
+        basicShadow: string;
         alertColor: {
             error: string[];
             success: string[];

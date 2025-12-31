@@ -6,6 +6,11 @@ export type BookingPolicy = {
     accentColor: string;
     icon: React.ReactElement;
 };
+export type CancelPolicy = {
+    title: string;
+    lines: string[];
+    footer?: string;
+};
 export type PaymentMethod = {
     id: string;
     label: string;
@@ -30,20 +35,9 @@ export declare const wabATMPlanNotice: {
     lines: string[];
 };
 export declare const bookingGuaranteeTerms: string[][];
-export declare const cancelPolicyDefault: {
-    title: string;
-    lines: string[];
-    footer: string;
-};
-export declare const cancelPolicyFree: {
-    title: string;
-    lines: string[];
-};
-export declare const cancelPolicySafe: {
-    title: string;
-    lines: string[];
-    footer: string;
-};
+export declare const cancelPolicyDefault: CancelPolicy;
+export declare const cancelPolicyFree: CancelPolicy;
+export declare const cancelPolicySafe: CancelPolicy;
 export declare const userAccount: {
     code: string;
     account: string;
