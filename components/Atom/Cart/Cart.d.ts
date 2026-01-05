@@ -39,8 +39,7 @@ export type CartProps = {
     subtotalValue: string;
     depositValue: string;
     payOnArrivalValue: string;
-    rewardText?: string;
-    rewardValue?: string;
     memberRole?: MemberRole;
+    showPromoCode?: boolean;
 };
 export declare const Cart: React.FC<CartProps>;

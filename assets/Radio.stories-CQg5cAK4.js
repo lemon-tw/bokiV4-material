@@ -1,0 +1,59 @@
+import{j as r}from"./jsx-runtime-BO8uF4Og.js";import{R as U}from"./index-D4H_InIO.js";import"./lemonTheme-CzmFcrQX.js";import"./Cart-C3K20dwi.js";import"./Profile-XeOp9uDf.js";import"./ToggleButton-oZXW10Qn.js";import{B as a}from"./Calendar-C3JQvePW.js";import"./BottomModal-BGRPiAzg.js";import"./DefaultPropsProvider-BUHaCmAf.js";import"./CheckCircle.es-CWUap0Ir.js";import"./index-Bm8UbI65.js";import"./Copy.es-C9oN9lTh.js";import"./getThemeProps-BwdQ335V.js";import"./index-BkuToD7M.js";import"./index-vYCkCKEW.js";import"./tiny-invariant-CopsF_GD.js";import"./Tabs-DUc-6XiH.js";const N={title:"Components/Atoms/Radio/Radio",component:a,parameters:{layout:"centered"},tags:["autodocs"],argTypes:{color:{control:{type:"select"},options:["primary"]},label:{control:"text"},disabled:{control:"boolean"}},args:{}},j=e=>{const[D,y]=U.useState(!1),L=T=>{y(T.target.checked)};return r.jsx(a,{...e,checked:D,onChange:L})},o={render:e=>r.jsx(j,{...e}),parameters:{docs:{source:{code:`
+<Radio />`.trim()}}}},s={render:e=>r.jsx(j,{...e,label:"Standard 樣式"}),parameters:{docs:{source:{code:`
+<Radio label="Standard 樣式"/>`.trim()}}}},t={render:e=>r.jsx(a,{...e,defaultChecked:!1})},d={render:e=>r.jsx(a,{...e,defaultChecked:!1,label:"非受控模式 - Standard 樣式"}),parameters:{docs:{source:{code:`
+<Radio 
+  defaultChecked={false}
+  label="非受控模式 - Standard 樣式"
+/>`.trim()}}}},n={render:e=>r.jsx(a,{...e,disabled:!0,label:"Disabled 樣式"}),parameters:{docs:{source:{code:`
+<Radio 
+  disabled={true}
+  label="Disabled 樣式"
+/>`.trim()}}}};var c,l,i;o.parameters={...o.parameters,docs:{...(c=o.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  render: args => <InteractiveTemplate {...args} />,
+  parameters: {
+    docs: {
+      source: {
+        code: \`
+<Radio />\`.trim()
+      }
+    }
+  }
+}`,...(i=(l=o.parameters)==null?void 0:l.docs)==null?void 0:i.source}}};var m,p,u;s.parameters={...s.parameters,docs:{...(m=s.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  render: args => <InteractiveTemplate {...args} label="Standard 樣式" />,
+  parameters: {
+    docs: {
+      source: {
+        code: \`
+<Radio label="Standard 樣式"/>\`.trim()
+      }
+    }
+  }
+}`,...(u=(p=s.parameters)==null?void 0:p.docs)==null?void 0:u.source}}};var b,g,f;t.parameters={...t.parameters,docs:{...(b=t.parameters)==null?void 0:b.docs,source:{originalSource:`{
+  render: args => <Radio {...args} defaultChecked={false} />
+}`,...(f=(g=t.parameters)==null?void 0:g.docs)==null?void 0:f.source}}};var R,h,S;d.parameters={...d.parameters,docs:{...(R=d.parameters)==null?void 0:R.docs,source:{originalSource:`{
+  render: args => <Radio {...args} defaultChecked={false} label="非受控模式 - Standard 樣式" />,
+  parameters: {
+    docs: {
+      source: {
+        code: \`
+<Radio 
+  defaultChecked={false}
+  label="非受控模式 - Standard 樣式"
+/>\`.trim()
+      }
+    }
+  }
+}`,...(S=(h=d.parameters)==null?void 0:h.docs)==null?void 0:S.source}}};var x,C,k;n.parameters={...n.parameters,docs:{...(x=n.parameters)==null?void 0:x.docs,source:{originalSource:`{
+  render: args => <Radio {...args} disabled={true} label="Disabled 樣式" />,
+  parameters: {
+    docs: {
+      source: {
+        code: \`
+<Radio 
+  disabled={true}
+  label="Disabled 樣式"
+/>\`.trim()
+      }
+    }
+  }
+}`,...(k=(C=n.parameters)==null?void 0:C.docs)==null?void 0:k.source}}};const P=["Standard","WithLabel","Uncontrolled","UncontrolledWithLabel","Disabled"];export{n as Disabled,o as Standard,t as Uncontrolled,d as UncontrolledWithLabel,s as WithLabel,P as __namedExportsOrder,N as default};

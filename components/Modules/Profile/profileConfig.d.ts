@@ -17,9 +17,9 @@ export type CartItemConfig = {
 export type memberCoupon = {
     code: string;
     title: string;
-    discount: string;
+    discount: number;
     validRange: string;
-    minSpend: string;
+    minSpend: number;
 };
 export declare const memberExclusiveCoupon: {
     code: string;
