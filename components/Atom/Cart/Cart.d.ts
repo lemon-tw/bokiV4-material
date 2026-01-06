@@ -40,6 +40,5 @@ export type CartProps = {
     depositValue: string;
     payOnArrivalValue: string;
     memberRole?: MemberRole;
-    showPromoCode?: boolean;
 };
 export declare const Cart: React.FC<CartProps>;
