@@ -1,4 +1,5 @@
 export { lemonTheme } from './themes/lemonTheme';
+export * from './components/Atom/AddonUpsell';
 export * from './components/Modules/Alert';
 export * from './components/Atom/Avatar';
 export * from './components/Atom/Button';
