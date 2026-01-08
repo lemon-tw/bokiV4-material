@@ -24,6 +24,7 @@ export type SubBookingHeaderProps = {
 };
 export declare const hotelLayoutProps: {
     hotelName: string;
+    hotelPhone: string;
 };
 export declare const bookingFooterDefaults: Required<BookingFooterSectionProps>;
 export declare const subBookingHeader: {
@@ -58,6 +59,66 @@ export type BookingNoticeInfo = {
     noticeTitle: string;
     lines: string[];
 };
+export type BookingAddOnOfferItem = {
+    title: string;
+    priceText: string;
+    imageUrl: string;
+    ctaLabel: string;
+    ctaHref?: string;
+};
+export type BookingAddOnOffersInfo = {
+    title: string;
+    dateRangeText: string;
+    offers: BookingAddOnOfferItem[];
+};
+export type PreArrivalTipItem = {
+    title: string;
+    details: string[];
+};
+export type PreArrivalTipsInfo = {
+    title: string;
+    tips: PreArrivalTipItem[];
+};
+export type TransportationInfoLine = {
+    text: string;
+    prefix?: string;
+    linkText?: string;
+    linkHref?: string;
+};
+export type TransportationInfoSection = {
+    icon: ReactNode;
+    title: string;
+    lines: TransportationInfoLine[];
+};
+export type TransportationInfoInfo = {
+    title: string;
+    sections: TransportationInfoSection[];
+};
+export type NearbyAttractionItem = {
+    name: string;
+    distanceText: string;
+    timeText: string;
+    linkHref: string;
+};
+export type NearbyAttractionsInfo = {
+    title: string;
+    items: NearbyAttractionItem[];
+};
+export type WeeklyWeatherForecastDay = {
+    dayLabel: string;
+    icon: ReactNode;
+    highTemp: string;
+    lowTemp: string;
+};
+export type WeeklyWeatherForecastInfo = {
+    location: string;
+    title: string;
+    subtitle: string;
+    days: WeeklyWeatherForecastDay[];
+    footnote: string;
+    footnoteLinkText?: string;
+    footnoteLinkHref?: string;
+};
 export type BookingActionItem = {
     icon: ReactNode;
     descriptionLines: string[];
@@ -68,18 +129,33 @@ export type BookingActionsInfo = {
     introText: string;
     actions: BookingActionItem[];
 };
-export type PaymentInfoCardInfo = {
-    title: string;
-    methodLabel: string;
+export type PaymentInfoItem = {
     date: string;
     statusLabel: string;
     statusColor?: string;
     statusBackground?: string;
     amount: string;
     amountColor?: string;
+};
+export type PaymentInfoCardBody = {
+    methodLabel: string;
+    detail: PaymentInfoItem[];
+};
+export type PaymentInfoStateCard = {
+    icon: ReactNode;
+    message: string;
+    backgroundColor: string;
+};
+export type PaymentInfoCardInfo = {
+    title: string;
+    cardBody: PaymentInfoCardBody[];
     footerText: string;
     footerAmount: string;
     footerAmountColor?: string;
+    updateLabel?: string;
+    updateAmount?: string;
+    updateAmountColor?: string;
+    state?: PaymentInfoStateCard;
 };
 export type PaymentSummaryItem = {
     label: string;
@@ -100,9 +176,10 @@ export type PaymentInfo = {
     greeting: string;
     orderNumber: string;
     mailBody: string;
+    hotelFacilitiesNote?: string;
     showInfo: boolean;
     mailFooter: string;
-    remittanceInfo: PaymentRemittanceInfo;
+    remittanceInfo?: PaymentRemittanceInfo;
     summaryTitle: string;
     summaryItems: PaymentSummaryItem[];
 };
@@ -121,23 +198,27 @@ export type BookingItemCharge = {
     label: string;
     value: string;
     color?: string;
+    size?: string;
 };
+export type BookingItemStatus = 1 | 2 | 3;
+export declare const bookingItemStatusLabelMap: Record<BookingItemStatus, string>;
+export declare const getBookingItemStatusLabel: (status?: BookingItemStatus | string) => string;
 export type BookingItemDetails = {
     badge: string;
     title: string;
     plan?: string;
     subtitle?: string;
-    status?: string;
+    status?: BookingItemStatus | string;
     statusColor?: string;
     statusBackground?: string;
-    fields: BookingItemField[];
-    charges: BookingItemCharge[];
+    fields?: BookingItemField[];
+    charges?: BookingItemCharge[];
 };
 export type OrderContentInfo = {
     title: string;
     ctaLabel?: string;
     items: BookingItemDetails[];
     summaryTitle?: string;
-    summaryCharges: BookingItemCharge[];
+    summaryCharges?: BookingItemCharge[];
 };
 export declare const orderContentDefaults: OrderContentInfo;
