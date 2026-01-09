@@ -51,8 +51,11 @@ export type BookingInvoiceInfo = {
 };
 export type BookingGuestContactInfo = {
     title: string;
+    subtitle?: string;
     fields: BookingInfoField[];
     orderId: string;
+    guestTitle?: string;
+    guestFields?: BookingInfoField[];
 };
 export type BookingNoticeInfo = {
     title: string;
@@ -172,16 +175,22 @@ export type PaymentRemittanceInfo = {
     amountLabel: string;
     amount: string;
 };
+export type StatusDescriptions = {
+    title: string;
+    descriptions: string;
+};
 export type PaymentInfo = {
     greeting: string;
     orderNumber: string;
+    introText?: string;
     mailBody: string;
     hotelFacilitiesNote?: string;
     showInfo: boolean;
     mailFooter: string;
     remittanceInfo?: PaymentRemittanceInfo;
-    summaryTitle: string;
-    summaryItems: PaymentSummaryItem[];
+    summaryTitle?: string;
+    summaryItems?: PaymentSummaryItem[];
+    statusDescriptions?: StatusDescriptions[];
 };
 export declare const bookingInvoiceInfo: BookingInvoiceInfo;
 export declare const bookingGuestContactInfo: BookingGuestContactInfo;
@@ -216,7 +225,7 @@ export type BookingItemDetails = {
 };
 export type OrderContentInfo = {
     title: string;
-    ctaLabel?: string;
+    ctaLabel?: string[];
     items: BookingItemDetails[];
     summaryTitle?: string;
     summaryCharges?: BookingItemCharge[];
