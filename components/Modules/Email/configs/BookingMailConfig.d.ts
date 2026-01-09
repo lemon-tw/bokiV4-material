@@ -1,4 +1,5 @@
 import { default as React, ReactNode } from '../../../../../node_modules/react';
+import { ActionBannerButtonInfo } from '../sections/ActionBanner';
 export type HotelLayoutProps = {
     hotelName: string;
     noticeText?: string;
@@ -179,6 +180,10 @@ export type StatusDescriptions = {
     title: string;
     descriptions: string;
 };
+export type PaymentNoticeInfo = {
+    title?: string;
+    lines?: string[];
+};
 export type PaymentInfo = {
     greeting: string;
     orderNumber: string;
@@ -191,6 +196,10 @@ export type PaymentInfo = {
     summaryTitle?: string;
     summaryItems?: PaymentSummaryItem[];
     statusDescriptions?: StatusDescriptions[];
+    fontSize?: string;
+    fontWeight?: number;
+    actionButton?: ActionBannerButtonInfo;
+    noticeInfo?: BookingNoticeInfo;
 };
 export declare const bookingInvoiceInfo: BookingInvoiceInfo;
 export declare const bookingGuestContactInfo: BookingGuestContactInfo;
