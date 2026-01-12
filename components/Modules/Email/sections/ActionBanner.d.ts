@@ -11,6 +11,19 @@ export type ActionBannerTrip = {
     roomType: string;
     people: string;
 };
+export type CartItem = {
+    title: string;
+    suvTitle: string;
+    imgUrl: string;
+    alt: string;
+    nightIcon: React.ReactElement;
+    nights: number;
+    startDate: string;
+    peopleIcon: React.ReactElement;
+    endDate: string;
+    peoples: number;
+    children: number;
+};
 export type ActionBannerInfo = {
     textAlign: "left" | "center" | "right";
     bold?: boolean;
@@ -20,6 +33,7 @@ export type ActionBannerInfo = {
     body?: string;
     button: ActionBannerButtonInfo;
     trip?: ActionBannerTrip;
+    carts?: CartItem[];
 };
 export type ActionBannerButtonProps = {
     info: ActionBannerButtonInfo;

@@ -176,9 +176,13 @@ export type PaymentRemittanceInfo = {
     amountLabel: string;
     amount: string;
 };
-export type StatusDescriptions = {
+export type descriptions = {
     title: string;
     descriptions: string;
+};
+export type StatusDescription = {
+    mainTitle: string;
+    descriptions: descriptions[];
 };
 export type PaymentNoticeInfo = {
     title?: string;
@@ -195,11 +199,12 @@ export type PaymentInfo = {
     remittanceInfo?: PaymentRemittanceInfo;
     summaryTitle?: string;
     summaryItems?: PaymentSummaryItem[];
-    statusDescriptions?: StatusDescriptions[];
+    statusDescriptions?: StatusDescription;
     fontSize?: string;
     fontWeight?: number;
     actionButton?: ActionBannerButtonInfo;
     noticeInfo?: BookingNoticeInfo;
+    disclaimerText?: string;
 };
 export declare const bookingInvoiceInfo: BookingInvoiceInfo;
 export declare const bookingGuestContactInfo: BookingGuestContactInfo;
@@ -218,7 +223,7 @@ export type BookingItemCharge = {
     color?: string;
     size?: string;
 };
-export type BookingItemStatus = 1 | 2 | 3;
+export type BookingItemStatus = 1 | 2 | 3 | 4;
 export declare const bookingItemStatusLabelMap: Record<BookingItemStatus, string>;
 export declare const getBookingItemStatusLabel: (status?: BookingItemStatus | string) => string;
 export type BookingItemDetails = {
