@@ -5,6 +5,8 @@ export interface CustomModalProps extends Omit<MuiDialogProps, "title" | "icon" 
     /** 依設備控制Modal的尺寸 */
     deviceType?: "desktop" | "tablet" | "mobile";
     size?: "small" | "medium" | "large" | "extraLarge";
+    /** 是否隱藏右上角關閉按鈕 */
+    hideCloseButton?: boolean;
     /** Modal的Title */
     title?: string;
     /** Modal的Icon */

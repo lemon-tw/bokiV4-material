@@ -9,6 +9,7 @@ export type OrderSummary = {
     orderTime: string;
     payStateColor: string;
     resStateColor: string;
+    backgroundColor?: string;
 };
 export type Announcement = {
     title: string;
