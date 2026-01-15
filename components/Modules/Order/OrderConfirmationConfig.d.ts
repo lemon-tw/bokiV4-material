@@ -19,13 +19,18 @@ export type Announcement = {
 export type RoomInfo = {
     statusLabel: string;
     bookingCode: string;
-    dateRange: string;
+    startDate: string;
+    endDate: string;
     nights: number;
     segmentCount: number;
     roomCount: number;
     priceLabel: string;
     imageSrc: string;
 };
+export declare const formatDateWithWeekday: (value?: string) => string;
+export declare const getRoomStayNights: (roomInfo: Pick<RoomInfo, "startDate" | "endDate" | "nights">) => number | undefined;
+export declare const formatRoomDateRange: (hasNightCount: boolean, roomInfo: Pick<RoomInfo, "startDate" | "endDate" | "nights">) => string;
+export declare const getCalendarDateRange: (roomInfo: Pick<RoomInfo, "startDate" | "endDate">) => string | undefined;
 export type HotelInfo = {
     name: string;
     checkIn: string;
