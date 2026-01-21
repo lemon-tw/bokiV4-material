@@ -1,0 +1,33 @@
+import { default as React } from '../../../../node_modules/react';
+import { Dayjs } from 'dayjs';
+import { TripGroup, TripMember } from './MemberDashboardConfig';
+type Option = {
+    label: string;
+    value: string;
+};
+type MemberTripSectionProps = {
+    isMobile: boolean;
+    showSearchInput: boolean;
+    showSearchIcon: boolean;
+    searchValue: string;
+    onSearchValueChange: (value: string) => void;
+    onSearchBlur: () => void;
+    onSearchToggle: () => void;
+    sortValue: string;
+    onSortChange: (value: string) => void;
+    orderStart: Dayjs | null;
+    orderEnd: Dayjs | null;
+    setOrderStart: (value: Dayjs | null) => void;
+    setOrderEnd: (value: Dayjs | null) => void;
+    openMobileFilter: () => void;
+    filterPlaceholderFontSize: number;
+    activeTab: string;
+    onTabChange: (value: string) => void;
+    tabOptions: Option[];
+    sortOptions: Option[];
+    filteredGroups: TripGroup[];
+    profileName: string;
+    renderMemberAvatars: (members: TripMember[], extraMembers?: number) => React.ReactNode;
+};
+export declare const MemberTripSection: ({ isMobile, showSearchInput, showSearchIcon, searchValue, onSearchValueChange, onSearchBlur, onSearchToggle, sortValue, onSortChange, orderStart, orderEnd, setOrderStart, setOrderEnd, openMobileFilter, filterPlaceholderFontSize, activeTab, onTabChange, tabOptions, sortOptions, filteredGroups, profileName, renderMemberAvatars, }: MemberTripSectionProps) => import("react/jsx-runtime").JSX.Element;
+export {};

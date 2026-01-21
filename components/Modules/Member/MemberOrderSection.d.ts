@@ -1,0 +1,31 @@
+import { Dayjs } from 'dayjs';
+import { OrderGroup, OrderStatusKey, OrderStatusOption } from './MemberDashboardConfig';
+type Option = {
+    label: string;
+    value: string;
+};
+type MemberOrderSectionProps = {
+    isMobile: boolean;
+    showSearchInput: boolean;
+    showSearchIcon: boolean;
+    searchValue: string;
+    onSearchValueChange: (value: string) => void;
+    onSearchBlur: () => void;
+    onSearchToggle: () => void;
+    sortValue: string;
+    onSortChange: (value: string) => void;
+    orderStart: Dayjs | null;
+    orderEnd: Dayjs | null;
+    setOrderStart: (value: Dayjs | null) => void;
+    setOrderEnd: (value: Dayjs | null) => void;
+    openMobileFilter: () => void;
+    filterPlaceholderFontSize: number;
+    sortOptions: Option[];
+    orderStatus: OrderStatusKey;
+    onOrderStatusChange: (value: OrderStatusKey) => void;
+    orderStatusOptions: OrderStatusOption[];
+    pendingOrderCount: number;
+    filteredOrderGroups: OrderGroup[];
+};
+export declare const MemberOrderSection: ({ isMobile, showSearchInput, showSearchIcon, searchValue, onSearchValueChange, onSearchBlur, onSearchToggle, sortValue, onSortChange, orderStart, orderEnd, setOrderStart, setOrderEnd, openMobileFilter, filterPlaceholderFontSize, sortOptions, orderStatus, onOrderStatusChange, orderStatusOptions, pendingOrderCount, filteredOrderGroups, }: MemberOrderSectionProps) => import("react/jsx-runtime").JSX.Element;
+export {};

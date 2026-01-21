@@ -8,6 +8,7 @@ export type CustomIconButtonVariant = "filled" | "standard" | "tonal" | "outline
 export interface CustomButtonProps extends Omit<MuiButtonProps, "variant" | "color"> {
     variant?: CustomButtonVariant;
     color?: CustomColor;
+    target?: string;
 }
 export interface CustomFabProps extends Omit<MuiFabProps, "color"> {
     color?: CustomColor;

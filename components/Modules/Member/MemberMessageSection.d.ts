@@ -1,0 +1,29 @@
+import { HotelMessage, HotelMessageStatusKey, HotelMessageStatusOption, HotelMessageTabKey, HotelMessageTabOption } from './MemberDashboardConfig';
+type Option = {
+    label: string;
+    value: string;
+};
+type MemberMessageSectionProps = {
+    showSearchInput: boolean;
+    showSearchIcon: boolean;
+    searchValue: string;
+    onSearchValueChange: (value: string) => void;
+    onSearchBlur: () => void;
+    onSearchToggle: () => void;
+    messageTab: HotelMessageTabKey;
+    onMessageTabChange: (value: HotelMessageTabKey) => void;
+    messageTabs: HotelMessageTabOption[];
+    messageUnreadCounts: Partial<Record<HotelMessageTabKey, number>>;
+    messageStatus: HotelMessageStatusKey;
+    onMessageStatusChange: (value: HotelMessageStatusKey) => void;
+    messageStatusOptions: HotelMessageStatusOption[];
+    messageSortValue: string;
+    onMessageSortChange: (value: string) => void;
+    messageSortOptions: Option[];
+    messageCategoryValue: string;
+    onMessageCategoryChange: (value: string) => void;
+    messageCategoryOptions: Option[];
+    filteredMessages: HotelMessage[];
+};
+export declare const MemberMessageSection: ({ searchValue, onSearchValueChange, onSearchBlur, messageTab, onMessageTabChange, messageTabs, messageUnreadCounts, messageStatus, onMessageStatusChange, messageStatusOptions, messageSortValue, onMessageSortChange, messageSortOptions, messageCategoryValue, onMessageCategoryChange, messageCategoryOptions, filteredMessages, }: MemberMessageSectionProps) => import("react/jsx-runtime").JSX.Element;
+export {};
