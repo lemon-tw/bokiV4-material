@@ -1,5 +1,6 @@
 import { ElementType } from '../../../../node_modules/react';
 import { RoomsProjectsCardInfo } from 'src/types/roomsProjectsCardExtends';
+import { PointsEntry, PointsEntryStatus } from 'src/types/pointsTableExtends';
 export type MemberProfile = {
     name: string;
     email: string;
@@ -112,6 +113,42 @@ export type MemberLevelConfig = {
     tiers: MemberLevelDetail[];
     rules: MemberLevelRuleSection[];
 };
+export type PointsTabKey = "all" | PointsEntryStatus;
+export type PointsTabOption = {
+    label: string;
+    value: PointsTabKey;
+};
+export type MemberPointsSummaryCard = {
+    key: string;
+    title: string;
+    value: number;
+    unitLabel: string;
+    note?: string;
+};
+export type MemberPointsConfig = {
+    summaryCards: MemberPointsSummaryCard[];
+    tabs: PointsTabOption[];
+    entries: PointsEntry[];
+};
+export type MemberCouponStatus = "available" | "expired" | "used";
+export type MemberCoupon = {
+    id: string;
+    code: string;
+    title: string;
+    discountLabel: string;
+    periodLabel: string;
+    minSpendLabel: string;
+    status: MemberCouponStatus;
+};
+export type MemberCouponTabKey = MemberCouponStatus;
+export type MemberCouponTabOption = {
+    label: string;
+    value: MemberCouponTabKey;
+};
+export type MemberCouponConfig = {
+    tabs: MemberCouponTabOption[];
+    coupons: MemberCoupon[];
+};
 export type HotelMessageTabKey = "active" | "checked-out";
 export type HotelMessageStatusKey = "pending" | "unread" | "read";
 export type HotelMessageTabOption = {
@@ -148,10 +185,14 @@ export type MemberDashboardProps = {
     hotelMessages?: HotelMessage[];
     favoriteProjectsInfo?: RoomsProjectsCardInfo;
     memberLevelConfig?: MemberLevelConfig;
+    memberPointsConfig?: MemberPointsConfig;
+    memberCouponConfig?: MemberCouponConfig;
 };
 export declare const defaultMemberProfile: MemberProfile;
 export declare const defaultMemberMenuSections: MemberMenuSection[];
 export declare const defaultMemberLevelConfig: MemberLevelConfig;
+export declare const defaultMemberPointsConfig: MemberPointsConfig;
+export declare const defaultMemberCouponConfig: MemberCouponConfig;
 export declare const defaultTripGroups: TripGroup[];
 export declare const sortOptions: {
     label: string;
