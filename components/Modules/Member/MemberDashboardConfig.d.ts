@@ -149,6 +149,121 @@ export type MemberCouponConfig = {
     tabs: MemberCouponTabOption[];
     coupons: MemberCoupon[];
 };
+export type MemberAccountTabKey = "profile" | "account" | "member";
+export type MemberAccountTabOption = {
+    label: string;
+    value: MemberAccountTabKey;
+};
+export type MemberAccountPersonalInfo = {
+    lastName: string;
+    firstName: string;
+    title: string;
+    phoneCode: string;
+    phoneNumber: string;
+    email: string;
+    country: string;
+    city: string;
+    documentType: string;
+    documentNumber: string;
+    birthday: string;
+    note: string;
+};
+export type MemberAccountDeviceInfo = {
+    carrierCode: string;
+    invoiceNotice: boolean;
+};
+export type MemberAccountTgoInfo = {
+    memberId: string;
+    orderNotice: boolean;
+};
+export type MemberAccountSubscriptionInfo = {
+    memberNewsletter: boolean;
+    promoOffers: boolean;
+};
+export type MemberAccountPreferenceInfo = {
+    language: string;
+    currency: string;
+};
+export type MemberAccountSecurityInfo = {
+    email: string;
+    emailStatusLabel: string;
+    passwordMask: string;
+    passwordRules: MemberAccountPasswordRule[];
+};
+export type MemberAccountPasswordRule = {
+    id: "length" | "letters" | "upperLowerNumber";
+    label: string;
+};
+export type MemberAccountSocialBinding = {
+    id: "facebook" | "line" | "google";
+    label: string;
+    status: "connected" | "disconnected";
+    value?: string;
+    iconSrc: string;
+    iconBgColor?: string;
+};
+export type MemberSettingsTabKey = "guests" | "companies";
+export type MemberSettingsTabOption = {
+    label: string;
+    value: MemberSettingsTabKey;
+};
+export type MemberCommonGuest = {
+    id: string;
+    lastName: string;
+    firstName: string;
+    title: string;
+    phoneCode: string;
+    phoneNumber: string;
+    email: string;
+    country: string;
+    city: string;
+    documentType: string;
+    documentNumber: string;
+    note: string;
+};
+export type MemberSettingsEmptyState = {
+    title: string;
+    imageSrc: string;
+    actionLabel: string;
+};
+export type MemberCommonCompany = {
+    id: string;
+    name: string;
+    taxId: string;
+};
+export type MemberSettingsConfig = {
+    tabs: MemberSettingsTabOption[];
+    titleOptions: MemberAccountOption[];
+    phoneCodeOptions: MemberAccountOption[];
+    countryOptions: MemberAccountOption[];
+    cityOptions: MemberAccountOption[];
+    documentTypeOptions: MemberAccountOption[];
+    emptyState: MemberSettingsEmptyState;
+    companyEmptyState: MemberSettingsEmptyState;
+    guests: MemberCommonGuest[];
+    companies: MemberCommonCompany[];
+};
+export type MemberAccountOption = {
+    label: string;
+    value: string;
+};
+export type MemberAccountConfig = {
+    tabs: MemberAccountTabOption[];
+    titleOptions: MemberAccountOption[];
+    phoneCodeOptions: MemberAccountOption[];
+    countryOptions: MemberAccountOption[];
+    cityOptions: MemberAccountOption[];
+    documentTypeOptions: MemberAccountOption[];
+    languageOptions: MemberAccountOption[];
+    currencyOptions: MemberAccountOption[];
+    personalInfo: MemberAccountPersonalInfo;
+    deviceInfo: MemberAccountDeviceInfo;
+    tgoInfo: MemberAccountTgoInfo;
+    subscriptionInfo: MemberAccountSubscriptionInfo;
+    preferenceInfo: MemberAccountPreferenceInfo;
+    accountInfo: MemberAccountSecurityInfo;
+    socialBindings: MemberAccountSocialBinding[];
+};
 export type HotelMessageTabKey = "active" | "checked-out";
 export type HotelMessageStatusKey = "pending" | "unread" | "read";
 export type HotelMessageTabOption = {
@@ -187,12 +302,16 @@ export type MemberDashboardProps = {
     memberLevelConfig?: MemberLevelConfig;
     memberPointsConfig?: MemberPointsConfig;
     memberCouponConfig?: MemberCouponConfig;
+    memberAccountConfig?: MemberAccountConfig;
+    memberSettingsConfig?: MemberSettingsConfig;
 };
 export declare const defaultMemberProfile: MemberProfile;
 export declare const defaultMemberMenuSections: MemberMenuSection[];
 export declare const defaultMemberLevelConfig: MemberLevelConfig;
 export declare const defaultMemberPointsConfig: MemberPointsConfig;
 export declare const defaultMemberCouponConfig: MemberCouponConfig;
+export declare const defaultMemberAccountConfig: MemberAccountConfig;
+export declare const defaultMemberSettingsConfig: MemberSettingsConfig;
 export declare const defaultTripGroups: TripGroup[];
 export declare const sortOptions: {
     label: string;
