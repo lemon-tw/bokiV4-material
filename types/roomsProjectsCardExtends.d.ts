@@ -88,6 +88,7 @@ export interface mainCardProps extends BoxProps {
     photo?: string;
     isFavorite?: boolean;
     onToggleFavorite?: () => void;
+    onRequestRemoveFavorite?: () => void;
     mainTitle?: string;
     description?: string;
     projectFeature?: {
@@ -122,6 +123,7 @@ export interface roomsProjectsCardProps extends BoxProps {
     info: RoomsProjectsCardInfo;
     favorites?: string[];
     onToggleFavorite?: (id: string) => void;
+    onRequestRemoveFavorite?: (id: string) => void;
     onRemovePromoCode?: (id: string) => void;
     actionButton?: React.ReactNode;
     /** 房型 or 專案 顯示 */

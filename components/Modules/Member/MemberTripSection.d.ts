@@ -28,6 +28,7 @@ type MemberTripSectionProps = {
     filteredGroups: TripGroup[];
     profileName: string;
     renderMemberAvatars: (members: TripMember[], extraMembers?: number) => React.ReactNode;
+    setOpenModal: (open: boolean) => void;
 };
-export declare const MemberTripSection: ({ isMobile, showSearchInput, showSearchIcon, searchValue, onSearchValueChange, onSearchBlur, onSearchToggle, sortValue, onSortChange, orderStart, orderEnd, setOrderStart, setOrderEnd, openMobileFilter, filterPlaceholderFontSize, activeTab, onTabChange, tabOptions, sortOptions, filteredGroups, profileName, renderMemberAvatars, }: MemberTripSectionProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MemberTripSection: ({ isMobile, showSearchInput, showSearchIcon, searchValue, onSearchValueChange, onSearchBlur, onSearchToggle, sortValue, onSortChange, orderStart, orderEnd, setOrderStart, setOrderEnd, openMobileFilter, filterPlaceholderFontSize, activeTab, onTabChange, tabOptions, sortOptions, filteredGroups, profileName, renderMemberAvatars, setOpenModal }: MemberTripSectionProps) => import("react/jsx-runtime").JSX.Element;
 export {};

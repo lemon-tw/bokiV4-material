@@ -31,6 +31,7 @@ export type TripStatus = {
     backgroundColor: string;
 };
 export type OrderStatusKey = "pending" | "pending-waitlist" | "cancelled" | "void" | "checked-out";
+export type OrderScope = "joined" | "mine";
 export type OrderStatusOption = {
     label: string;
     value: OrderStatusKey;
@@ -62,6 +63,7 @@ export type OrderCardData = {
     id: string;
     orderNumber: string;
     statusKey: OrderStatusKey;
+    scope?: OrderScope;
     statusLabel: string;
     statusColor: string;
     hotelName: string;

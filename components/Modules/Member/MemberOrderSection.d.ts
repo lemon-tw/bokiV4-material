@@ -20,12 +20,17 @@ type MemberOrderSectionProps = {
     setOrderEnd: (value: Dayjs | null) => void;
     openMobileFilter: () => void;
     filterPlaceholderFontSize: number;
+    activeTab: string;
+    onTabChange: (value: string) => void;
+    tabOptions: Option[];
     sortOptions: Option[];
     orderStatus: OrderStatusKey;
     onOrderStatusChange: (value: OrderStatusKey) => void;
     orderStatusOptions: OrderStatusOption[];
     pendingOrderCount: number;
     filteredOrderGroups: OrderGroup[];
+    setOpenPaymentModal: (open: boolean) => void;
+    setOpenModal: (open: boolean) => void;
 };
-export declare const MemberOrderSection: ({ isMobile, showSearchInput, showSearchIcon, searchValue, onSearchValueChange, onSearchBlur, onSearchToggle, sortValue, onSortChange, orderStart, orderEnd, setOrderStart, setOrderEnd, openMobileFilter, filterPlaceholderFontSize, sortOptions, orderStatus, onOrderStatusChange, orderStatusOptions, pendingOrderCount, filteredOrderGroups, }: MemberOrderSectionProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MemberOrderSection: ({ isMobile, showSearchInput, showSearchIcon, searchValue, onSearchValueChange, onSearchBlur, onSearchToggle, sortValue, onSortChange, orderStart, orderEnd, setOrderStart, setOrderEnd, openMobileFilter, filterPlaceholderFontSize, activeTab, onTabChange, tabOptions, sortOptions, orderStatus, onOrderStatusChange, orderStatusOptions, pendingOrderCount, filteredOrderGroups, setOpenPaymentModal, setOpenModal }: MemberOrderSectionProps) => import("react/jsx-runtime").JSX.Element;
 export {};
