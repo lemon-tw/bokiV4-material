@@ -79,5 +79,6 @@ export interface AddonUpsellProps {
     isLogin: boolean;
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
+    onBack?: () => void;
 }
 export {};

@@ -13,6 +13,10 @@ export interface DisplaySortBarProps extends BoxProps {
     defaultDisplayType?: "room" | "project";
     defaultSortType?: "lowToHigh" | "highToLow" | "recommend";
     defaultFilterItems?: FilterOption[];
+    showDisplayToggle?: boolean;
+    showFilterChips?: boolean;
+    filterItemsValue?: FilterOption[];
+    onFilterItemsChange?: (items: FilterOption[]) => void;
     onFilterResult?: (result: {
         displayType: "room" | "project";
         sortType: "lowToHigh" | "highToLow" | "recommend";

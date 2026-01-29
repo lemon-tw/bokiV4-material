@@ -2,6 +2,7 @@ export declare const promoDetails: {
     code: string;
     description: string;
     discountAmount: string;
+    discount: number;
     memberOnly: boolean;
     minSpend: string;
     stayPeriod: string;

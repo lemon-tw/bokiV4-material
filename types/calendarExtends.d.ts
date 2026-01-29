@@ -80,6 +80,7 @@ export type DiscountType = "rate" | "promo" | "voucher";
 export interface UsedDiscountType {
     discountType: DiscountType;
     discountCode: string;
+    discount: number;
     Icon: IconRenderer;
 }
 export interface CalendarProps {
@@ -115,4 +116,9 @@ export interface CalendarProps {
     className?: string;
     roomCodes?: RoomCode[];
     sx?: SxProps<Theme>;
+    defaultCalendarCollapsed?: boolean;
+    multiRoomPackageValue?: boolean;
+    onMultiRoomPackageChange?: (value: boolean) => void;
+    selectedCodeValue?: UsedDiscountType | null;
+    onSelectedCodeChange?: (value: UsedDiscountType | null) => void;
 }

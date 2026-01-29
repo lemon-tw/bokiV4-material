@@ -4,11 +4,13 @@ import { SwipeableDrawerProps as MuiSwipeableDrawerprops } from '@mui/material/S
 export interface CustomModalProps extends Omit<MuiDialogProps, "title" | "icon" | "content"> {
     /** 依設備控制Modal的尺寸 */
     deviceType?: "desktop" | "tablet" | "mobile";
-    size?: "small" | "medium" | "large" | "extraLarge";
+    size?: "small" | "medium" | "large" | "extraLarge" | "superLarge";
     /** 是否隱藏右上角關閉按鈕 */
     hideCloseButton?: boolean;
     /** Modal的Title */
     title?: string;
+    /** Modal標題左側返回按鈕 */
+    backButton?: React.ReactNode;
     /** Modal的Icon */
     icon?: React.ReactNode;
     /** Modal的內容，可以是字串或ReactNode */

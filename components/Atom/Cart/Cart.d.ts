@@ -23,6 +23,7 @@ export type CartProps = {
     onDeleteItem: (id: string) => void;
     onClear: () => void;
     onCheckout: () => void;
+    onOpenAddonUpsell?: (id: string) => void;
     isCartExpanded: boolean;
     onCartExpandChange: (open: boolean) => void;
     isFeeExpanded: boolean;
