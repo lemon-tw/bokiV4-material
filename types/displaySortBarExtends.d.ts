@@ -9,8 +9,18 @@ export type Item = {
     category: string[];
     [key: string]: string[] | string | undefined;
 };
+export type DisplayOption = {
+    label: string;
+    value: string;
+};
 export interface DisplaySortBarProps extends BoxProps {
-    defaultDisplayType?: "room" | "project";
+    defaultDisplayType?: string;
+    displayTypeValue?: string;
+    displayTypeOptions?: DisplayOption[];
+    onDisplayTypeChange?: (value: string) => void;
+    variant?: "full" | "displayOnly";
+    showSort?: boolean;
+    showFilter?: boolean;
     defaultSortType?: "lowToHigh" | "highToLow" | "recommend";
     defaultFilterItems?: FilterOption[];
     showDisplayToggle?: boolean;
@@ -18,7 +28,7 @@ export interface DisplaySortBarProps extends BoxProps {
     filterItemsValue?: FilterOption[];
     onFilterItemsChange?: (items: FilterOption[]) => void;
     onFilterResult?: (result: {
-        displayType: "room" | "project";
+        displayType: string;
         sortType: "lowToHigh" | "highToLow" | "recommend";
         filterItems: FilterOption[];
     }) => void;
@@ -31,7 +41,7 @@ export interface DisplaySortBarProps extends BoxProps {
             value: string;
         }[];
     }[];
-    baseItems: Item[];
+    baseItems?: Item[];
 }
 export interface FilterModalProps {
     filterOpen: boolean;

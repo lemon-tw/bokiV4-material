@@ -27,3 +27,4 @@ export * from './components/Atom/Typography';
 export * from './components/Modules/Header';
 export * from './components/Modules/Calendar';
 export * from './components/Modules/Profile';
+export * from './components/Modules/Rest/Rest';

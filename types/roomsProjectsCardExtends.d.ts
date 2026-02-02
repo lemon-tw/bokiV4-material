@@ -126,6 +126,17 @@ export interface roomsProjectsCardProps extends BoxProps {
     onRequestRemoveFavorite?: (id: string) => void;
     onRemovePromoCode?: (id: string) => void;
     actionButton?: React.ReactNode;
+    renderActionButton?: (context: {
+        displayMode: "room" | "project";
+        room?: RoomInfo;
+        project?: ProjectInfo;
+        linkId?: string;
+        price?: {
+            amount: number;
+            original?: number;
+            nights?: number;
+        };
+    }) => React.ReactNode;
     /** 房型 or 專案 顯示 */
     displayMode?: "room" | "project";
     /** 預設是否展開 */

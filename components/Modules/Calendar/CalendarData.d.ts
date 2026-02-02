@@ -1,3 +1,5 @@
+import { Dayjs } from 'dayjs';
+import { CalendarDay } from '../../../types/calendarExtends';
 export declare const promoDetails: {
     code: string;
     description: string;
@@ -25,3 +27,11 @@ export declare const badgePresets: {
     Icon: import('@phosphor-icons/react').Icon;
     iconColor: string;
 }[];
+type SampleDayMapOptions = {
+    start?: Dayjs;
+    end?: Dayjs;
+    basePrice?: number;
+    priceStep?: number;
+};
+export declare const buildSampleDayMap: ({ start, end, basePrice, priceStep, }?: SampleDayMapOptions) => Record<string, CalendarDay>;
+export {};

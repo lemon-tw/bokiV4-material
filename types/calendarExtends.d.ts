@@ -121,4 +121,7 @@ export interface CalendarProps {
     onMultiRoomPackageChange?: (value: boolean) => void;
     selectedCodeValue?: UsedDiscountType | null;
     onSelectedCodeChange?: (value: UsedDiscountType | null) => void;
+    showStayRestToggle?: boolean;
+    stayModeValue?: "stay" | "rest";
+    onStayModeChange?: (value: "stay" | "rest") => void;
 }
