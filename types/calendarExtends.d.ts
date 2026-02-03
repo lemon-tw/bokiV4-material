@@ -124,4 +124,16 @@ export interface CalendarProps {
     showStayRestToggle?: boolean;
     stayModeValue?: "stay" | "rest";
     onStayModeChange?: (value: "stay" | "rest") => void;
+    /**
+     * 休息模式時是否改成單選日期
+     */
+    restSingleDay?: boolean;
+    onGuestConfigChange?: (value: {
+        numRooms: number;
+        adults: number;
+        childrens: number;
+        seniors: number;
+        pets: number;
+        summary: string;
+    }) => void;
 }
