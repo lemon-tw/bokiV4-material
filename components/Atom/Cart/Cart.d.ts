@@ -7,6 +7,7 @@ export type CartItem = {
     dateRange: string;
     guests: string;
     plan: string;
+    roomCount?: number;
     discountLabel?: string;
     discountAmount?: number;
 };

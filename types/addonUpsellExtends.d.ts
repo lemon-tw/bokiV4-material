@@ -49,11 +49,13 @@ export interface UpsellButtonModuleprops {
     memberOnly?: boolean;
     isLogin?: boolean;
     id: string;
+    title?: string;
     price: number;
     priceTag?: string;
     upsell?: upsellprops;
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
+    onRequestRemove?: (id: string, title?: string) => void;
 }
 export interface AddonButtonModuleprops {
     memberOnly?: boolean;
@@ -65,12 +67,14 @@ export interface AddonButtonModuleprops {
     addon?: addonprops;
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
+    onRequestRemove?: (id: string, title?: string) => void;
 }
 export interface CardProps {
     item: ListValue;
     isLogin: boolean;
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
+    onRequestRemove?: (id: string, title?: string) => void;
 }
 export interface AddonUpsellProps {
     roomName: string;

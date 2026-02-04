@@ -105,6 +105,7 @@ export interface mainCardProps extends BoxProps {
     roomTagLabels?: string[];
     cancelText?: React.ReactNode;
     priceTagLabel?: string;
+    promoCodeLabel?: string;
     fullImg?: boolean;
     handleDetailCardOpen: (target: DetailTarget) => void;
     taglabel: (label: React.ReactNode | undefined, icon: React.ReactElement, disabled?: boolean) => JSX.Element;
@@ -131,6 +132,7 @@ export interface roomsProjectsCardProps extends BoxProps {
         room?: RoomInfo;
         project?: ProjectInfo;
         linkId?: string;
+        roomCount?: number;
         price?: {
             amount: number;
             original?: number;
@@ -146,6 +148,14 @@ export interface roomsProjectsCardProps extends BoxProps {
     /** 登入狀態 */
     isLogin: boolean;
     loginLink: string;
+    /** 登入提示訊息 */
+    loginModalMessage?: string;
+    /** 顯示於主卡圖片左上角的折扣碼 */
+    promoCodeLabel?: string;
+    /** 價格區塊顯示的人數文字（例如：1位成人） */
+    guestLabel?: string;
+    /** 房間數預設值（對應上方賓客設定） */
+    defaultRoomCount?: number;
     /** 大圖顯示 */
     fullImg: boolean;
     checkIn: Dayjs | null;
