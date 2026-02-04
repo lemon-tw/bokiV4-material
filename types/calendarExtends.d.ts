@@ -124,6 +124,8 @@ export interface CalendarProps {
     showStayRestToggle?: boolean;
     stayModeValue?: "stay" | "rest";
     onStayModeChange?: (value: "stay" | "rest") => void;
+    restHourValue?: number;
+    onRestHourChange?: (value: number) => void;
     /**
      * 休息模式時是否改成單選日期
      */

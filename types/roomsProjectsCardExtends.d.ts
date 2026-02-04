@@ -154,6 +154,16 @@ export interface roomsProjectsCardProps extends BoxProps {
     setCheckOut: (date: Dayjs | null) => void;
     /** 是否含稅及服務費 */
     taxesCharges: "null" | "charges" | "both";
+    /** 休息模式下隱藏查看空房日曆 */
+    hideProjectCalendar?: boolean;
+    /** 覆寫顯示價格 */
+    overridePrice?: number;
+    overridePriceOriginal?: number;
+    /** 休息模式入住時間選項 */
+    showRestTimeSelect?: boolean;
+    restTimeOptions?: string[];
+    selectedRestTime?: string;
+    onRestTimeChange?: (value: string) => void;
 }
 export interface DateRange {
     checkIn: Dayjs;
