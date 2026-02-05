@@ -42,5 +42,14 @@ export type CartProps = {
     depositValue: string;
     payOnArrivalValue: string;
     memberRole?: MemberRole;
+    memberCoupons?: MemberCoupon[];
+    memberExclusiveCoupons?: MemberCoupon[];
+};
+export type MemberCoupon = {
+    code: string;
+    title: string;
+    discount: string;
+    validRange: string;
+    minSpend: string;
 };
 export declare const Cart: React.FC<CartProps>;

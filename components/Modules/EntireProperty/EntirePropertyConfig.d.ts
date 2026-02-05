@@ -116,6 +116,3 @@ export type AddonUpsellPreset = {
     }>;
 };
 export declare const calcDiscountPrice: (originalPrice?: number, discountRate?: number) => number | undefined;
-export declare const roomGroups: RoomGroup[];
-export declare const villaModalData: Record<string, VillaModalData>;
-export declare const addonUpsellPreset: AddonUpsellPreset;

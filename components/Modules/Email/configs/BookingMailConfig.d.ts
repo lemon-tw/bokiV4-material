@@ -1,9 +1,11 @@
-import { default as React, ReactNode } from '../../../../../node_modules/react';
+import { ReactNode } from '../../../../../node_modules/react';
 import { ActionBannerButtonInfo } from '../sections/ActionBanner';
 export type HotelLayoutProps = {
     hotelName: string;
     noticeText?: string;
+    hotelPhone?: string;
 };
+export declare const hotelLayoutProps: HotelLayoutProps;
 export type BookingFooterSectionProps = {
     serviceTime?: string;
     mainPhone?: string;
@@ -23,25 +25,10 @@ export type SubBookingHeaderProps = {
     message: string;
     backgroundColor: string;
 };
-export declare const hotelLayoutProps: {
-    hotelName: string;
-    hotelPhone: string;
-};
-export declare const bookingFooterDefaults: Required<BookingFooterSectionProps>;
-export declare const subBookingHeader: {
-    title: string;
-    icon: React.FunctionComponentElement<import('@phosphor-icons/react').IconProps>;
-    color: string;
-    mainFontColor: string;
-    subColor: string;
-    message: string;
-    backgroundColor: string;
-};
 export type BookingCancellationPolicy = {
     title: string;
     items: string[];
 };
-export declare const bookingCancellationPolicy: BookingCancellationPolicy;
 export type BookingInfoField = {
     label: string;
     value: string;
@@ -58,6 +45,7 @@ export type BookingGuestContactInfo = {
     guestTitle?: string;
     guestFields?: BookingInfoField[];
 };
+export declare const bookingGuestContactInfo: BookingGuestContactInfo;
 export type BookingNoticeInfo = {
     title: string;
     noticeTitle: string;
@@ -206,10 +194,6 @@ export type PaymentInfo = {
     noticeInfo?: BookingNoticeInfo;
     disclaimerText?: string;
 };
-export declare const bookingInvoiceInfo: BookingInvoiceInfo;
-export declare const bookingGuestContactInfo: BookingGuestContactInfo;
-export declare const paymentRemittanceInfoDefaults: PaymentRemittanceInfo;
-export declare const paymentInfoDefaults: PaymentInfo;
 export type BookingItemField = {
     label: string;
     value: string | string[];
@@ -244,4 +228,3 @@ export type OrderContentInfo = {
     summaryTitle?: string;
     summaryCharges?: BookingItemCharge[];
 };
-export declare const orderContentDefaults: OrderContentInfo;

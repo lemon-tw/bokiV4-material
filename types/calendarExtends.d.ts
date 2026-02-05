@@ -77,6 +77,16 @@ export interface RoomCode {
     icon?: IconRenderer;
 }
 export type DiscountType = "rate" | "promo" | "voucher";
+export type PromoDetail = {
+    memberOnly: boolean;
+    code: string;
+    title: string;
+    discountAmount: string;
+    validPeriod: string;
+    stayPeriod: string;
+    minSpend: string;
+    description: string;
+};
 export interface UsedDiscountType {
     discountType: DiscountType;
     discountCode: string;
@@ -115,6 +125,7 @@ export interface CalendarProps {
     renderExtra?: (day: CalendarDayComputed) => ReactNode;
     className?: string;
     roomCodes?: RoomCode[];
+    promoDetails?: PromoDetail[];
     sx?: SxProps<Theme>;
     defaultCalendarCollapsed?: boolean;
     multiRoomPackageValue?: boolean;

@@ -1,15 +1,5 @@
 import { PopoverProps } from '@mui/material';
-import { RoomCode, UsedDiscountType } from './calendarExtends';
-export type PromoDetail = {
-    memberOnly: boolean;
-    code: string;
-    title: string;
-    discountAmount: string;
-    validPeriod: string;
-    stayPeriod: string;
-    minSpend: string;
-    description: string;
-};
+import { PromoDetail, RoomCode, UsedDiscountType } from './calendarExtends';
 export interface CodeInputProps extends PopoverProps {
     /** 房型代碼 */
     roomCode?: RoomCode[];

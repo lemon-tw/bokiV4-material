@@ -306,34 +306,23 @@ export type MemberDashboardProps = {
     memberCouponConfig?: MemberCouponConfig;
     memberAccountConfig?: MemberAccountConfig;
     memberSettingsConfig?: MemberSettingsConfig;
+    sortOptions?: {
+        label: string;
+        value: string;
+    }[];
+    tabOptions?: {
+        label: string;
+        value: string;
+    }[];
+    orderStatusOptions?: OrderStatusOption[];
+    hotelMessageTabs?: HotelMessageTabOption[];
+    hotelMessageStatusOptions?: HotelMessageStatusOption[];
+    hotelMessageSortOptions?: {
+        label: string;
+        value: string;
+    }[];
+    hotelMessageCategoryOptions?: {
+        label: string;
+        value: string;
+    }[];
 };
-export declare const defaultMemberProfile: MemberProfile;
-export declare const defaultMemberMenuSections: MemberMenuSection[];
-export declare const defaultMemberLevelConfig: MemberLevelConfig;
-export declare const defaultMemberPointsConfig: MemberPointsConfig;
-export declare const defaultMemberCouponConfig: MemberCouponConfig;
-export declare const defaultMemberAccountConfig: MemberAccountConfig;
-export declare const defaultMemberSettingsConfig: MemberSettingsConfig;
-export declare const defaultTripGroups: TripGroup[];
-export declare const sortOptions: {
-    label: string;
-    value: string;
-}[];
-export declare const tabOptions: {
-    label: string;
-    value: string;
-}[];
-export declare const orderStatusOptions: OrderStatusOption[];
-export declare const defaultOrderGroups: OrderGroup[];
-export declare const hotelMessageTabs: HotelMessageTabOption[];
-export declare const hotelMessageStatusOptions: HotelMessageStatusOption[];
-export declare const hotelMessageSortOptions: {
-    label: string;
-    value: string;
-}[];
-export declare const hotelMessageCategoryOptions: {
-    label: string;
-    value: string;
-}[];
-export declare const defaultHotelMessages: HotelMessage[];
-export declare const defaultFavoriteProjectsInfo: RoomsProjectsCardInfo;

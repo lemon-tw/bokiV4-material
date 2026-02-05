@@ -1,9 +1,8 @@
-export type MemberRole = 'guest' | 'socialGuest' | 'member';
+export type MemberRole = "guest" | "socialGuest" | "member";
 export type ImportantInfoContent = Record<string, {
     text: string;
     agreeLabel?: string;
 }>;
-export declare const importantInfoContent: ImportantInfoContent;
 export type CartItemConfig = {
     id: string;
     title: string;
@@ -13,25 +12,6 @@ export type CartItemConfig = {
     plan: string;
     discountLabel?: string;
     discountAmount?: number;
-};
-export type memberCoupon = {
-    code: string;
-    title: string;
-    discount: number;
-    validRange: string;
-    minSpend: number;
-};
-export declare const memberExclusiveCoupon: {
-    code: string;
-    title: string;
-    discount: number;
-    validRange: string;
-    minSpend: number;
-}[];
-export type FrequentCompany = {
-    id: string;
-    title: string;
-    taxId: string;
 };
 export type FrequentGuest = {
     id: string;
@@ -46,36 +26,3 @@ export type FrequentGuest = {
     idType: string;
     idNumber: string;
 };
-declare const profileConfig: {
-    arrivalTimeOptions: {
-        value: string;
-        label: string;
-    }[];
-    specialRequirementOptions: string[];
-    specialRequirementPanels: {
-        id: string;
-        index: number;
-        title: string;
-    }[];
-    invoiceIssueMethodOptions: {
-        value: string;
-        label: string;
-    }[];
-    importantInfoPanels: {
-        id: string;
-        title: string;
-        required: boolean;
-    }[];
-    importantInfoContent: ImportantInfoContent;
-    feeItems: {
-        label: string;
-        value: string;
-    }[];
-    cartItems: CartItemConfig[];
-    defaultUser: FrequentGuest;
-    frequentGuests: FrequentGuest[];
-    frequentCompanies: FrequentCompany[];
-    promoDiscount: number;
-    memberDiscount: number;
-};
-export default profileConfig;

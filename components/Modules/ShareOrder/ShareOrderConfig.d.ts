@@ -60,10 +60,3 @@ export type ShareOrderProps = {
     verifyStep?: ShareVerifyStep;
     memberSection?: ShareMemberSection;
 };
-export declare const announcementActionButton: React.FunctionComponentElement<import('../../Atom/Button').CustomButtonProps>;
-export declare const defaultOrderNumber = "#BK25226782424";
-export declare const defaultPageTitle = "\u5206\u4EAB\u8A02\u55AE";
-export declare const defaultAnnouncement: ShareOrderAnnouncement;
-export declare const defaultShareStep: ShareStep;
-export declare const defaultVerifyStep: ShareVerifyStep;
-export declare const defaultMemberSection: ShareMemberSection;

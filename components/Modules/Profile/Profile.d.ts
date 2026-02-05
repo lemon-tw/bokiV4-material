@@ -1,6 +1,7 @@
 import { default as React } from '../../../../node_modules/react';
 import { StepperProps } from '@mui/material';
-import { default as profileConfig, CartItemConfig, ImportantInfoContent, MemberRole } from './profileConfig';
+import { CartItemConfig, FrequentGuest, ImportantInfoContent, MemberRole } from './profileConfig';
+import { MemberCoupon } from '../../Atom/Cart/Cart';
 export type ProfileStep = {
     label: string;
 };
@@ -17,17 +18,35 @@ export interface ProfileProps extends Omit<StepperProps, "children"> {
     activeStep?: number;
     memberRole?: MemberRole;
     memberBenefitBanner?: memberBenefitBanner;
-    arrivalTimeOptions?: typeof profileConfig.arrivalTimeOptions;
-    specialRequirementOptions?: typeof profileConfig.specialRequirementOptions;
-    invoiceIssueMethodOptions?: typeof profileConfig.invoiceIssueMethodOptions;
-    importantInfoPanels?: typeof profileConfig.importantInfoPanels;
+    arrivalTimeOptions?: {
+        value: string;
+        label: string;
+    }[];
+    specialRequirementOptions?: string[];
+    invoiceIssueMethodOptions?: {
+        value: string;
+        label: string;
+    }[];
+    importantInfoPanels?: {
+        id: string;
+        title: string;
+        required?: boolean;
+    }[];
     importantInfoContent?: ImportantInfoContent;
-    feeItems?: typeof profileConfig.feeItems;
+    feeItems?: {
+        label: string;
+        value: string;
+    }[];
     initialCartItems?: CartItem[];
     promoDiscount?: number;
     memberDiscount?: number;
-    frequentGuests?: typeof profileConfig.frequentGuests;
-    frequentCompanies?: typeof profileConfig.frequentCompanies;
+    frequentGuests?: FrequentGuest[];
+    frequentCompanies?: {
+        id: string;
+        name: string;
+        taxId: string;
+    }[];
+    memberExclusiveCoupons?: MemberCoupon[];
 }
 export type CartItem = CartItemConfig;
 export declare const Profile: React.FC<ProfileProps>;
