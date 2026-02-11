@@ -47,6 +47,32 @@ export interface ProfileProps extends Omit<StepperProps, "children"> {
         taxId: string;
     }[];
     memberExclusiveCoupons?: MemberCoupon[];
+    changeNotice?: {
+        title: string;
+        lines: string[];
+    };
+    initialGuestInfo?: Partial<GuestInfo>;
+    initialStayGuestInfo?: Partial<GuestInfo>;
+    cartHeaderContent?: React.ReactNode;
+    highlightCartItemId?: string;
+    highlightLabel?: string;
+    changeOriginalItem?: CartItem | null;
+    changeUpdatedItem?: CartItem | null;
+    changeSummaryItems?: {
+        label: string;
+        value: string;
+        valueColor?: string;
+        emphasize?: boolean;
+        note?: string;
+    }[];
+    changeConfirmLabel?: string;
+    onChangeConfirm?: () => void;
+    onSubmit?: (payload: {
+        guestInfo: GuestInfo;
+        cartItems: CartItem[];
+    }) => void;
 }
 export type CartItem = CartItemConfig;
+type GuestInfo = Omit<FrequentGuest, "id">;
 export declare const Profile: React.FC<ProfileProps>;
+export {};

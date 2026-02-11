@@ -53,6 +53,30 @@ type PaymentProps = {
     userAccount?: UserAccount;
     /** 會員專屬優惠券 */
     memberExclusiveCoupons?: MemberCoupon[];
+    /** 轉為候補 */
+    onWaitlistConfirm?: () => void;
+    /** 右側購物車自訂區塊（修改訂單用） */
+    cartHeaderContent?: React.ReactNode;
+    /** 修改中的卡片 id */
+    highlightCartItemId?: string;
+    /** 修改中的標籤 */
+    highlightLabel?: string;
+    /** 修改前資料 */
+    changeOriginalItem?: CartItemType | null;
+    /** 修改後資料 */
+    changeUpdatedItem?: CartItemType | null;
+    /** 修改摘要 */
+    changeSummaryItems?: {
+        label: string;
+        value: string;
+        valueColor?: string;
+        emphasize?: boolean;
+        note?: string;
+    }[];
+    /** 修改確認按鈕文字 */
+    changeConfirmLabel?: string;
+    /** 修改確認行為 */
+    onChangeConfirm?: () => void;
 };
 export declare const Payment: React.FC<PaymentProps>;
 export default Payment;

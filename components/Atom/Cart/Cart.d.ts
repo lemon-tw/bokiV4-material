@@ -10,6 +10,10 @@ export type CartItem = {
     roomCount?: number;
     discountLabel?: string;
     discountAmount?: number;
+    addons?: {
+        label: string;
+        price: number;
+    }[];
 };
 export type BookingSummaryItem = {
     label: string;
@@ -44,6 +48,22 @@ export type CartProps = {
     memberRole?: MemberRole;
     memberCoupons?: MemberCoupon[];
     memberExclusiveCoupons?: MemberCoupon[];
+    headerContent?: React.ReactNode;
+    highlightItemId?: string;
+    highlightLabel?: string;
+    highlightLabelColor?: string;
+    changeOriginalItem?: CartItem | null;
+    changeUpdatedItem?: CartItem | null;
+    hideAddonForHighlight?: boolean;
+    changeSummaryItems?: {
+        label: string;
+        value: string;
+        valueColor?: string;
+        emphasize?: boolean;
+        note?: string;
+    }[];
+    changeConfirmLabel?: string;
+    onChangeConfirm?: () => void;
 };
 export type MemberCoupon = {
     code: string;

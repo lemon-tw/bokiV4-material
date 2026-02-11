@@ -14,10 +14,12 @@ export type OrderRoomAction = {
 };
 export type OrderRoomCardBaseProps = {
     index: number;
-    statusLabel: string;
+    statusLabel?: string;
     bookingCode: string;
     statusColor?: string;
+    bookingCodeStrike?: boolean;
     imageSrc: string;
+    hideImage?: boolean;
     imageAlt?: string;
     imageAction?: React.ReactNode;
     imageActionWrapperSx?: SxProps<Theme>;
@@ -26,8 +28,14 @@ export type OrderRoomCardBaseProps = {
     dateRange: string;
     guestText: string;
     detailSections: OrderRoomDetailSection[];
+    summaryRows?: {
+        label: string;
+        value: string;
+        valueColor?: string;
+    }[];
     actions?: OrderRoomAction[];
     onActionClick?: (actionId: string) => void;
+    summaryTone?: "muted";
 };
 export declare const OrderRoomCardBase: React.FC<OrderRoomCardBaseProps>;
 export default OrderRoomCardBase;

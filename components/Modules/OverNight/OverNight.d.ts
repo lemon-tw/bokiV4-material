@@ -1,5 +1,6 @@
 import { default as React } from '../../../../node_modules/react';
-import { MemberCoupon } from '../../Atom/Cart/Cart';
+import { Dayjs } from 'dayjs';
+import { CartItem as CartItemType, MemberCoupon } from '../../Atom/Cart/Cart';
 import { AddonUpsellProps } from '../../../types/addonUpsellExtends';
 import { RoomsProjectsCardInfo } from '../../../types/roomsProjectsCardExtends';
 type OverNightTrip = {
@@ -30,6 +31,29 @@ export type OverNightProps = {
     addonUpsellPreset: OverNightAddonPreset;
     calendarDayMap?: Record<string, CalendarDay>;
     memberExclusiveCoupons?: MemberCoupon[];
+    initialRange?: {
+        start: Dayjs;
+        end: Dayjs;
+    };
+    onApply?: (payload: OverNightApplyPayload) => void;
+    onExit?: () => void;
+    applyLabel?: string;
+    exitLabel?: string;
+    initialCartItems?: CartItemType[];
+    highlightCartItemId?: string;
+    changeOrderNumber?: string;
+    onAbort?: () => void;
+    abortLabel?: string;
+    changeHeaderLabel?: string;
+    highlightLabel?: string;
+    hideChangeHeader?: boolean;
+    hideChangeHeaderActions?: boolean;
+};
+export type OverNightApplyPayload = {
+    start: Dayjs | null;
+    end: Dayjs | null;
+    stayLabel: string;
+    cartItems?: CartItemType[];
 };
 export declare const OverNight: React.FC<OverNightProps>;
 export {};
