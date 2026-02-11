@@ -84,5 +84,6 @@ export interface AddonUpsellProps {
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
     onBack?: () => void;
+    variant?: "default" | "list";
 }
 export {};

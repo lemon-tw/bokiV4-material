@@ -11,7 +11,7 @@ type GuestSelectionDetail = {
         time?: string;
     } | null;
 };
-export declare const GuestCountSelector: ({ title, detail, selectedDetail, setSelectedDetail, setTotalPrice, setOpenIndex, dayIndex, mealIndex, inMultiDay, currentDate, onTotalChange, currentMeal, open, }: {
+export declare const GuestCountSelector: ({ title, detail, selectedDetail, setSelectedDetail, setTotalPrice, setOpenIndex, dayIndex, mealIndex, inMultiDay, currentDate, onTotalChange, currentMeal, open, showSectionTitle, }: {
     title?: string;
     detail?: any;
     selectedDetail: GuestSelectionDetail[] | null | undefined;
@@ -25,5 +25,6 @@ export declare const GuestCountSelector: ({ title, detail, selectedDetail, setSe
     onTotalChange?: (dayKey: string, total: number) => void;
     currentMeal?: string;
     open?: boolean;
+    showSectionTitle?: boolean;
 }) => import("react/jsx-runtime").JSX.Element;
 export {};

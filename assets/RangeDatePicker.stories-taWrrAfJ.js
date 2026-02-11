@@ -1,0 +1,10 @@
+import{j as c}from"./jsx-runtime-BO8uF4Og.js";import"./lemonTheme-DRSUy1mj.js";import{R as m}from"./Rest-VbacVP9U.js";import"./Alert-DRAbsrNu.js";import"./Avatar-kr3oDakC.js";import"./ToggleButton-B_1nB3DD.js";import"./DraggableChips-D0MI0M_6.js";import"./Modal-C5rE0h8n.js";import"./BottomModal-Bux3tXCl.js";import"./Profile-PFiyOLDq.js";import"./Typography-CFfHvyVk.js";import{r}from"./index-D4H_InIO.js";import"./defaultPalette-BZVf8BwZ.js";import"./dayjs.min-BJoxDa44.js";import"./CheckCircle.es-DXCUKnUH.js";import"./zh-tw-CCYRlzet.js";import"./Cart-DJEv7-_-.js";import"./FormControlLabel-CQG9jDu4.js";import"./CaretDown.es-C_6dMS2T.js";import"./Moon.es-mpdNk7_p.js";import"./Users.es-CXrS66a4.js";import"./WarningCircle.es-CJLwpT3c.js";import"./index-Bm8UbI65.js";import"./useTheme-C-KIORmc.js";import"./useSlotProps-CGB2S-5Z.js";import"./Link-D6s8y8jX.js";import"./index-B5T-G8Uu.js";import"./getThemeProps-D8nCqP97.js";import"./CaretUp.es-Cflm5pVD.js";import"./MagnifyingGlassPlus.es-BecyuEKe.js";import"./Tabs-BbBue1HL.js";import"./CrownSimple.es-BynC5VcB.js";import"./Warning.es-C1cCrKac.js";import"./Divider-QqgqyZ2C.js";import"./AccordionSummary-BPG7zxQD.js";import"./Copy.es-Akm3ZCin.js";import"./index-BkuToD7M.js";import"./index-vYCkCKEW.js";import"./tiny-invariant-CopsF_GD.js";const Y={title:"components/Atoms/DatePicker/RangeDatePicker",component:m,parameters:{layout:"centered"},tags:["autodocs"],argTypes:{},args:{}},t={render:p=>{const[a,i]=r.useState(null),[n,u]=r.useState(null);return c.jsx(m,{...p,start:a,end:n,setStart:i,setEnd:u})},args:{buttonHeight:"48px"}};var o,e,s;t.parameters={...t.parameters,docs:{...(o=t.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: args => {
+    const [start, setStart] = useState<Dayjs | null>(null);
+    const [end, setEnd] = useState<Dayjs | null>(null);
+    return <RangeDatePicker {...args} start={start} end={end} setStart={setStart} setEnd={setEnd} />;
+  },
+  args: {
+    buttonHeight: "48px"
+  }
+}`,...(s=(e=t.parameters)==null?void 0:e.docs)==null?void 0:s.source}}};const Z=["Default"];export{t as Default,Z as __namedExportsOrder,Y as default};

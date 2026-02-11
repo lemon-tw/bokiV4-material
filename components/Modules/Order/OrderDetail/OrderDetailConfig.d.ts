@@ -100,6 +100,10 @@ export type OrderInvoiceInfo = {
     title: string;
     items: AmountLineItem[];
 };
+export type OrderAddonUpsellPreset = {
+    upsell: NonNullable<import('../../../../types/addonUpsellExtends').AddonUpsellProps["upsellList"]>;
+    addon: NonNullable<import('../../../../types/addonUpsellExtends').AddonUpsellProps["addonList"]>;
+};
 export type OrderGuestInfo = {
     title: string;
     items: (AmountLineItem & {
@@ -230,4 +234,5 @@ export type OrderDetailProps = {
     onRoomCancelConfirmed?: (roomId: string) => void;
     onRoomChangeConfirmed?: (roomId: string) => void;
     onRoomActionClick?: (roomId: string, actionId: string) => void;
+    addonUpsellPreset?: OrderAddonUpsellPreset;
 };
