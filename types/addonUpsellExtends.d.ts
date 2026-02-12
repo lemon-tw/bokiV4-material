@@ -9,9 +9,35 @@ interface upsellprops {
     originalPrice?: number;
 }
 interface addonprops {
-    group: "guestCountSelector" | "quantitySelector" | "multiDaysSelector" | "airportTransfer" | "halfBroadSelector";
+    group: "guestCountSelector" | "quantitySelector" | "multiDaysSelector" | "airportTransfer" | "thsrTicket" | "halfBroadSelector" | "highSpeedRail";
     detail?: any;
 }
+export type ThsrLegType = "outbound" | "return";
+export type ThsrLegSummary = {
+    leg: ThsrLegType;
+    from: string;
+    to: string;
+    fromLabel: string;
+    toLabel: string;
+    date: string;
+    departTime: string;
+    arriveTime: string;
+    duration: string;
+    trainNo: number;
+    carClass?: "standard" | "business";
+};
+export type ThsrSelection = {
+    tripType: "outbound" | "return" | "roundTrip";
+    carType: "standard" | "business";
+    passengers: {
+        senior?: number;
+        adult?: number;
+        child?: number;
+        concessional?: number;
+    };
+    legs: ThsrLegSummary[];
+    totalPrice?: number;
+};
 export interface selectedItem {
     id: string;
     label?: string;
@@ -22,14 +48,22 @@ export interface selectedItem {
             adult?: number;
             child?: number;
             quantity?: number;
+            disabled?: number;
         };
         timeSlot?: {
             date: string;
             meal?: string;
             time?: string;
         } | null;
+        hsr?: {
+            cabin?: string;
+            tripType?: string;
+            from?: string;
+            to?: string;
+        };
         flight?: string;
     }[] | null;
+    thsr?: ThsrSelection;
 }
 interface ListValue {
     id: string;
@@ -41,7 +75,7 @@ interface ListValue {
     priceTag?: string;
     upsell?: upsellprops;
     addon?: {
-        group: "guestCountSelector" | "quantitySelector" | "multiDaysSelector" | "airportTransfer" | "halfBroadSelector";
+        group: "guestCountSelector" | "quantitySelector" | "multiDaysSelector" | "airportTransfer" | "thsrTicket" | "halfBroadSelector" | "highSpeedRail";
         detail?: any;
     };
 }
