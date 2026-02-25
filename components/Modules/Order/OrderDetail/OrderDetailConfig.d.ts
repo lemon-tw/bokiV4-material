@@ -104,6 +104,12 @@ export type OrderAddonUpsellPreset = {
     upsell: NonNullable<import('../../../../types/addonUpsellExtends').AddonUpsellProps["upsellList"]>;
     addon: NonNullable<import('../../../../types/addonUpsellExtends').AddonUpsellProps["addonList"]>;
 };
+export type OrderAddonProceedToPaymentPayload = {
+    roomId: string;
+    roomName: string;
+    selectedAddons: import('../../../../types/addonUpsellExtends').selectedItem[];
+    currentAddon?: import('../../../../types/addonUpsellExtends').selectedItem | null;
+};
 export type OrderGuestInfo = {
     title: string;
     items: (AmountLineItem & {
@@ -234,5 +240,6 @@ export type OrderDetailProps = {
     onRoomCancelConfirmed?: (roomId: string) => void;
     onRoomChangeConfirmed?: (roomId: string) => void;
     onRoomActionClick?: (roomId: string, actionId: string) => void;
+    onAddonProceedToPayment?: (payload: OrderAddonProceedToPaymentPayload) => void;
     addonUpsellPreset?: OrderAddonUpsellPreset;
 };

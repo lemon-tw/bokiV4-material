@@ -17,8 +17,16 @@ type HsrDetail = {
     stations?: string[];
     dates?: string[];
     times?: string[];
+    trains?: TrainOption[];
 };
-export declare const HighSpeedRailSelector: ({ title, detail, selectedDetail, setSelectedDetail, setTotalPrice, }: {
+type TrainOption = {
+    id: string;
+    depart: string;
+    arrive: string;
+    duration: string;
+    isHot?: boolean;
+};
+export declare const HighSpeedRailSelector: ({ detail, selectedDetail, setSelectedDetail, setTotalPrice, onProceedToPayment, }: {
     title?: string;
     detail?: HsrDetail;
     selectedDetail: {
@@ -62,5 +70,6 @@ export declare const HighSpeedRailSelector: ({ title, detail, selectedDetail, se
         };
     }[] | null | undefined>>;
     setTotalPrice: React.Dispatch<React.SetStateAction<number>>;
+    onProceedToPayment?: () => void;
 }) => import("react/jsx-runtime").JSX.Element;
 export default HighSpeedRailSelector;

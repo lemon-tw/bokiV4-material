@@ -24,6 +24,7 @@ type MemberMessageSectionProps = {
     onMessageCategoryChange: (value: string) => void;
     messageCategoryOptions: Option[];
     filteredMessages: HotelMessage[];
+    onMessageClick?: (message: HotelMessage) => void;
 };
-export declare const MemberMessageSection: ({ searchValue, onSearchValueChange, onSearchBlur, messageTab, onMessageTabChange, messageTabs, messageUnreadCounts, messageStatus, onMessageStatusChange, messageStatusOptions, messageSortValue, onMessageSortChange, messageSortOptions, messageCategoryValue, onMessageCategoryChange, messageCategoryOptions, filteredMessages, }: MemberMessageSectionProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MemberMessageSection: ({ searchValue, onSearchValueChange, onSearchBlur, messageTab, onMessageTabChange, messageTabs, messageUnreadCounts, messageStatus, onMessageStatusChange, messageStatusOptions, messageSortValue, onMessageSortChange, messageSortOptions, messageCategoryValue, onMessageCategoryChange, messageCategoryOptions, filteredMessages, onMessageClick, }: MemberMessageSectionProps) => import("react/jsx-runtime").JSX.Element;
 export {};

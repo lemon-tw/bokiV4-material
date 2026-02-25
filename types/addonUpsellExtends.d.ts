@@ -65,6 +65,10 @@ export interface selectedItem {
     }[] | null;
     thsr?: ThsrSelection;
 }
+export interface AddonProceedToPaymentPayload {
+    selected: selectedItem[];
+    currentItem?: selectedItem | null;
+}
 interface ListValue {
     id: string;
     title: string;
@@ -102,6 +106,7 @@ export interface AddonButtonModuleprops {
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
     onRequestRemove?: (id: string, title?: string) => void;
+    onProceedToPayment?: (payload: AddonProceedToPaymentPayload) => void;
 }
 export interface CardProps {
     item: ListValue;
@@ -109,6 +114,7 @@ export interface CardProps {
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
     onRequestRemove?: (id: string, title?: string) => void;
+    onProceedToPayment?: (payload: AddonProceedToPaymentPayload) => void;
 }
 export interface AddonUpsellProps {
     roomName: string;
@@ -119,5 +125,6 @@ export interface AddonUpsellProps {
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
     onBack?: () => void;
     variant?: "default" | "list";
+    onProceedToPayment?: (payload: AddonProceedToPaymentPayload) => void;
 }
 export {};
