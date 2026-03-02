@@ -42,6 +42,7 @@ export interface selectedItem {
     id: string;
     label?: string;
     price: number;
+    exclusiveGroup?: string;
     detail?: {
         count: {
             senior?: number;
@@ -71,6 +72,7 @@ export interface AddonProceedToPaymentPayload {
 }
 interface ListValue {
     id: string;
+    exclusiveGroup?: string;
     title: string;
     images: string[];
     description: string;
@@ -94,6 +96,7 @@ export interface UpsellButtonModuleprops {
     selected: selectedItem[];
     setSelected: React.Dispatch<React.SetStateAction<selectedItem[] | undefined>>;
     onRequestRemove?: (id: string, title?: string) => void;
+    exclusiveGroup?: string;
 }
 export interface AddonButtonModuleprops {
     memberOnly?: boolean;
